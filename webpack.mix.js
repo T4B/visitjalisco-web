@@ -14,6 +14,7 @@ require('laravel-mix-tailwind');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
+   .copy('node_modules/swiper/dist/css/swiper.min.css', 'public/css/swiper.css')
    .tailwind('tailwind.config.js')
    .browserSync('visitjalisco.test')
    .disableSuccessNotifications();

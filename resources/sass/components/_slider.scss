@@ -1,0 +1,25 @@
+.slider {
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev,
+    .swiper-button-prev, 
+    .swiper-container-rtl .swiper-button-next{
+        background-image: none;
+    }
+
+    .swiper-pagination-bullet, .swiper-pagination-bullet-active {
+        @apply bg-white;
+    }
+
+    .button-prev, .button-next, .swiper-button-prev, .swiper-button-next {
+        @apply text-4xl flex justify-center items-center;
+        @apply absolute z-10 cursor-pointer bg-center bg-no-repeat -mt-6;
+        top: 50%;
+    }
+    .button-prev {
+        left: theme('spacing.8');
+    }
+
+    .button-next {
+        right: theme('spacing.8');
+    }
+}

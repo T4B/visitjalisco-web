@@ -14,14 +14,14 @@
            class="button-prev"
       >
         <font-awesome-icon class="text-white"
-                           :icon="['far', 'chevron-left']"
+                           :icon="['fas', 'chevron-left']"
         />
       </div>
       <div slot="button-next"
            class="button-next"
       >
         <font-awesome-icon class="text-white"
-                           :icon="['far', 'chevron-right']"
+                           :icon="['fas', 'chevron-right']"
         />
       </div>
     </swiper>

@@ -4461,6 +4461,46 @@ video {
   z-index: auto;
 }
 
+.slider .swiper-button-next,
+.slider .swiper-container-rtl .swiper-button-prev,
+.slider .swiper-button-prev,
+.slider .swiper-container-rtl .swiper-button-next {
+  background-image: none;
+}
+
+.slider .swiper-pagination-bullet, .slider .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.slider .button-prev, .slider .button-next, .slider .swiper-button-prev, .slider .swiper-button-next {
+  font-size: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -1.5rem;
+  top: 50%;
+}
+
+.slider .button-prev {
+  left: 2rem;
+}
+
+.slider .button-next {
+  right: 2rem;
+}
+
+.categories .category {
+  height: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
