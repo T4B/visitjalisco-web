@@ -21,6 +21,9 @@ module.exports = {
     container: {
         center: true,
     },
+    inset: {
+        '16' : '4rem',
+    },
     extend: {}
   },
   variants: {},

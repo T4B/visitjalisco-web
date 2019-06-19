@@ -9,22 +9,32 @@
 
 <slider>
     <slide>
-        <div class="h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/slider/slider-01.jpg') }})"></div>
+        <div class="h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/slider/slider-01.jpg') }})">
+            <div class="container py-32 text-white">
+                <h2 class="text-6xl font-bold leading-none">Festival 212</h2>
+                <p class="text-2xl">14 de Marzo. Trasloma</p>
+            </div>
+        </div>
     </slide>
 </slider>
 
 <section class="regions">
     <div class="container py-10">
         <div class="flex flex-wrap text-black">
-            <div class="w-1/3">
+            <div class="w-full md:w-1/3 px-10 lg:px-0 py-8">
                 <h1 class="text-6xl leading-none lg:leading-tight">Este es </br><strong>Mi Jalisco</strong></h1>
                 <p class="text-2xl">Estas son las historias y </br>experiencias que nuestras</br> regiones ofrecen,</br>
                     <strong>Vividas a profundidad.</strong></p>
             </div>
-            <div class="w-7/12 ml-auto">
+            <div class="w-full md:w-7/12 ml-auto">
                 <slider class="shadow-2xl">
                     <slide>
-                        <div class="p-56 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/slider/slider-01.jpg') }})"></div>
+                        <div class="py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset('images/slider/slider-01.jpg') }})">
+                            <div class="text-white absolute bottom-16">
+                                <h2 class="text-4xl font-bold leading-none">Tapalpa</h2>
+                                <p class="text-xl">La paz e inspiración del bosque</p>
+                            </div>
+                        </div>
                     </slide>
                 </slider>
             </div>
@@ -33,36 +43,36 @@
 </section>
 
 <section class="categories">
-    <div class="flex flex-wrap text-white text-center">
-        <div class="category w-1/5 bg-red bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/experiencias.jpg') }})">
-            <h2>Experiencias</h2>
+    <div class="flex flex-wrap text-white text-center font-bold">
+        <div class="category w-1/2 lg:w-1/5 bg-red bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/experiencias.jpg') }})">
+            <h2 class="text-xl">Experiencias</h2>
         </div>
-        <div class="category w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/cultura.jpg') }})">
-            <h2>Cultura</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/cultura.jpg') }})">
+            <h2 class="text-xl">Cultura</h2>
         </div>
-         <div class="category w-1/5 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/deportivo.jpg') }})">
-            <h2>Deportivo</h2>
+         <div class="category w-1/2 lg:w-1/5 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/deportivo.jpg') }})">
+            <h2 class="text-xl">Deportivo</h2>
         </div>
-        <div class="category w-1/5 bg-orange ">
-            <h2>Gastronómico</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-orange ">
+            <h2 class="text-xl">Gastronómico</h2>
         </div>
-        <div class="category w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/lgbt.jpg') }})">
-            <h2>LGBTTTIQ</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/lgbt.jpg') }})">
+            <h2 class="text-xl">LGBTTTIQ</h2>
         </div>
-        <div class="category w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/naturaleza.jpg') }})">
-            <h2>Naturaleza</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/naturaleza.jpg') }})">
+            <h2 class="text-xl">Naturaleza</h2>
         </div>
-        <div class="category w-1/5 bg-orange ">
-            <h2>Negocio y reuniones</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-orange ">
+            <h2 class="text-xl">Negocio y reuniones</h2>
         </div>
-         <div class="category w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/religioso.jpg') }})">
-            <h2>Religioso</h2>
+         <div class="category w-1/2 lg:w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/religioso.jpg') }})">
+            <h2 class="text-xl">Religioso</h2>
         </div>
-        <div class="category w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/salud.jpg') }})">
-            <h2>Salud y Bienestar</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-gray bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/categories/salud.jpg') }})">
+            <h2 class="text-xl">Salud y Bienestar</h2>
         </div>
-        <div class="category w-1/5 bg-purple ">
-            <h2>Sol y Playa</h2>
+        <div class="category w-1/2 lg:w-1/5 bg-purple ">
+            <h2 class="text-xl">Sol y Playa</h2>
         </div>
     </div>
 </section>
@@ -106,7 +116,7 @@
 </section>
 
 <section class="routes bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-routes.jpg') }})">
-    <div class="container py-10">
+    <div class="container py-10 px-10 lg:px-0">
         <div class="w-full bg-white p-10 rounded-lg">
             <img class="w-full" src="{{ asset('images/routes/ruta-historica.jpg') }}">
             <div class="px-4">
@@ -116,20 +126,20 @@
         </div>
 
         <div class="py-6">
-            <div class="flex -mx-2">
-                <div class="w-1/3 px-2">
+            <div class="flex flex-wrap -mx-2">
+                <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 my-6" style="background-image:url({{ asset('images/routes/ruta-historica.jpg') }})"></div>
                         <h2 class="font-bold text-2xl my-2 leading-none">Ruta de los bosques</h2>
                     </div>
                 </div>
-                <div class="w-1/3 px-2">
+                <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 my-6" style="background-image:url({{ asset('images/routes/ruta-historica.jpg') }})"></div>
                         <h2 class="font-bold text-2xl my-2 leading-none">Ruta histórica</h2>
                     </div>
                 </div>
-                <div class="w-1/3 px-2">
+                <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 my-6" style="background-image:url({{ asset('images/routes/ruta-historica.jpg') }})"></div>
                         <h2 class="font-bold text-2xl my-2 leading-none">Ruta del arte</h2>
