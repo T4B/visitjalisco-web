@@ -148,6 +148,9 @@
                 </div>
             </div>
         </div>
+        <div class="flex w-full py-4">
+            <a class="font-serif text-3xl ml-auto text-white" href="">Más rutas</a>
+        </div>
     </div>
 </section>
 

@@ -21,10 +21,11 @@ module.exports = {
     container: {
         center: true,
     },
-    inset: {
-        '16' : '4rem',
-    },
-    extend: {}
+    extend: {
+        inset: {
+            '16': '4rem',
+        },
+    }
   },
   variants: {},
   plugins: []

@@ -1,16 +1,16 @@
 <footer class="bg-red">
     <div class="container py-10">
         <div class="flex flex-wrap text-white">
-            <div class="w-full lg:w-1/3">
-                <h2 class="font-bold">Mapa del sitio</h2>
-                <ul>
-                    <li><a class="no-underline" href="#">Jalisco</a></li>
-                    <li><a class="no-underline" href="#">Este es mi Jalisco</a></li>
-                    <li><a class="no-underline" href="#">Agenda</a></li>
-                    <li><a class="no-underline" href="#">Regiones</a></li>
-                    <li><a class="no-underline" href="#">Experiencia</a></li>
-                    <li><a class="no-underline" href="#">Ruta</a></li>
-                    <li><a class="no-underline" href="#">Eventos y convenciones</a></li>
+            <div class="w-full lg:w-1/3 px-10 mb-6 lg:mb-0 text-center lg:text-left">
+                <h2 class="font-bold font-secondary">Mapa del sitio</h2>
+                <ul class="sitemap lg:pl-8 leading-relaxed py-4">
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Jalisco</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Este es mi Jalisco</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Agenda</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Regiones</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Experiencia</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Ruta</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Eventos y convenciones</a></li>
                 </ul>
             </div>
             <div class="w-full lg:w-1/4 text-center relative">
@@ -39,9 +39,17 @@
                 </ul>
                 <a class="lg:absolute lg:inset-x-0 lg:bottom-0 no-unerline" href="#">aviso de privacidad</a>
             </div>
-            <div class="w-full lg:w-1/3 text-center ml-auto">
+            <div class="w-full lg:w-1/3 text-center ml-auto mt-4 lg:mt-0 px-10">
                 <p>Página Oficial del estado de Jalisco, México.</p> 
                 <p>Compartimos y promovemos experiencias de los hermosos destinos vacacionales y culturales.</p>
+                <div class="flex flex-row items-center">
+                    <div class="w-1/2">
+                        <img class="h-12 mx-auto" src="{{ asset('images/Logo_turismo_blanco.svg') }}">
+                    </div>
+                    <div class="w-1/2">
+                        <img class="h-40 mx-auto" src="{{ asset('images/jalisco.svg') }}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

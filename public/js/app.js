@@ -2743,6 +2743,46 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
+/***/ "./node_modules/@fortawesome/pro-solid-svg-icons/faHorizontalRule.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@fortawesome/pro-solid-svg-icons/faHorizontalRule.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fas';
+var iconName = 'horizontal-rule';
+var width = 640;
+var height = 512;
+var ligatures = [];
+var unicode = 'f86c';
+var svgPathData = 'M640 239.87v31.26A15.88 15.88 0 0 1 624.14 287H15.87A15.88 15.88 0 0 1 0 271.13v-31.26A15.88 15.88 0 0 1 15.87 224h608.27A15.88 15.88 0 0 1 640 239.87z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faHorizontalRule = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = ligatures;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/pro-solid-svg-icons/faMapMarkerAlt.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@fortawesome/pro-solid-svg-icons/faMapMarkerAlt.js ***!
@@ -46015,6 +46055,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faPlayCircle */ "./node_modules/@fortawesome/pro-solid-svg-icons/faPlayCircle.js");
 /* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faHorizontalRule */ "./node_modules/@fortawesome/pro-solid-svg-icons/faHorizontalRule.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -46026,7 +46068,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_pro_solid_svg_icons_faTimes__WEBPACK_IMPORTED_MODULE_1__["faTimes"], _fortawesome_pro_solid_svg_icons_faBars__WEBPACK_IMPORTED_MODULE_2__["faBars"], _fortawesome_free_brands_svg_icons_faFacebookSquare__WEBPACK_IMPORTED_MODULE_3__["faFacebookSquare"], _fortawesome_free_brands_svg_icons_faTwitterSquare__WEBPACK_IMPORTED_MODULE_4__["faTwitterSquare"], _fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5__["faInstagram"], _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__["faYoutube"], _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__["faMapMarkerAlt"], _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8__["faChevronLeft"], _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__["faChevronRight"], _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__["faPlayCircle"]);
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_pro_solid_svg_icons_faTimes__WEBPACK_IMPORTED_MODULE_1__["faTimes"], _fortawesome_pro_solid_svg_icons_faBars__WEBPACK_IMPORTED_MODULE_2__["faBars"], _fortawesome_free_brands_svg_icons_faFacebookSquare__WEBPACK_IMPORTED_MODULE_3__["faFacebookSquare"], _fortawesome_free_brands_svg_icons_faTwitterSquare__WEBPACK_IMPORTED_MODULE_4__["faTwitterSquare"], _fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5__["faInstagram"], _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__["faYoutube"], _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__["faMapMarkerAlt"], _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8__["faChevronLeft"], _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__["faChevronRight"], _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__["faPlayCircle"], _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__["faHorizontalRule"]);
 
 /***/ }),
 

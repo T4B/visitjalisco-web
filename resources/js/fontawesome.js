@@ -10,6 +10,7 @@ import { faMapMarkerAlt as fasMapMarketAlt } from '@fortawesome/pro-solid-svg-ic
 import { faChevronLeft as fasChevronLeft } from '@fortawesome/pro-solid-svg-icons/faChevronLeft'
 import { faChevronRight as fasChevronRight } from '@fortawesome/pro-solid-svg-icons/faChevronRight'
 import { faPlayCircle as fasPlayCircle } from '@fortawesome/pro-solid-svg-icons/faPlayCircle'
+import { faHorizontalRule as fasHorizontalRule } from '@fortawesome/pro-solid-svg-icons/faHorizontalRule'
 
 library.add(
     fasTimes,
@@ -21,5 +22,6 @@ library.add(
     fasMapMarketAlt,
     fasChevronLeft,
     fasChevronRight,
-    fasPlayCircle
+    fasPlayCircle, 
+    fasHorizontalRule
 );
