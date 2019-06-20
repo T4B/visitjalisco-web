@@ -6,7 +6,7 @@ module.exports = {
         primary: ['Questrial', 'sans-serif'],
         secondary: ['Arimo', 'sans-serif'],
         serif: ['Noto Serif SC', 'serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        //montserrat: ['Montserrat', 'sans-serif'],
     },
     colors: {
         transparent: theme.colors['transparent'],

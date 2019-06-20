@@ -1505,10 +1505,6 @@ video {
   font-family: Noto Serif SC, serif;
 }
 
-.font-montserrat {
-  font-family: Montserrat, sans-serif;
-}
-
 .font-hairline {
   font-weight: 100;
 }
@@ -4461,11 +4457,52 @@ video {
   right: 4rem;
 }
 
+html {
+  font-family: Questrial, sans-serif;
+  overflow-x: hidden;
+}
+
+.main-slider .container h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.main-slider .container p {
+  font-size: 1.5rem;
+}
+
+.regions .slider h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.regions .slider p {
+  font-size: 1.25rem;
+}
+
 .categories .category {
-  height: 20vw;
+  height: 50vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .categories .category {
+    height: 20vw;
+  }
+}
+
+.events h2 {
+  font-weight: 700;
+  font-size: 1.875rem;
+  font-family: Arimo, sans-serif;
 }
 
 @media (min-width: 640px) {
@@ -5343,10 +5380,6 @@ video {
 
   .sm\:font-serif {
     font-family: Noto Serif SC, serif;
-  }
-
-  .sm\:font-montserrat {
-    font-family: Montserrat, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -9146,10 +9179,6 @@ video {
     font-family: Noto Serif SC, serif;
   }
 
-  .md\:font-montserrat {
-    font-family: Montserrat, sans-serif;
-  }
-
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -12947,10 +12976,6 @@ video {
     font-family: Noto Serif SC, serif;
   }
 
-  .lg\:font-montserrat {
-    font-family: Montserrat, sans-serif;
-  }
-
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -16746,10 +16771,6 @@ video {
 
   .xl\:font-serif {
     font-family: Noto Serif SC, serif;
-  }
-
-  .xl\:font-montserrat {
-    font-family: Montserrat, sans-serif;
   }
 
   .xl\:font-hairline {
