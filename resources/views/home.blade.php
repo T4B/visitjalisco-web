@@ -6,16 +6,19 @@
 
 @section('content')
 
+@if($sliders->count())
 <slider class="main-slider">
+    @foreach($sliders->sortBy('order') as $slider)
     <slide>
-        <div class="h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/slider/slider-01.jpg') }})">
+        <div class="h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container py-32 text-white">
-                <h2>Festival 212</h2>
-                <p>14 de Marzo. Trasloma</p>
+                @markdown( $slider->text )
             </div>
         </div>
     </slide>
+    @endforeach
 </slider>
+@endif
 
 <section class="regions font-serif">
     <div class="container py-16">
