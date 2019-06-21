@@ -1,11 +1,60 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d61460c493ef6acdc6fa0d8c1d72ef89",
+    "content-hash": "c5778bb33f1569be670a806274228d14",
     "packages": [
+        {
+            "name": "benjaminhirsch/nova-slug-field",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjaminhirsch/nova-slug-field.git",
+                "reference": "4c5cee9adc12256e6cd89c3761f203f660e83568"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjaminhirsch/nova-slug-field/zipball/4c5cee9adc12256e6cd89c3761f203f660e83568",
+                "reference": "4c5cee9adc12256e6cd89c3761f203f660e83568",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Benjaminhirsch\\NovaSlugField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Benjaminhirsch\\NovaSlugField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Hirsch",
+                    "email": "mail@benjaminhirsch.net",
+                    "homepage": "https://wwwbenjaminhirsch.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova field to generate a slugs.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2019-04-27T05:54:45+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.2.7",
