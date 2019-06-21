@@ -17,6 +17,7 @@ module.exports = {
         orange: '#BB7000',
         purple: '#624298',
         gray: '#3C3C3B',
+        blend: 'rgba(0, 0, 0, 0.25)', 
     },
     container: {
         center: true,

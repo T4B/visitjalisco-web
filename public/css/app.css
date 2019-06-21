@@ -675,6 +675,10 @@ video {
   background-color: #3C3C3B;
 }
 
+.bg-blend {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -703,6 +707,10 @@ video {
   background-color: #3C3C3B;
 }
 
+.hover\:bg-blend:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -729,6 +737,10 @@ video {
 
 .focus\:bg-gray:focus {
   background-color: #3C3C3B;
+}
+
+.focus\:bg-blend:focus {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .bg-bottom {
@@ -839,6 +851,10 @@ video {
   border-color: #3C3C3B;
 }
 
+.border-blend {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -867,6 +883,10 @@ video {
   border-color: #3C3C3B;
 }
 
+.hover\:border-blend:hover {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -893,6 +913,10 @@ video {
 
 .focus\:border-gray:focus {
   border-color: #3C3C3B;
+}
+
+.focus\:border-blend:focus {
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 .rounded-none {
@@ -3981,6 +4005,10 @@ video {
   color: #3C3C3B;
 }
 
+.text-blend {
+  color: rgba(0, 0, 0, 0.25);
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -4009,6 +4037,10 @@ video {
   color: #3C3C3B;
 }
 
+.hover\:text-blend:hover {
+  color: rgba(0, 0, 0, 0.25);
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -4035,6 +4067,10 @@ video {
 
 .focus\:text-gray:focus {
   color: #3C3C3B;
+}
+
+.focus\:text-blend:focus {
+  color: rgba(0, 0, 0, 0.25);
 }
 
 .text-xs {
@@ -4538,6 +4574,11 @@ html {
   font-size: 1.5rem;
 }
 
+.main-slider .slide {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+}
+
 .regions .slider h2 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -4618,6 +4659,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .sm\:bg-blend {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -4646,6 +4691,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .sm\:hover\:bg-blend:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -4672,6 +4721,10 @@ html {
 
   .sm\:focus\:bg-gray:focus {
     background-color: #3C3C3B;
+  }
+
+  .sm\:focus\:bg-blend:focus {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .sm\:bg-bottom {
@@ -4782,6 +4835,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .sm\:border-blend {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -4810,6 +4867,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .sm\:hover\:border-blend:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -4836,6 +4897,10 @@ html {
 
   .sm\:focus\:border-gray:focus {
     border-color: #3C3C3B;
+  }
+
+  .sm\:focus\:border-blend:focus {
+    border-color: rgba(0, 0, 0, 0.25);
   }
 
   .sm\:rounded-none {
@@ -7924,6 +7989,10 @@ html {
     color: #3C3C3B;
   }
 
+  .sm\:text-blend {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -7952,6 +8021,10 @@ html {
     color: #3C3C3B;
   }
 
+  .sm\:hover\:text-blend:hover {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -7978,6 +8051,10 @@ html {
 
   .sm\:focus\:text-gray:focus {
     color: #3C3C3B;
+  }
+
+  .sm\:focus\:text-blend:focus {
+    color: rgba(0, 0, 0, 0.25);
   }
 
   .sm\:text-xs {
@@ -8481,6 +8558,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .md\:bg-blend {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -8509,6 +8590,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .md\:hover\:bg-blend:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -8535,6 +8620,10 @@ html {
 
   .md\:focus\:bg-gray:focus {
     background-color: #3C3C3B;
+  }
+
+  .md\:focus\:bg-blend:focus {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .md\:bg-bottom {
@@ -8645,6 +8734,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .md\:border-blend {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -8673,6 +8766,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .md\:hover\:border-blend:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -8699,6 +8796,10 @@ html {
 
   .md\:focus\:border-gray:focus {
     border-color: #3C3C3B;
+  }
+
+  .md\:focus\:border-blend:focus {
+    border-color: rgba(0, 0, 0, 0.25);
   }
 
   .md\:rounded-none {
@@ -11787,6 +11888,10 @@ html {
     color: #3C3C3B;
   }
 
+  .md\:text-blend {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -11815,6 +11920,10 @@ html {
     color: #3C3C3B;
   }
 
+  .md\:hover\:text-blend:hover {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -11841,6 +11950,10 @@ html {
 
   .md\:focus\:text-gray:focus {
     color: #3C3C3B;
+  }
+
+  .md\:focus\:text-blend:focus {
+    color: rgba(0, 0, 0, 0.25);
   }
 
   .md\:text-xs {
@@ -12344,6 +12457,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .lg\:bg-blend {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -12372,6 +12489,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .lg\:hover\:bg-blend:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -12398,6 +12519,10 @@ html {
 
   .lg\:focus\:bg-gray:focus {
     background-color: #3C3C3B;
+  }
+
+  .lg\:focus\:bg-blend:focus {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .lg\:bg-bottom {
@@ -12508,6 +12633,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .lg\:border-blend {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -12536,6 +12665,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .lg\:hover\:border-blend:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -12562,6 +12695,10 @@ html {
 
   .lg\:focus\:border-gray:focus {
     border-color: #3C3C3B;
+  }
+
+  .lg\:focus\:border-blend:focus {
+    border-color: rgba(0, 0, 0, 0.25);
   }
 
   .lg\:rounded-none {
@@ -15650,6 +15787,10 @@ html {
     color: #3C3C3B;
   }
 
+  .lg\:text-blend {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -15678,6 +15819,10 @@ html {
     color: #3C3C3B;
   }
 
+  .lg\:hover\:text-blend:hover {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -15704,6 +15849,10 @@ html {
 
   .lg\:focus\:text-gray:focus {
     color: #3C3C3B;
+  }
+
+  .lg\:focus\:text-blend:focus {
+    color: rgba(0, 0, 0, 0.25);
   }
 
   .lg\:text-xs {
@@ -16207,6 +16356,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .xl\:bg-blend {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -16235,6 +16388,10 @@ html {
     background-color: #3C3C3B;
   }
 
+  .xl\:hover\:bg-blend:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -16261,6 +16418,10 @@ html {
 
   .xl\:focus\:bg-gray:focus {
     background-color: #3C3C3B;
+  }
+
+  .xl\:focus\:bg-blend:focus {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   .xl\:bg-bottom {
@@ -16371,6 +16532,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .xl\:border-blend {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -16399,6 +16564,10 @@ html {
     border-color: #3C3C3B;
   }
 
+  .xl\:hover\:border-blend:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -16425,6 +16594,10 @@ html {
 
   .xl\:focus\:border-gray:focus {
     border-color: #3C3C3B;
+  }
+
+  .xl\:focus\:border-blend:focus {
+    border-color: rgba(0, 0, 0, 0.25);
   }
 
   .xl\:rounded-none {
@@ -19513,6 +19686,10 @@ html {
     color: #3C3C3B;
   }
 
+  .xl\:text-blend {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -19541,6 +19718,10 @@ html {
     color: #3C3C3B;
   }
 
+  .xl\:hover\:text-blend:hover {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -19567,6 +19748,10 @@ html {
 
   .xl\:focus\:text-gray:focus {
     color: #3C3C3B;
+  }
+
+  .xl\:focus\:text-blend:focus {
+    color: rgba(0, 0, 0, 0.25);
   }
 
   .xl\:text-xs {

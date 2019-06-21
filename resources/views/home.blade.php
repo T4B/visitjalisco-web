@@ -10,7 +10,7 @@
 <slider class="main-slider">
     @foreach($sliders->sortBy('order') as $slider)
     <slide>
-        <div class="h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
+        <div class="slide h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container py-32 text-white">
                 @markdown( $slider->text )
             </div>
