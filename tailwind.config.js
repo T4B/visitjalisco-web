@@ -13,8 +13,11 @@ module.exports = {
         white: theme.colors['white'],
         black: theme.colors['black'],
 
-        gray: '#3C3C3B',
-        'gray-navbar': '#606060',
+        grey: '#3C3C3B',
+        gray: {
+            '500': '#606060',
+            '600': '#3C3C3B',
+        },
         orange: '#BB7000',
         purple: '#624298',
         red: '#FF4363',
