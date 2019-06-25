@@ -1,6 +1,9 @@
 @tailwind base;
+@import './theme/base';
+
 @tailwind components;
-@tailwind utilities;
 
 @import './components/all';
 @import './theme/all';
+
+@tailwind utilities;

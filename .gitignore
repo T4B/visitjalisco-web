@@ -11,3 +11,4 @@ npm-debug.log
 yarn-error.log
 .npmrc
 auth.json
+.DS_Store

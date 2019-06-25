@@ -6,7 +6,6 @@ use Laravel\Nova\Http\Middleware\Authenticate;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Nova App Name
@@ -18,7 +17,7 @@ return [
     |
     */
 
-    'name' => 'Nova Site',
+    'name' => env('APP_NAME', 'Visit Jalisco'),
 
     /*
     |--------------------------------------------------------------------------
@@ -90,5 +89,4 @@ return [
     */
 
     'pagination' => 'simple',
-
 ];

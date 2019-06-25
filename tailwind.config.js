@@ -13,11 +13,14 @@ module.exports = {
         white: theme.colors['white'],
         black: theme.colors['black'],
 
-        red: '#FF4363',
+        gray: '#3C3C3B',
+        'gray-navbar': '#606060',
         orange: '#BB7000',
         purple: '#624298',
-        gray: '#3C3C3B',
-        blend: 'rgba(0, 0, 0, 0.25)', 
+        red: '#FF4363',
+
+        blend: 'rgba(0, 0, 0, 0.25)',
+        navbar: 'rgba(0, 0, 0, 0.75)',
     },
     container: {
         center: true,
@@ -26,6 +29,9 @@ module.exports = {
         inset: {
             '16': '4rem',
         },
+        textColor: {
+            'current': 'currentColor'
+        }
     }
   },
   variants: {},

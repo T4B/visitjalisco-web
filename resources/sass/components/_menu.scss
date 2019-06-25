@@ -1,0 +1,63 @@
+$menu-transition-time: 200ms !default;
+$menu-transition-ease: ease-in-out !default;
+
+nav.nav-menu {
+    @apply text-white bg-transparent;
+    transition: $menu-transition-time all $menu-transition-ease;
+    .menu {
+        @apply absolute left-0 w-full;
+        top: -100vh;
+        z-index: -20;
+        transition: $menu-transition-time top $menu-transition-ease;
+        transform: translate3d(0,0,-20px);
+        @screen lg {
+            @apply relative inset-auto z-auto;
+        }
+        &.is-active {
+            top: 100%;
+        }
+
+        > ul {
+            transition: $menu-transition-time all $menu-transition-ease;
+            @apply bg-navbar text-white;
+            @screen lg {
+                @apply bg-transparent text-current;
+                transition: none;
+            }
+        }
+    }
+
+    //Use styles incase of <nav-menu :alt="true" />
+    &.is-alt {
+        @apply text-gray-navbar bg-white shadow-md;
+        .menu {
+            ul {
+                @apply bg-white text-black;
+                @screen lg {
+                    @apply bg-transparent text-current;
+                }
+            }
+        }
+    }
+
+    //Theme styles
+    .menu.is-active:before {
+        @apply absolute top-0 w-full h-40 bg-navbar -mt-40;
+        content: '';
+        @screen lg {
+            content: none;
+        }
+    }
+    .menu-top {
+        @apply justify-end;
+    }
+    .menu-social {
+        @apply overflow-hidden max-w-full;
+        transition: $menu-transition-time max-height $menu-transition-ease, $menu-transition-time border $menu-transition-ease;
+        max-height: theme('spacing.12');
+    }
+    &.is-alt .menu-social {
+        @apply py-0 border-0;
+        max-height: 0;
+    }
+}
