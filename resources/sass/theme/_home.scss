@@ -7,10 +7,10 @@
             @apply .text-2xl;
         }
     }
-    .slide{
-        @apply bg-blend;
-        background-blend-mode: multiply;
-    }
+    // .slide{
+    //     @apply bg-blend;
+    //     background-blend-mode: multiply;
+    // }
 }
 
 .regions{
@@ -27,7 +27,7 @@
 .categories{
     .category{
         height: 50vw;
-        @apply .flex .items-center .justify-center .bg-cover .bg-no-repeat .bg-center .p-4;
+        @apply .flex .items-center .justify-center .bg-cover .bg-no-repeat .bg-center .p-4 .multiply;
         @screen lg{
             height: 20vw;
         }

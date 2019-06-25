@@ -4564,6 +4564,11 @@ html {
   overflow-x: hidden;
 }
 
+.multiply {
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+}
+
 .main-slider .container h2 {
   font-size: 4rem;
   font-weight: 700;
@@ -4572,11 +4577,6 @@ html {
 
 .main-slider .container p {
   font-size: 1.5rem;
-}
-
-.main-slider .slide {
-  background-color: rgba(0, 0, 0, 0.25);
-  background-blend-mode: multiply;
 }
 
 .regions .slider h2 {
@@ -4598,6 +4598,8 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
 }
 
 @media (min-width: 1024px) {
