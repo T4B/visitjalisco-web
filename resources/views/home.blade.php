@@ -11,7 +11,7 @@
     @foreach($sliders->sortBy('order') as $slider)
     <slide>
         <div class="multiply h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
-            <div class="container py-32 text-white">
+            <div class="container text-white px-8 py-20 md:py-40">
                 @markdown( $slider->text )
             </div>
         </div>
@@ -81,7 +81,7 @@
     </div>
 </section>
 
-<section class="events bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
+<section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container py-16">
         <div class="flex flex-wrap mb-8">
             <div class="w-1/2 bg-white">

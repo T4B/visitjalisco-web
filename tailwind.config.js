@@ -15,8 +15,8 @@ module.exports = {
 
         grey: '#3C3C3B',
         gray: {
-            '500': '#606060',
-            '600': '#3C3C3B',
+            '400': '#606060',
+            '500': '#3C3C3B',
         },
         orange: '#BB7000',
         purple: '#624298',
@@ -34,6 +34,9 @@ module.exports = {
         },
         textColor: {
             'current': 'currentColor'
+        },
+        fontSize: {
+            '12xl' : '8rem',
         }
     }
   },

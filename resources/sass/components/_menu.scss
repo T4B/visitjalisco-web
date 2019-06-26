@@ -29,7 +29,7 @@ nav.nav-menu {
 
     //Use styles incase of <nav-menu :alt="true" />
     &.is-alt {
-        @apply text-gray-500 bg-white shadow-md;
+        @apply text-gray-400 bg-white shadow-md;
         .menu {
             ul {
                 @apply bg-white text-black;

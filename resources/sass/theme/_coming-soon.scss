@@ -1,0 +1,8 @@
+.coming-soon{
+    .text-content{
+        @apply .h-screen;
+        @screen md{
+            height: 150vh;
+        }  
+    }
+}
