@@ -4,13 +4,13 @@
             <div class="w-full lg:w-1/3 px-10 mb-6 lg:mb-0 text-center lg:text-left">
                 <h2 class="font-bold font-secondary">Mapa del sitio</h2>
                 <ul class="sitemap lg:pl-8 leading-relaxed py-4">
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Jalisco</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Este es mi Jalisco</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Agenda</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Regiones</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Experiencia</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Ruta</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="#">Eventos y convenciones</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('jalisco') }}">Jalisco</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('mi-jalisco') }}">Este es mi Jalisco</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('agenda') }}">Agenda</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('regiones') }}">Regiones</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('experiencias') }}">Experiencia</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('rutas') }}">Ruta</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('eventos') }}">Eventos y convenciones</a></li>
                 </ul>
             </div>
             <div class="w-full lg:w-1/4 text-center relative">

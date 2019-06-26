@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="flex w-full">
-            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-md" href="">Más eventos</a>
+            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-md" href="{{ route('eventos') }}">Más eventos</a>
         </div>
     </div>
 </section>
@@ -156,7 +156,7 @@
             </div>
         </div>
         <div class="flex w-full py-4">
-            <a class="font-serif text-3xl ml-auto text-white" href="">Más rutas</a>
+            <a class="font-serif text-3xl ml-auto text-white" href="{{ route('rutas') }}">Más rutas</a>
         </div>
     </div>
 </section>
