@@ -119,7 +119,7 @@
     </div>
 </section>
 
-<section class="routes bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-routes.jpg') }})">
+<section class="routes multiply bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-routes.jpg') }})">
     <div class="container py-10 px-10 lg:px-0">
         <div class="w-full bg-white p-10 rounded-lg">
             <img class="w-full" src="{{ asset('images/routes/ruta_banner_fransiscana.jpg') }}">
