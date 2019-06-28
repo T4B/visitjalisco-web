@@ -22,7 +22,11 @@ module.exports = {
         purple: '#624298',
         red: '#FF4363',
 
-        blend: 'rgba(0, 0, 0, 0.25)',
+        //blend: 'rgba(0, 0, 0, 0.25)',
+        blend: {
+            '25': 'rgba(0, 0, 0, 0.25)',
+            '40': 'rgba(0, 0, 0, 0.40)',
+        },
         navbar: 'rgba(0, 0, 0, 0.75)',
     },
     container: {

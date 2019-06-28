@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 @yield('css')
 </head>
-<body>
+<body class="visitjalisco-@yield('page-name', 'default')">
 <div id="app">
 @include('partials.header')
 @yield('content')

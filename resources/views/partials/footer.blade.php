@@ -43,7 +43,7 @@
                 <p>Página Oficial del estado de Jalisco, México.</p> 
                 <p>Compartimos y promovemos experiencias de los hermosos destinos vacacionales y culturales.</p>
                 <div class="flex flex-row items-center">
-                    <div class="w-1/2">
+                    <div class="w-1/2 border-r border-white">
                         <img class="h-12 mx-auto" src="{{ asset('images/Logo_turismo_blanco.svg') }}">
                     </div>
                     <div class="w-1/2">

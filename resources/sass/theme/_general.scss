@@ -1,4 +1,9 @@
 .multiply{
-    @apply bg-blend;
+    @apply bg-blend-25;
+    background-blend-mode: multiply;
+}
+
+.multiply-40{
+    @apply bg-blend-40;
     background-blend-mode: multiply;
 }

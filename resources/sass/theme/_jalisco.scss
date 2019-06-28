@@ -1,0 +1,23 @@
+.visitjalisco-jalisco{
+    .headerimage{
+        height: 90vh;
+        @screen md{
+            max-height: 600px;
+        } 
+    }
+
+    .history, .jalisco-info{
+        p{
+            @apply .mb-8;
+        }
+    }
+
+    .history{
+        .slider{
+            h2{
+                @apply .text-2xl .font-bold .leading-tight;
+            }
+        }
+
+    }
+}
