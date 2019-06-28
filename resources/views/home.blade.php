@@ -84,8 +84,8 @@
 <section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container py-16">
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white">
-                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-md" style="background-image:url({{ asset('images/events/eventos_home_open_vallarta.jpg') }})"></div>
+            <div class="w-1/2 bg-white z-0">
+                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_open_vallarta.jpg') }})"></div>
             </div>
             <div class="w-1/2 bg-white p-8">
                 <h2>Open Vallarta</h2>
@@ -94,8 +94,8 @@
             </div>
         </div>
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white">
-                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-md" style="background-image:url({{ asset('images/events/eventos_home_mariachi.jpg') }})"></div>
+            <div class="w-1/2 bg-white z-0">
+                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_mariachi.jpg') }})"></div>
             </div>
             <div class="w-1/2 bg-white p-8">
                 <h2>Encuentro Internacional de Mariachi y Charrería 2019</h2>
@@ -104,8 +104,8 @@
             </div>
         </div>
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white">
-                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-md" style="background-image:url({{ asset('images/events/eventos_home_coordenada.jpg') }})"></div>
+            <div class="w-1/2 bg-white z-0">
+                <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_coordenada.jpg') }})"></div>
             </div>
             <div class="w-1/2 bg-white p-8">
                 <h2>Coordenada</h2>
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="flex w-full">
-            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-md" href="{{ route('eventos') }}">Más eventos</a>
+            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-7xl" href="{{ route('eventos') }}">Más eventos</a>
         </div>
     </div>
 </section>

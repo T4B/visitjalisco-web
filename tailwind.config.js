@@ -41,7 +41,10 @@ module.exports = {
         },
         fontSize: {
             '12xl' : '8rem',
-        }
+        },
+        boxShadow: {
+            '7xl' : '7px 7px 5px 0px rgba(0,0,0,0.1)',
+        },
     }
   },
   variants: {},
