@@ -112,4 +112,21 @@
     </div>
 </section>
 
+<section class="map">
+    <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 p-12">
+            <img src="{{ asset('images/map.jpg') }}">
+        </div>
+        <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center" style="background-image:url({{ asset('images/region.jpg') }})">
+            <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
+                <div class="text-left">
+                    <h3 class="font-secondary text-5xl"><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1 -ml-12 align-middle"></font-awesome-icon>Región Centro</h3>
+                    <p class="text-xl">Si visitas Jalisco, muy probablemente pases por aquí al disfrutar de la capital, Guadalajara, o al caminar por los bellísimos andadores de Tlaquepaque. ¡Bienvenido! </p>
+                </div>
+                <a class="bg-red text-white px-8 py-2 shadow-7xl my-8 inline-block" href="{{ route('regiones') }}">Más información</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
