@@ -17,22 +17,22 @@
                 <h1 class="font-bold text-2xl mb-2">Síguenos</h1>
                 <ul class="w-full lg:w-auto flex justify-center text-2xl">
                     <li class="mr-3 lg:mx-1">
-                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://facebook.com" target="_blank" rel="noopener">
+                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://www.facebook.com/JaliscoEsMexico/" target="_blank" rel="noopener">
                             <font-awesome-icon :icon="['fab', 'facebook-square']" fixed-width></font-awesome-icon>
                         </a>
                     </li>
                     <li class="mr-3 lg:mx-1">
-                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://twitter.com" target="_blank" rel="noopener">
+                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://twitter.com/JaliscoEsMexico" target="_blank" rel="noopener">
                             <font-awesome-icon :icon="['fab', 'twitter-square']" fixed-width></font-awesome-icon>
                         </a>
                     </li>
                     <li class="lg:mr-0 lg:mx-1">
-                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://instagram.com" target="_blank" rel="noopener">
+                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://www.instagram.com/jalisco.esmexico/" target="_blank" rel="noopener">
                             <font-awesome-icon :icon="['fab', 'instagram']" fixed-width></font-awesome-icon>
                         </a>
                     </li>
                     <li class="lg:mx-1">
-                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://youtube.com" target="_blank" rel="noopener">
+                        <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://www.youtube.com/user/JaliscoEsMexicoTube" target="_blank" rel="noopener">
                             <font-awesome-icon :icon="['fab', 'youtube']" fixed-width></font-awesome-icon>
                         </a>
                     </li>
