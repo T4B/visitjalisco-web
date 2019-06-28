@@ -801,7 +801,7 @@ nav.nav-menu.is-alt .menu-logo a {
   line-height: 1;
 }
 
-@scrren md {
+@media (min-width: 768px) {
   .main-slider .container h2 {
     font-size: 4rem;
   }

@@ -2,7 +2,7 @@
     .container{
         h2{
             @apply .text-4xl .font-bold .leading-none;
-            @scrren md{
+            @screen md{
                 @apply .text-6xl;
             }
         }
