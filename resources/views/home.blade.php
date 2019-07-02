@@ -10,7 +10,7 @@
 <slider class="main-slider">
     @foreach($sliders->sortBy('order') as $slider)
     <slide>
-        <div class="multiply h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
+        <div class="multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container text-white px-8 py-20 md:py-40">
                 @markdown( $slider->text )
             </div>
@@ -84,30 +84,30 @@
 <section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container py-16">
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white z-0">
+            <div class="w-full md:w-1/2 bg-white z-0">
                 <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_open_vallarta.jpg') }})"></div>
             </div>
-            <div class="w-1/2 bg-white p-8">
+            <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Open Vallarta</h2>
                 <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Puerto Vallarta</p>
                 <p>29 de abril - 5 de mayo</p>
             </div>
         </div>
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white z-0">
+            <div class="w-full md:w-1/2 bg-white z-0">
                 <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_mariachi.jpg') }})"></div>
             </div>
-            <div class="w-1/2 bg-white p-8">
+            <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Encuentro Internacional de Mariachi y Charrería 2019</h2>
                 <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Guadalajara</p>
                 <p>23 de agosto - 1 de septiembre</p>
             </div>
         </div>
         <div class="flex flex-wrap mb-8">
-            <div class="w-1/2 bg-white z-0">
+            <div class="w-full md:w-1/2 bg-white z-0">
                 <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_coordenada.jpg') }})"></div>
             </div>
-            <div class="w-1/2 bg-white p-8">
+            <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Coordenada</h2>
                 <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Guadalajara</p>
                 <p>18 - 19 de octubre</p>
