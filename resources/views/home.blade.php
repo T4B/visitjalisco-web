@@ -12,7 +12,7 @@
     <slide>
         <div class="multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container text-white px-8 py-20 md:py-40">
-                @markdown( $slider->text )
+                @markdown( $slider->text_es )
             </div>
         </div>
     </slide>
@@ -25,9 +25,8 @@
         <div class="flex flex-wrap text-black">
             <div class="flex flex-row items-center w-full md:w-1/3 px-10 lg:px-0 py-8">
                 <div class="w-full flex-1 leading-tight font-light">
-                    <h1 class="text-5xl">Este es </br><span class="font-bold">Mi Jalisco</span></h1>
-                    <p class="text-2xl py-8">Estas son las historias y </br>experiencias que nuestras</br> regiones ofrecen,</br>
-                        <span class="font-bold">Vividas a profundidad.</span></p>
+                    <h1 class="text-5xl">@lang('home.this-is') </br><span class="font-bold">@lang('home.mi-jalisco')</span></h1>
+                    <p class="text-2xl py-8">@lang('home.mi-jalisco-text')</p>
                 </div>
             </div>
             <div class="w-full md:w-7/12 ml-auto">
@@ -49,34 +48,34 @@
 <section class="categories font-secondary leading-tight">
     <div class="flex flex-wrap text-white text-center font-bold">
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_titulo.jpg') }})">
-            <h2 class="text-2xl">Experiencias</h2>
+            <h2 class="text-2xl">@lang('categories.experiences')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_cultura.jpg') }})">
-            <h2 class="text-2xl">Cultura</h2>
+            <h2 class="text-2xl">@lang('categories.culture')</h2>
         </div>
          <div class="category w-1/2 lg:w-1/5 " style="background-image:url({{ asset('images/categories/experiensa_home_deporte.jpg') }})">
-            <h2 class="text-2xl">Deportivo</h2>
+            <h2 class="text-2xl">@lang('categories.sports')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_gastronomia.jpg') }})">
-            <h2 class="text-2xl">Gastronómico</h2>
+            <h2 class="text-2xl">@lang('categories.gastronomic')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_lgbt.jpg') }})">
-            <h2 class="text-2xl">LGBTTTIQ</h2>
+            <h2 class="text-2xl">@lang('categories.lgbtttiq')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_naturaleza.jpg') }})">
-            <h2 class="text-2xl">Naturaleza</h2>
+            <h2 class="text-2xl">@lang('categories.nature')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_negocios.jpg') }})">
-            <h2 class="text-2xl">Negocio y reuniones</h2>
+            <h2 class="text-2xl">@lang('categories.business')</h2>
         </div>
          <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_religioso.jpg') }})">
-            <h2 class="text-2xl">Religioso</h2>
+            <h2 class="text-2xl">@lang('categories.religious')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_salud.jpg') }})">
-            <h2 class="text-2xl">Salud y Bienestar</h2>
+            <h2 class="text-2xl">@lang('categories.health')</h2>
         </div>
         <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_playa.jpg') }})">
-            <h2 class="text-2xl">Sol y Playa</h2>
+            <h2 class="text-2xl">@lang('categories.beach')</h2>
         </div>
     </div>
 </section>
@@ -114,7 +113,7 @@
             </div>
         </div>
         <div class="flex w-full">
-            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-7xl" href="{{ route('eventos') }}">Más eventos</a>
+            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-7xl" href="{{ route('eventos') }}">@lang('home.more-events')</a>
         </div>
     </div>
 </section>
@@ -156,7 +155,7 @@
             </div>
         </div>
         <div class="flex w-full py-4">
-            <a class="font-serif text-3xl ml-auto text-white" href="{{ route('rutas') }}">Más rutas</a>
+            <a class="font-serif text-3xl ml-auto text-white" href="{{ route('rutas') }}">@lang('home.more-routes')</a>
         </div>
     </div>
 </section>

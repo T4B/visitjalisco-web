@@ -53,7 +53,7 @@ class Slider extends Resource
                 ->updateRules('nullable')
                 ->prunable(),
 
-            Markdown::make('Texto', 'text')
+            Markdown::make('Texto', 'text_es')
                 ->rules('nullable'),
                 
             Number::make('Orden', 'order')

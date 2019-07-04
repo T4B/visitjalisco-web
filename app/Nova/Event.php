@@ -63,7 +63,7 @@ class Event extends Resource
             ])->hideFromIndex(),
             Image::make('Imagen', 'image')
                 ->disk('public')
-                ->path('slider')
+                ->path('events')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
