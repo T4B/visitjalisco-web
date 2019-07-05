@@ -82,7 +82,7 @@
 
 <section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container py-16">
-        @foreach($events as $event)
+        @foreach($events->sortBy('id') as $event)
             <div class="flex flex-wrap mb-8">
                 <div class="w-full md:w-1/2 bg-white z-0">
                     <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset($event->large) }})"></div>
