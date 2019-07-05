@@ -11,13 +11,12 @@ class HomeTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * A basic feature test example.
      *
-     * @return void
+     * @test
      */
-    public function testExample()
+    public function home_view_has_sliders()
     {
-        $page = factory('App\Slider', 4)->create();
+        factory('App\Slider', 4)->create();
 
         $response = $this->get('/')
                     ->assertStatus(200)
@@ -26,5 +25,23 @@ class HomeTest extends TestCase
         $sliders = $response->original['sliders'];
 
         $this->assertEquals(4, count($sliders));  
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function home_view_has_highlighted_events()
+    {
+        factory('App\Event', 5)->create(['highlight' => 1]);
+        factory('App\Event')->create(['highlight' => 0]);
+
+        $response = $this->get('/')
+                    ->assertStatus(200)
+                    ->assertViewHas('events')
+                    ->assertViewIs('home');
+        $events = $response->original['events'];
+
+        $this->assertEquals(3, count($events));  
     }
 }

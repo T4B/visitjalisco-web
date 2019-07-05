@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Boolean;
 
 class Event extends Resource
 {
@@ -47,11 +48,11 @@ class Event extends Resource
             ID::make()->onlyOnForms(),
             Text::make('Nombre', 'name')
                 ->sortable(),
-            Text::make('Fecha', 'date')
+            Text::make('Fecha', 'date_es')
                 ->sortable(),
             Text::make('Lugar', 'place')
                 ->sortable(),
-            Markdown::make('Texto', 'text')
+            Markdown::make('Texto', 'text_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
             Text::make('Enlace', 'url')
@@ -61,13 +62,21 @@ class Event extends Resource
                 '_blank' => 'Blank',
                 '_self' => 'Self',
             ])->hideFromIndex(),
-            Image::make('Imagen', 'image')
+            Image::make('Imagen principal', 'thumb_image')
                 ->disk('public')
                 ->path('events')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
+                ->prunable(),
+            Boolean::make('Destacado', 'highlight'),
+            Image::make('Imagen destacados', 'large_image')
+                ->disk('public')
+                ->path('events')
+                ->rules('max:1024')
+                ->updateRules('nullable')
                 ->prunable()
+                ->hideFromIndex()
         ];
     }
 

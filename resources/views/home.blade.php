@@ -82,7 +82,19 @@
 
 <section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container py-16">
-        <div class="flex flex-wrap mb-8">
+        @foreach($events as $event)
+            <div class="flex flex-wrap mb-8">
+                <div class="w-full md:w-1/2 bg-white z-0">
+                    <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset($event->large) }})"></div>
+                </div>
+                <div class="w-full md:w-1/2 bg-white p-8">
+                    <h2>{{ $event->name }}</h2>
+                    <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>{{ $event->place }}</p>
+                    <p>{{ $event->date_es }}</p>
+                </div>
+            </div>
+        @endforeach
+        {{-- <div class="flex flex-wrap mb-8">
             <div class="w-full md:w-1/2 bg-white z-0">
                 <div class="bg-cover bg-no-repeat bg-center p-20 -mt-4 -ml-4 shadow-7xl z-10" style="background-image:url({{ asset('images/events/eventos_home_open_vallarta.jpg') }})"></div>
             </div>
@@ -111,7 +123,7 @@
                 <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Guadalajara</p>
                 <p>18 - 19 de octubre</p>
             </div>
-        </div>
+        </div> --}}
         <div class="flex w-full">
             <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-7xl" href="{{ route('eventos') }}">@lang('home.more-events')</a>
         </div>
