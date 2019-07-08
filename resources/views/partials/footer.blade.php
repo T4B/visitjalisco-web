@@ -1,4 +1,4 @@
-<footer class="bg-red">
+<footer class="bg-red-400">
     <div class="container py-10">
         <div class="flex flex-wrap text-white">
             <div class="w-full lg:w-1/3 px-10 mb-6 lg:mb-0 text-center lg:text-left">

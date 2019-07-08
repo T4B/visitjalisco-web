@@ -125,7 +125,7 @@
             </div>
         </div> --}}
         <div class="flex w-full">
-            <a class="font-secondary text-2xl font-bold ml-auto bg-red text-white px-8 py-2 rounded-lg shadow-7xl" href="{{ route('eventos') }}">@lang('home.more-events')</a>
+            <a class="button font-secondary text-2xl font-bold ml-auto px-8 py-2 shadow-7xl" href="{{ route('eventos') }}">@lang('home.more-events')</a>
         </div>
     </div>
 </section>

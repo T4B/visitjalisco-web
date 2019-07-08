@@ -7,3 +7,7 @@
     @apply bg-blend-40;
     background-blend-mode: multiply;
 }
+
+.button{
+    @apply .bg-red-400 .text-white .rounded-lg;
+}

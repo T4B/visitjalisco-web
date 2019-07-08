@@ -15,13 +15,19 @@ module.exports = {
 
         grey: '#3C3C3B',
         gray: {
+            '100': '#F4F4F4',
             '400': '#606060',
             '500': '#3C3C3B',
+            '600': '#575756'
         },
         orange: '#BB7000',
         purple: '#624298',
-        red: '#FF4363',
-
+        //red: '#FF4363',
+        red: {
+            '400': '#FF4363',
+            '500': '#AE2E44',
+        },
+        
         //blend: 'rgba(0, 0, 0, 0.25)',
         blend: {
             '25': 'rgba(0, 0, 0, 0.25)',
@@ -40,6 +46,7 @@ module.exports = {
             'current': 'currentColor'
         },
         fontSize: {
+            '8xl' : '5rem',
             '12xl' : '8rem',
         },
         boxShadow: {

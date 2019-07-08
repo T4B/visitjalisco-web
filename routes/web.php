@@ -16,7 +16,7 @@ Route::get('/coming-soon', 'ComingSoonController@index')->name('coming-soon');
 
 Route::get('/jalisco', 'JaliscoController@jalisco')->name('jalisco');
 Route::get('/este-es-mi-jalisco', 'ComingSoonController@index')->name('mi-jalisco');
-Route::get('/agenda', 'ComingSoonController@index')->name('agenda');
+Route::get('/agenda', 'ScheduleController@index')->name('agenda');
 Route::get('/regiones', 'ComingSoonController@index')->name('regiones');
 Route::get('/experiencias', 'ComingSoonController@index')->name('experiencias');
 Route::get('/rutas', 'ComingSoonController@index')->name('rutas');

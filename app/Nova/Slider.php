@@ -8,6 +8,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 
 class Slider extends Resource
 {
@@ -55,6 +56,11 @@ class Slider extends Resource
 
             Markdown::make('Texto', 'text_es')
                 ->rules('nullable'),
+
+            Select::make('Ubicación', 'position')->options([
+                'home' => 'Home',
+                'schedule' => 'Agenda',
+            ])->displayUsingLabels(),
                 
             Number::make('Orden', 'order')
                 ->min(1)->max(20)
