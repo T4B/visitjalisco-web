@@ -15,7 +15,7 @@
             </div>
             <div class="w-full lg:w-1/4 text-center relative">
                 <h1 class="font-bold text-2xl mb-2"> @lang('general.follow-us') </h1>
-                <ul class="w-full lg:w-auto flex justify-center text-2xl">
+                <ul class="w-full lg:w-auto flex justify-center text-3xl">
                     <li class="mr-3 lg:mx-1">
                         <a class="inline-block text-white w-8 h-8 flex justify-center items-center" href="https://www.facebook.com/JaliscoEsMexico/" target="_blank" rel="noopener">
                             <font-awesome-icon :icon="['fab', 'facebook-square']" fixed-width></font-awesome-icon>

@@ -135,7 +135,7 @@
         <div class="w-full bg-white p-10 rounded-lg">
             <img class="w-full" src="{{ asset('images/routes/ruta_banner_fransiscana.jpg') }}">
             <div class="px-4 text-sm">
-                <h2 class="font-secondary font-bold text-3xl my-2">Ruta Franciscana de Tlajomulco</h2>
+                <h2 class="font-secondary font-bold text-2xl my-2">Ruta Franciscana de Tlajomulco</h2>
                 <p>Esta ruta recorre un total de 10 templos donde podrás conocer parte
                     de la historia de Tlajomulco, 
                     uno de los municipios que conforman la Zona Metropolitana de
@@ -149,19 +149,19 @@
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_costa_alegre.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-3xl my-2 leading-none">Ruta Costalegre</h2>
+                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none">Ruta Costalegre</h2>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_huachimontones.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-3xl my-2 leading-none">Ruta Guachimontones</h2>
+                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none">Ruta Guachimontones</h2>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="bg-white p-4 rounded-lg text-center">
                         <div class="bg-cover bg-no-repeat bg-center p-32 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_agave.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-3xl my-2 leading-none">Ruta Paisaje Agavero</h2>
+                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none">Ruta Paisaje Agavero</h2>
                     </div>
                 </div>
             </div>

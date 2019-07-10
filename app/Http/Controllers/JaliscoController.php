@@ -8,6 +8,12 @@ class JaliscoController extends Controller
 {
     public function jalisco()
     {
-        return view('jalisco');
+        $jalisco = \App\Jalisco::where('language', 'es')->first();
+        return view('jalisco', compact('jalisco'));
+    }
+
+    public function mijalisco()
+    {
+        return view('mi-jalisco');
     }
 }

@@ -6,11 +6,14 @@ import { faFacebookSquare as fabFacebookSquare } from '@fortawesome/free-brands-
 import { faTwitterSquare as fabTwitterSquare } from '@fortawesome/free-brands-svg-icons/faTwitterSquare'
 import { faInstagram as fabInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
 import { faYoutube as fabYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube'
+import { faPinterest as fabPinterest } from '@fortawesome/free-brands-svg-icons/faPinterest'
 import { faMapMarkerAlt as fasMapMarketAlt } from '@fortawesome/pro-solid-svg-icons/faMapMarkerAlt'
 import { faChevronLeft as fasChevronLeft } from '@fortawesome/pro-solid-svg-icons/faChevronLeft'
 import { faChevronRight as fasChevronRight } from '@fortawesome/pro-solid-svg-icons/faChevronRight'
 import { faPlayCircle as fasPlayCircle } from '@fortawesome/pro-solid-svg-icons/faPlayCircle'
 import { faHorizontalRule as fasHorizontalRule } from '@fortawesome/pro-solid-svg-icons/faHorizontalRule'
+import { faPlusSquare as fasPlusSquare } from '@fortawesome/pro-solid-svg-icons/faPlusSquare'
+import { faEnvelope as farEnvelope } from '@fortawesome/pro-regular-svg-icons/faEnvelope'
 
 library.add(
     fasTimes,
@@ -19,9 +22,12 @@ library.add(
     fabTwitterSquare,
     fabInstagram,
     fabYoutube,
+    fabPinterest,
     fasMapMarketAlt,
     fasChevronLeft,
     fasChevronRight,
     fasPlayCircle, 
-    fasHorizontalRule
+    fasHorizontalRule,
+    fasPlusSquare,
+    farEnvelope,
 );

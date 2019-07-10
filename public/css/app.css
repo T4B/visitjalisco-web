@@ -872,7 +872,31 @@ nav.nav-menu.is-alt .menu-logo a {
   }
 }
 
+.visitjalisco-jalisco .headerimage h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+@media (min-width: 1024px) {
+  .visitjalisco-jalisco .headerimage h1 {
+    font-size: 4rem;
+  }
+}
+
 .visitjalisco-jalisco .history p, .visitjalisco-jalisco .jalisco-info p {
+  margin-bottom: 2rem;
+}
+
+.visitjalisco-jalisco .jalisco-info h1 {
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.25;
+  font-family: Arimo, sans-serif;
+}
+
+.visitjalisco-jalisco .jalisco-info h1:last-of-type {
   margin-bottom: 2rem;
 }
 
@@ -935,6 +959,10 @@ nav.nav-menu.is-alt .menu-logo a {
 
 .schedule .events-navigation .page-item.disabled {
   display: none;
+}
+
+.visitjalisco-mi-jalisco .headerimage {
+  max-height: 450px;
 }
 
 .appearance-none {
@@ -4217,6 +4245,13 @@ nav.nav-menu.is-alt .menu-logo a {
   left: 0;
 }
 
+.inset-8 {
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+}
+
 .inset-16 {
   top: 4rem;
   right: 4rem;
@@ -4239,6 +4274,16 @@ nav.nav-menu.is-alt .menu-logo a {
 .inset-x-0 {
   right: 0;
   left: 0;
+}
+
+.inset-y-8 {
+  top: 2rem;
+  bottom: 2rem;
+}
+
+.inset-x-8 {
+  right: 2rem;
+  left: 2rem;
 }
 
 .inset-y-16 {
@@ -4275,6 +4320,22 @@ nav.nav-menu.is-alt .menu-logo a {
 
 .left-0 {
   left: 0;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.right-8 {
+  right: 2rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.left-8 {
+  left: 2rem;
 }
 
 .top-16 {
@@ -8399,6 +8460,13 @@ nav.nav-menu.is-alt .menu-logo a {
     left: 0;
   }
 
+  .sm\:inset-8 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .sm\:inset-16 {
     top: 4rem;
     right: 4rem;
@@ -8421,6 +8489,16 @@ nav.nav-menu.is-alt .menu-logo a {
   .sm\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .sm\:inset-y-8 {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .sm\:inset-x-8 {
+    right: 2rem;
+    left: 2rem;
   }
 
   .sm\:inset-y-16 {
@@ -8457,6 +8535,22 @@ nav.nav-menu.is-alt .menu-logo a {
 
   .sm\:left-0 {
     left: 0;
+  }
+
+  .sm\:top-8 {
+    top: 2rem;
+  }
+
+  .sm\:right-8 {
+    right: 2rem;
+  }
+
+  .sm\:bottom-8 {
+    bottom: 2rem;
+  }
+
+  .sm\:left-8 {
+    left: 2rem;
   }
 
   .sm\:top-16 {
@@ -12582,6 +12676,13 @@ nav.nav-menu.is-alt .menu-logo a {
     left: 0;
   }
 
+  .md\:inset-8 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .md\:inset-16 {
     top: 4rem;
     right: 4rem;
@@ -12604,6 +12705,16 @@ nav.nav-menu.is-alt .menu-logo a {
   .md\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .md\:inset-y-8 {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .md\:inset-x-8 {
+    right: 2rem;
+    left: 2rem;
   }
 
   .md\:inset-y-16 {
@@ -12640,6 +12751,22 @@ nav.nav-menu.is-alt .menu-logo a {
 
   .md\:left-0 {
     left: 0;
+  }
+
+  .md\:top-8 {
+    top: 2rem;
+  }
+
+  .md\:right-8 {
+    right: 2rem;
+  }
+
+  .md\:bottom-8 {
+    bottom: 2rem;
+  }
+
+  .md\:left-8 {
+    left: 2rem;
   }
 
   .md\:top-16 {
@@ -16765,6 +16892,13 @@ nav.nav-menu.is-alt .menu-logo a {
     left: 0;
   }
 
+  .lg\:inset-8 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .lg\:inset-16 {
     top: 4rem;
     right: 4rem;
@@ -16787,6 +16921,16 @@ nav.nav-menu.is-alt .menu-logo a {
   .lg\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .lg\:inset-y-8 {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .lg\:inset-x-8 {
+    right: 2rem;
+    left: 2rem;
   }
 
   .lg\:inset-y-16 {
@@ -16823,6 +16967,22 @@ nav.nav-menu.is-alt .menu-logo a {
 
   .lg\:left-0 {
     left: 0;
+  }
+
+  .lg\:top-8 {
+    top: 2rem;
+  }
+
+  .lg\:right-8 {
+    right: 2rem;
+  }
+
+  .lg\:bottom-8 {
+    bottom: 2rem;
+  }
+
+  .lg\:left-8 {
+    left: 2rem;
   }
 
   .lg\:top-16 {
@@ -20948,6 +21108,13 @@ nav.nav-menu.is-alt .menu-logo a {
     left: 0;
   }
 
+  .xl\:inset-8 {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .xl\:inset-16 {
     top: 4rem;
     right: 4rem;
@@ -20970,6 +21137,16 @@ nav.nav-menu.is-alt .menu-logo a {
   .xl\:inset-x-0 {
     right: 0;
     left: 0;
+  }
+
+  .xl\:inset-y-8 {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .xl\:inset-x-8 {
+    right: 2rem;
+    left: 2rem;
   }
 
   .xl\:inset-y-16 {
@@ -21006,6 +21183,22 @@ nav.nav-menu.is-alt .menu-logo a {
 
   .xl\:left-0 {
     left: 0;
+  }
+
+  .xl\:top-8 {
+    top: 2rem;
+  }
+
+  .xl\:right-8 {
+    right: 2rem;
+  }
+
+  .xl\:bottom-8 {
+    bottom: 2rem;
+  }
+
+  .xl\:left-8 {
+    left: 2rem;
   }
 
   .xl\:top-16 {

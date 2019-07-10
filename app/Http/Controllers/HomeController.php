@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $sliders = \App\Slider::all();
+        $sliders = \App\Slider::where('position', 'home')->get();
         $events = \App\Event::where('highlight', 1)->orderBy('id', 'desc')->take(3)->get();
         return view('home', compact('sliders', 'events'));
     }

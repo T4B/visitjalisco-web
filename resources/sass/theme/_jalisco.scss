@@ -4,11 +4,26 @@
         @screen md{
             max-height: 600px;
         } 
+        h1{
+            @apply .mx-auto .text-4xl .font-normal;
+            @screen lg{
+                @apply .text-6xl;
+            }
+        }
     }
 
     .history, .jalisco-info{
         p{
             @apply .mb-8;
+        }
+    }
+
+    .jalisco-info{
+        h1{
+            @apply .font-normal .text-6xl .leading-tight .font-secondary;
+            &:last-of-type{
+                @apply .mb-8;
+            }
         }
     }
 

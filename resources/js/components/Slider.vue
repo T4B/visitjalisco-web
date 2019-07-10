@@ -38,6 +38,14 @@ export default {
       type: Number,
       default: 4000
     },
+    slides: {
+      type: Number,
+      default: 1,
+    },
+    space: {
+      type: Number,
+      default: 0
+    }
   },
   data() {
     return {
@@ -55,6 +63,8 @@ export default {
         // autoplay: {
         //     delay: this.delay,
         // },
+        slidesPerView: this.slides,
+        spaceBetween: this.space,
       }
     }
   },

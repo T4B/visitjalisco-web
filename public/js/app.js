@@ -2543,6 +2543,46 @@ exports.svgPathData = svgPathData;
 
 /***/ }),
 
+/***/ "./node_modules/@fortawesome/free-brands-svg-icons/faPinterest.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@fortawesome/free-brands-svg-icons/faPinterest.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fab';
+var iconName = 'pinterest';
+var width = 496;
+var height = 512;
+var ligatures = [];
+var unicode = 'f0d2';
+var svgPathData = 'M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faPinterest = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = ligatures;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+
+/***/ }),
+
 /***/ "./node_modules/@fortawesome/free-brands-svg-icons/faTwitterSquare.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/@fortawesome/free-brands-svg-icons/faTwitterSquare.js ***!
@@ -2613,6 +2653,46 @@ exports.definition = {
   ]};
 
 exports.faYoutube = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = ligatures;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/pro-regular-svg-icons/faEnvelope.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@fortawesome/pro-regular-svg-icons/faEnvelope.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'far';
+var iconName = 'envelope';
+var width = 512;
+var height = 512;
+var ligatures = [];
+var unicode = 'f0e0';
+var svgPathData = 'M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faEnvelope = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -2853,6 +2933,46 @@ exports.definition = {
   ]};
 
 exports.faPlayCircle = exports.definition;
+exports.prefix = prefix;
+exports.iconName = iconName;
+exports.width = width;
+exports.height = height;
+exports.ligatures = ligatures;
+exports.unicode = unicode;
+exports.svgPathData = svgPathData;
+
+/***/ }),
+
+/***/ "./node_modules/@fortawesome/pro-solid-svg-icons/faPlusSquare.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@fortawesome/pro-solid-svg-icons/faPlusSquare.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, '__esModule', { value: true });
+var prefix = 'fas';
+var iconName = 'plus-square';
+var width = 448;
+var height = 512;
+var ligatures = [];
+var unicode = 'f0fe';
+var svgPathData = 'M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-32 252c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92H92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z';
+
+exports.definition = {
+  prefix: prefix,
+  iconName: iconName,
+  icon: [
+    width,
+    height,
+    ligatures,
+    unicode,
+    svgPathData
+  ]};
+
+exports.faPlusSquare = exports.definition;
 exports.prefix = prefix;
 exports.iconName = iconName;
 exports.width = width;
@@ -5321,6 +5441,14 @@ __webpack_require__.r(__webpack_exports__);
     delay: {
       type: Number,
       "default": 4000
+    },
+    slides: {
+      type: Number,
+      "default": 1
+    },
+    space: {
+      type: Number,
+      "default": 0
     }
   },
   data: function data() {
@@ -5335,10 +5463,12 @@ __webpack_require__.r(__webpack_exports__);
         pagination: {
           el: '.swiper-pagination',
           clickable: true
-        } // autoplay: {
+        },
+        // autoplay: {
         //     delay: this.delay,
         // },
-
+        slidesPerView: this.slides,
+        spaceBetween: this.space
       }
     };
   },
@@ -46280,16 +46410,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faYoutube */ "./node_modules/@fortawesome/free-brands-svg-icons/faYoutube.js");
 /* harmony import */ var _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faMapMarkerAlt */ "./node_modules/@fortawesome/pro-solid-svg-icons/faMapMarkerAlt.js");
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faChevronLeft */ "./node_modules/@fortawesome/pro-solid-svg-icons/faChevronLeft.js");
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faChevronRight */ "./node_modules/@fortawesome/pro-solid-svg-icons/faChevronRight.js");
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faPlayCircle */ "./node_modules/@fortawesome/pro-solid-svg-icons/faPlayCircle.js");
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faHorizontalRule */ "./node_modules/@fortawesome/pro-solid-svg-icons/faHorizontalRule.js");
-/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _fortawesome_free_brands_svg_icons_faPinterest__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons/faPinterest */ "./node_modules/@fortawesome/free-brands-svg-icons/faPinterest.js");
+/* harmony import */ var _fortawesome_free_brands_svg_icons_faPinterest__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons_faPinterest__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faMapMarkerAlt */ "./node_modules/@fortawesome/pro-solid-svg-icons/faMapMarkerAlt.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faChevronLeft */ "./node_modules/@fortawesome/pro-solid-svg-icons/faChevronLeft.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faChevronRight */ "./node_modules/@fortawesome/pro-solid-svg-icons/faChevronRight.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faPlayCircle */ "./node_modules/@fortawesome/pro-solid-svg-icons/faPlayCircle.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faHorizontalRule */ "./node_modules/@fortawesome/pro-solid-svg-icons/faHorizontalRule.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlusSquare__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fortawesome/pro-solid-svg-icons/faPlusSquare */ "./node_modules/@fortawesome/pro-solid-svg-icons/faPlusSquare.js");
+/* harmony import */ var _fortawesome_pro_solid_svg_icons_faPlusSquare__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_solid_svg_icons_faPlusSquare__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _fortawesome_pro_regular_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fortawesome/pro-regular-svg-icons/faEnvelope */ "./node_modules/@fortawesome/pro-regular-svg-icons/faEnvelope.js");
+/* harmony import */ var _fortawesome_pro_regular_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_pro_regular_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -46302,7 +46438,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_pro_solid_svg_icons_faTimes__WEBPACK_IMPORTED_MODULE_1__["faTimes"], _fortawesome_pro_solid_svg_icons_faBars__WEBPACK_IMPORTED_MODULE_2__["faBars"], _fortawesome_free_brands_svg_icons_faFacebookSquare__WEBPACK_IMPORTED_MODULE_3__["faFacebookSquare"], _fortawesome_free_brands_svg_icons_faTwitterSquare__WEBPACK_IMPORTED_MODULE_4__["faTwitterSquare"], _fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5__["faInstagram"], _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__["faYoutube"], _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_7__["faMapMarkerAlt"], _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_8__["faChevronLeft"], _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_9__["faChevronRight"], _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_10__["faPlayCircle"], _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_11__["faHorizontalRule"]);
+
+
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__["library"].add(_fortawesome_pro_solid_svg_icons_faTimes__WEBPACK_IMPORTED_MODULE_1__["faTimes"], _fortawesome_pro_solid_svg_icons_faBars__WEBPACK_IMPORTED_MODULE_2__["faBars"], _fortawesome_free_brands_svg_icons_faFacebookSquare__WEBPACK_IMPORTED_MODULE_3__["faFacebookSquare"], _fortawesome_free_brands_svg_icons_faTwitterSquare__WEBPACK_IMPORTED_MODULE_4__["faTwitterSquare"], _fortawesome_free_brands_svg_icons_faInstagram__WEBPACK_IMPORTED_MODULE_5__["faInstagram"], _fortawesome_free_brands_svg_icons_faYoutube__WEBPACK_IMPORTED_MODULE_6__["faYoutube"], _fortawesome_free_brands_svg_icons_faPinterest__WEBPACK_IMPORTED_MODULE_7__["faPinterest"], _fortawesome_pro_solid_svg_icons_faMapMarkerAlt__WEBPACK_IMPORTED_MODULE_8__["faMapMarkerAlt"], _fortawesome_pro_solid_svg_icons_faChevronLeft__WEBPACK_IMPORTED_MODULE_9__["faChevronLeft"], _fortawesome_pro_solid_svg_icons_faChevronRight__WEBPACK_IMPORTED_MODULE_10__["faChevronRight"], _fortawesome_pro_solid_svg_icons_faPlayCircle__WEBPACK_IMPORTED_MODULE_11__["faPlayCircle"], _fortawesome_pro_solid_svg_icons_faHorizontalRule__WEBPACK_IMPORTED_MODULE_12__["faHorizontalRule"], _fortawesome_pro_solid_svg_icons_faPlusSquare__WEBPACK_IMPORTED_MODULE_13__["faPlusSquare"], _fortawesome_pro_regular_svg_icons_faEnvelope__WEBPACK_IMPORTED_MODULE_14__["faEnvelope"]);
 
 /***/ }),
 

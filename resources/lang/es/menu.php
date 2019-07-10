@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'jalisco' => 'Jalisco',
+    'jalisco' => 'El estado',
     'mi-jalisco' => 'Este es Mi Jalisco',
     'schedule' => 'Agenda',
     'regions' => 'Regiones',
