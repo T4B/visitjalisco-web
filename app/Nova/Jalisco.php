@@ -57,7 +57,8 @@ class Jalisco extends Resource
             Select::make('Idioma', 'language')->options([
                 'es' => 'Español',
                 'en' => 'Inglés',
-            ])->displayUsingLabels(),
+            ])->displayUsingLabels()
+            ->rules('unique:jalisco,language'),
             Markdown::make('Texto encabezado', 'header_text')
                 ->hideFromIndex(),
             Markdown::make('Historia', 'history')
