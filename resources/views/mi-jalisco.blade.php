@@ -53,7 +53,7 @@
             <hr class="h-1 bg-gray-400 opacity-25 my-10">
         </div>
         <div class="w-full px-10">
-            <slider class="shadow-2xl" slides="3" :space="30">
+            <slider class="shadow-2xl" :slides="3" :space="30">
                 <slide>
                     <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset('images/mi_jalisco_home.jpg') }})">
                         <div class="text-white absolute bottom-8 font-serif">
