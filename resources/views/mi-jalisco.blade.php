@@ -15,6 +15,15 @@
     <div class="container px-10 py-10 lg:px-0">
         <div class="w-full">
             <h2 class="font-serif text-gray-500 text-8xl mb-8">Este es <span class="font-bold">Mi Jalisco</span></h2>
+        </div>
+    </div>
+    <mi-jalisco-videos :videos='@json($videos)'></mi-jalisco-videos>
+</section>
+
+{{--<section class="bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
+    <div class="container px-10 py-10 lg:px-0">
+        <div class="w-full">
+            <h2 class="font-serif text-gray-500 text-8xl mb-8">Este es <span class="font-bold">Mi Jalisco</span></h2>
             <div class="py-64 bg-cover bg-no-repeat bg-center w-5/6 mx-auto shadow-7xl mb-8" style="background-image:url({{ asset('images/mi-jalisco-video.jpg') }})">
             </div>
             <div class="py-8 text-gray-400 text-2xl leading-tight">
@@ -79,8 +88,10 @@
                     </div>
                 </slide>
             </slider>
-            </div>
+        </div>
     </div>
-</section>
+</section>--}}
+
+
 
 @endsection

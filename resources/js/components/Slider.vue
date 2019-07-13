@@ -45,12 +45,16 @@ export default {
     space: {
       type: Number,
       default: 0
+    },
+    loop: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
     return {
       options: {
-        loop: true,
+        loop: this.loop,
         autoHeight: true,
         navigation: {
           nextEl: '.button-next',
