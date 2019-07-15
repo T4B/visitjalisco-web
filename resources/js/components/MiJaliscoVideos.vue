@@ -36,7 +36,14 @@
       <hr class="h-1 bg-gray-400 opacity-25 my-10">
     </div>
     <div class="w-full px-10">
-        <slider class="shadow-2xl" :slides="3" :space="30"  ref="carrousel" @click.native="sliderClicked($event)">
+        <slider 
+            class="shadow-2xl" 
+            :slides="3" 
+            :space="30"  
+            :arrowscolor="'text-red-400'"
+            :outsidearrows="true"
+            ref="carrousel" 
+            @click.native="sliderClicked($event)">
             <slide v-for="video in videos" :key="video.id">
                   <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" 
                     :style="{ backgroundImage: 'url(' + video.preview + ')' }"

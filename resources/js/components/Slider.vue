@@ -12,19 +12,37 @@
       />
       <div slot="button-prev"
            class="button-prev"
+           v-if="!outsidearrows"
       >
-        <font-awesome-icon class="text-white"
+        <font-awesome-icon :class="arrowscolor"
                            :icon="['fas', 'chevron-left']"
         />
       </div>
       <div slot="button-next"
            class="button-next"
+           v-if="!outsidearrows"
       >
-        <font-awesome-icon class="text-white"
+        <font-awesome-icon :class="arrowscolor"
                            :icon="['fas', 'chevron-right']"
         />
       </div>
     </swiper>
+    <div slot="button-prev"
+           class="button-prev"
+           v-if="outsidearrows"
+      >
+        <font-awesome-icon :class="arrowscolor"
+                           :icon="['fas', 'chevron-left']"
+        />
+      </div>
+    <div slot="button-next"
+          class="button-next"
+          v-if="outsidearrows"
+      >
+        <font-awesome-icon :class="arrowscolor"
+                           :icon="['fas', 'chevron-right']"
+        />
+      </div>
   </div>
 </template>
 <script>
@@ -49,6 +67,14 @@ export default {
     loop: {
       type: Boolean,
       default: true
+    },
+    arrowscolor: {
+      type: String,
+      default: 'text-white',
+    },
+    outsidearrows: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -69,6 +95,12 @@ export default {
         // },
         slidesPerView: this.slides,
         spaceBetween: this.space,
+        breakpoints: {
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          }
+        }
       }
     }
   },

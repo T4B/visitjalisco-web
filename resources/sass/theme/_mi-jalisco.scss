@@ -2,4 +2,18 @@
     .headerimage{
         max-height: 450px;
     }
+
+    .slider{
+        .button-prev {
+            left: -2.5rem;
+        }
+
+        .button-next {
+            right: -2.5rem;
+        }
+
+        .swiper-pagination{
+            @apply .hidden;
+        }
+    }
 }
