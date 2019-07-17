@@ -8,6 +8,11 @@
     background-blend-mode: multiply;
 }
 
+.multiply-purple{
+    @apply bg-blend-purple-30;
+    background-blend-mode: multiply;
+}
+
 .button{
     @apply .bg-red-400 .text-white .rounded-lg;
 }

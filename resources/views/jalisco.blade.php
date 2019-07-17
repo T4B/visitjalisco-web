@@ -21,7 +21,7 @@
             <div class="w-full lg:w-5/12 text-2xl text-gray-500 px-10 lg:px-0">
                 @markdown($jalisco->history)
             </div>
-            <div class="w-full lg:w-6/12 ml-auto px-10 lg:px-0">
+            {{--<div class="w-full lg:w-6/12 ml-auto px-10 lg:px-0">
                 <slider class="slider shadow-2xl">
                     <slide>
                         <div class="py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset('images/mazamitla.jpg') }})">
@@ -50,7 +50,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>--}}
+            <jalisco-slider :gallery='@json($jalisco->gallery())'></jalisco-slider>
             
         </div>
     </div>

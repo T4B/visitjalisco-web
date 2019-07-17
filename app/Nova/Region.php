@@ -5,19 +5,20 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
-use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
+use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Image;
 
-class Jalisco extends Resource
+class Region extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Jalisco';
+    public static $model = 'App\Region';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -25,16 +26,6 @@ class Jalisco extends Resource
      * @var string
      */
     public static $title = 'id';
-
-    /**
-     * Get the displayble label of the resource.
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return 'Jalisco';
-    }
 
     /**
      * The columns that should be searched.
@@ -55,29 +46,40 @@ class Jalisco extends Resource
     {
         return [
             ID::make()->sortable(),
-            Select::make('Idioma', 'language')->options([
-                'es' => 'Español',
-                'en' => 'Inglés',
-            ])->displayUsingLabels()
-                ->rules('required')
-                ->creationRules('unique:jalisco,language')
-                ->updateRules('unique:jalisco,language,{{resourceId}}'),
-            Markdown::make('Texto encabezado', 'header_text')
+            Text::make('Nombre', 'name_es')
+                ->sortable(),
+            Select::make('Color', 'color')->options([
+                'orange-100' => 'Naranja',
+                'red-300' => 'Rojo',
+                'green-200' => 'Verde lima',
+                'green-300' => 'Verde primavera',
+                'green-400' => 'Verde',
+                'purple-400' => 'Morado',
+                'blue-400' => 'Azul claro',
+                'blue-500' => 'Azul oscuro',
+            ])->displayUsingLabels(),
+            Markdown::make('Descripción corta', 'short_description_es')
+                ->rules('nullable')
                 ->hideFromIndex(),
-            Markdown::make('Historia', 'history')
+            Markdown::make('Descripción corta', 'full_description_es')
+                ->rules('nullable')
                 ->hideFromIndex(),
-            Markdown::make('Información - superior', 'info_top')
-                ->hideFromIndex(),
-            Markdown::make('Información - izquierda', 'info_left')
-                ->hideFromIndex(),
-            Images::make('Galería', 'gallery')
-                ->multiple()
-                ->singleImageRules('image')
-                ->hideFromIndex()
-                ->customPropertiesFields([
-                    Text::make('Name'),
-                ]),
-            
+            Image::make('Imagen Principal', 'main_image')
+                ->disk('public')
+                ->path('regions')
+                ->rules('max:1024')
+                ->creationRules('required')
+                ->updateRules('nullable')
+                ->prunable(),
+            Image::make('Imagen Interior', 'interior_image')
+                ->disk('public')
+                ->path('regions')
+                ->rules('max:1024')
+                ->creationRules('required')
+                ->updateRules('nullable')
+                ->prunable(),
+            Number::make('Orden', 'order')
+                ->sortable(),
         ];
     }
 

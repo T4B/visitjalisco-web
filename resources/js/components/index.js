@@ -9,3 +9,4 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
 Vue.component('mi-jalisco-videos', require('./MiJaliscoVideos.vue').default);
+Vue.component('jalisco-slider', require('./JaliscoSlider.vue').default);
