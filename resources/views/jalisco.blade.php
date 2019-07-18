@@ -107,10 +107,9 @@
 </section>
 
 <section class="map">
-    <div class="flex flex-wrap">
+    {{--<div class="flex flex-wrap">
         <div class="w-full md:w-1/2 p-12">
-            {{--<img src="{{ asset('images/mapa_regiones.svg') }}">--}}
-            @include('partials.map')
+            <regions-map :regions='@json($regions)'></regions-map>
         </div>
         <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center" style="background-image:url({{ asset('images/region.jpg') }})">
             <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
@@ -121,7 +120,8 @@
                 <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" href="{{ route('regiones') }}">@lang('general.more-info')</a>
             </div>
         </div>
-    </div>
+    </div>--}}
+    <regions-map :regions='@json($regions)'></regions-map>
 </section>
 
 @endsection

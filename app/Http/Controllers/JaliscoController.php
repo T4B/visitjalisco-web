@@ -9,7 +9,8 @@ class JaliscoController extends Controller
     public function jalisco()
     {
         $jalisco = \App\Jalisco::where('language', 'es')->first();
-        return view('jalisco', compact('jalisco'));
+        $regions = \App\Region::all();
+        return view('jalisco', compact('jalisco', 'regions'));
     }
 
     public function mijalisco()
