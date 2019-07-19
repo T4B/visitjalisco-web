@@ -449,14 +449,15 @@
               </g>
             </svg>
         </div>
-        <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center bg-grey">
+        <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center"  
+        :style="{ backgroundImage: 'url(' + active.interior + ')' }">
             <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
                 <div class="text-left">
                     <h3 class="font-secondary text-5xl leading-tight">
                       <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1 -ml-12 align-middle"></font-awesome-icon>
                       {{ active.name_es }}
                     </h3>
-                    <p class="text-xl">Si visitas Jalisco, muy probablemente pases por aquí al disfrutar de la capital, Guadalajara, o al caminar por los bellísimos andadores de Tlaquepaque. ¡Bienvenido! </p>
+                    <p class="text-xl" v-text="active.short_description_es"></p>
                 </div>
                 <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" href="#">Más información</a>
             </div>
@@ -477,16 +478,23 @@ export default {
     }
   },
   created() {
-    [this.active] = this.regions
+    [this.active] = this.regions    
   },
-  computed: { 
-    
+  mounted(){
+    let paths = document.getElementById(this.active.name).getElementsByClassName("region")
+    if (paths.length)
+       paths[0].classList.add("active")
   },
   methods:{
     activeRegion(event){
-      console.log(event.currentTarget.id);
       this.active = _.find(this.regions, function(r) { return r.name === event.currentTarget.id; });
-      console.log(this.active);
+      this.removeActiveRegion();
+      event.target.classList.add("active")
+    },
+    removeActiveRegion(){
+      let active_regions = document.getElementsByClassName("region active")
+      while (active_regions.length)
+        active_regions[0].classList.remove("active");
     }
   }
 }
