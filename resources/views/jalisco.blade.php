@@ -114,7 +114,7 @@
         <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center" style="background-image:url({{ asset('images/region.jpg') }})">
             <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
                 <div class="text-left">
-                    <h3 class="font-secondary text-5xl"><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1 -ml-12 align-middle"></font-awesome-icon>Región Centro</h3>
+                    <h3 class="font-secondary text-5xl"><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 -ml-12 align-middle"></font-awesome-icon>Región Centro</h3>
                     <p class="text-xl">Si visitas Jalisco, muy probablemente pases por aquí al disfrutar de la capital, Guadalajara, o al caminar por los bellísimos andadores de Tlaquepaque. ¡Bienvenido! </p>
                 </div>
                 <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" href="{{ route('regiones') }}">@lang('general.more-info')</a>

@@ -454,7 +454,7 @@
             <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
                 <div class="text-left">
                     <h3 class="font-secondary text-5xl leading-tight">
-                      <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1 -ml-12 align-middle"></font-awesome-icon>
+                      <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 -ml-12 align-middle"></font-awesome-icon>
                       {{ active.name_es }}
                     </h3>
                     <p class="text-xl" v-text="active.short_description_es"></p>

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class Region extends Model
 {
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
-    protected $appends = ['name', 'interior'];
+    protected $appends = ['name', 'interior', 'main'];
 
     public function getNameAttribute()
     {
@@ -19,5 +19,10 @@ class Region extends Model
     public function getInteriorAttribute()
     {
         return ($this->interior_image) ? Storage::url($this->interior_image) : asset('images/'.$this->interior_image_default);
+    }
+
+    public function getMainAttribute()
+    {
+        return ($this->main_image) ? Storage::url($this->main_image) : asset('images/'.$this->main_image_default);
     }
 }

@@ -89,7 +89,7 @@
                 </div>
                 <div class="w-full md:w-1/2 bg-white p-8">
                     <h2>{{ $event->name }}</h2>
-                    <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>{{ $event->place }}</p>
+                    <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1"></font-awesome-icon>{{ $event->place }}</p>
                     <p>{{ $event->date_es }}</p>
                 </div>
             </div>
@@ -100,7 +100,7 @@
             </div>
             <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Open Vallarta</h2>
-                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Puerto Vallarta</p>
+                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1"></font-awesome-icon>Puerto Vallarta</p>
                 <p>29 de abril - 5 de mayo</p>
             </div>
         </div>
@@ -110,7 +110,7 @@
             </div>
             <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Encuentro Internacional de Mariachi y Charrería 2019</h2>
-                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Guadalajara</p>
+                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1"></font-awesome-icon>Guadalajara</p>
                 <p>23 de agosto - 1 de septiembre</p>
             </div>
         </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="w-full md:w-1/2 bg-white p-8">
                 <h2>Coordenada</h2>
-                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red mr-1"></font-awesome-icon>Guadalajara</p>
+                <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1"></font-awesome-icon>Guadalajara</p>
                 <p>18 - 19 de octubre</p>
             </div>
         </div> --}}

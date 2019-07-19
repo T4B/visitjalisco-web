@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('page-name', 'mi-jalisco')
+@section('page-name', 'regions')
 
 @section('css')
     <link rel="stylesheet" href="{{ mix('css/swiper.css') }}" />
@@ -7,8 +7,38 @@
 
 @section('content')
 
-<section class="headerimage multiply-40 h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/regions/bg-regions-main.jpg') }})">
-   
+<section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/regions/bg-regions-main.jpg') }})">
+   <div class="container text-content flex w-full font-secondary h-full relative">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
+            <h2 class="text-7xl">Regiones</h2>
+        </div>
+   </div>
+</section>
+
+<section class="regions">
+    @foreach ($regions as $region)
+        <div class="flex flex-wrap w-full {{ $loop->even ? 'flex-row-reverse' : '' }}">
+            <div class="w-full md:w-5/12 bg-cover bg-no-repeat bg-center" style="background-image:url({{ $region->main }})">
+            </div>
+            <div class="w-full md:w-7/12 py-12 {{ $loop->even ? 'bg-gray-100' : 'bg-gray-200' }}">
+                <div class="flex">
+                    <div class="w-3/12">
+
+                    </div>
+                    <div class="w-8/12 pl-12 border-l border-gray-400">
+                        <div class="flex items-center mb-4">
+                            <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 text-5xl inline-block"></font-awesome-icon>
+                            <h2 class="font-secondary text-5xl font-bold inline-block leading-none text-{{ $region->color }}">{{ $region->name_es}}</h2>
+                        </div>
+                        <div class="text-xl text-gray-400">@markdown($region->short_description_es)</div>
+                        <div class="text-center">
+                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="#">Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 </section>
 
 

@@ -16,6 +16,7 @@ module.exports = {
         grey: '#3C3C3B',
         gray: {
             '100': '#F4F4F4',
+            '200': '#E2E2E2',
             '400': '#606060',
             '500': '#3C3C3B',
             '600': '#575756'
@@ -66,11 +67,13 @@ module.exports = {
             'current': 'currentColor'
         },
         fontSize: {
+            '7xl' : '4.5rem',
             '8xl' : '5rem',
             '12xl' : '8rem',
         },
         boxShadow: {
-            '7xl' : '7px 7px 5px 0px rgba(0,0,0,0.1)',
+            '3xl' : '1px 1px 7px 0px rgba(0,0,0,0.65)',
+            '7xl': '7px 7px 5px 0px rgba(0,0,0,0.1)',
         },
     }
   },
