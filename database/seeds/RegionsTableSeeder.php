@@ -21,6 +21,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 1,
             'interior_image_default' => 'regions/region_norte_interior.jpg',
             'main_image_default' => 'regions/region_norte_main.jpg',
+            'slug' => 'region-norte',
+            'map' => 'regions/region-norte.svg'
         ]);
         Region::create([
             'name_es' => 'Región Altos',
@@ -30,6 +32,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 2,
             'interior_image_default' => 'regions/region_altos_interior.jpg',
             'main_image_default' => 'regions/region_altos_main.jpg',
+            'slug' => 'region-altos',
+            'map' => 'regions/region-altos.svg'
         ]);
         Region::create([
             'name_es' => 'Región Ciénega',
@@ -39,6 +43,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 3,
             'interior_image_default' => 'regions/region_cienega_interior.jpg',
             'main_image_default' => 'regions/region_cienega_main.jpg',
+            'slug' => 'region-cienega',
+            'map' => 'regions/region-cienega.svg'
         ]);
         Region::create([
             'name_es' => 'Región Sur y Sureste',
@@ -48,6 +54,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 4,
             'interior_image_default' => 'regions/region_sur_interior.jpg',
             'main_image_default' => 'regions/region_sur_main.jpg',
+            'slug' => 'region-sur-y-sureste',
+            'map' => 'regions/region-sur-y-sureste.svg'
         ]);
         Region::create([
             'name_es' => 'Región costa',
@@ -57,6 +65,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 5,
             'interior_image_default' => 'regions/region_costa_interior.jpg',
             'main_image_default' => 'regions/region_costa_main.jpg',
+            'slug' => 'region-costa',
+            'map' => 'regions/region-costa.svg'
         ]);
         Region::create([
             'name_es' => 'Región Sierra',
@@ -66,6 +76,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 6,
             'interior_image_default' => 'regions/region_sierra_interior.jpg',
             'main_image_default' => 'regions/region_sierra_main.jpg',
+            'slug' => 'region-sierra',
+            'map' => 'regions/region-sierra.svg'
         ]);
         Region::create([
             'name_es' => 'Región Valles',
@@ -75,6 +87,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 7,
             'interior_image_default' => 'regions/region_valles_interior.jpg',
             'main_image_default' => 'regions/region_valles_main.jpg',
+            'slug' => 'region-norte',
+            'map' => 'regions/region-valles.svg'
         ]);
         Region::create([
             'name_es' => 'Región Centro',
@@ -84,6 +98,8 @@ class RegionsTableSeeder extends Seeder
             'order' => 8,
             'interior_image_default' => 'regions/region_centro_interior.jpg',
             'main_image_default' => 'regions/region_centro_main.jpg',
+            'slug' => 'region-centro',
+            'map' => 'regions/region-centro.svg'
         ]);
     }
 }
