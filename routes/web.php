@@ -21,6 +21,7 @@ Route::get('/regiones', 'RegionsController@index')->name('regiones');
 Route::get('/experiencias', 'ComingSoonController@index')->name('experiencias');
 Route::get('/rutas', 'ComingSoonController@index')->name('rutas');
 Route::get('/eventos', 'ComingSoonController@index')->name('eventos');
+Route::get('/region/{slug}','RegionsController@getRegion')->name('region');
 
 Route::group(['prefix' => '{locale}'], function($locale) {
 

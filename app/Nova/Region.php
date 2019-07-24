@@ -10,6 +10,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Image;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 
 class Region extends Resource
 {
@@ -80,6 +81,11 @@ class Region extends Resource
                 ->prunable(),
             Number::make('Orden', 'order')
                 ->sortable(),
+
+            Images::make('Galería', 'gallery')
+                ->multiple()
+                ->singleImageRules('image')
+                ->hideFromIndex(),
         ];
     }
 

@@ -11,4 +11,15 @@ class RegionsController extends Controller
         $regions = \App\Region::all();
         return view('regions', compact('regions'));
     }
+
+    public function getRegion(Request $request, $slug)
+    {
+        $region = \App\Region::where('slug', $slug)->first();
+        if ($region){
+            return view('region', compact('region'));
+        }else{
+            
+            return redirect()->route('regiones');
+        }
+    }
 }

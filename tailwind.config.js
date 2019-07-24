@@ -54,6 +54,7 @@ module.exports = {
             '30' : 'rgba(127, 86, 197, 0.3)',
         },
         navbar: 'rgba(0, 0, 0, 0.75)',
+        map: '#C6D0BF',
     },
     container: {
         center: true,
