@@ -32,7 +32,7 @@
                         </div>
                         <div class="text-xl text-gray-400">@markdown($region->short_description_es)</div>
                         <div class="text-center">
-                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="#">Más información</a>
+                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="{{ route('region', ['slug' => $region->slug]) }}">Más información</a>
                         </div>
                     </div>
                 </div>

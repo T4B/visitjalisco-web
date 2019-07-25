@@ -6,11 +6,11 @@
                 <ul class="sitemap lg:pl-8 leading-relaxed py-4">
                     <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('jalisco') }}">@lang('menu.jalisco')</a></li>
                     <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('mi-jalisco') }}">@lang('menu.mi-jalisco')</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('agenda') }}">@lang('menu.schedule')</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('regiones') }}">@lang('menu.regions')</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('experiencias') }}">@lang('menu.experiences')</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('rutas') }}">@lang('menu.routes')</a></li>
-                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('eventos') }}">@lang('menu.events')</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('schedule') }}">@lang('menu.schedule')</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('regions') }}">@lang('menu.regions')</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('experiences') }}">@lang('menu.experiences')</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('routes') }}">@lang('menu.routes')</a></li>
+                    <li><font-awesome-icon :icon="['fas', 'horizontal-rule']" fixed-width class="mr-2 hidden lg:inline-block"></font-awesome-icon><a class="no-underline" href="{{ route('business-travel') }}">@lang('menu.events')</a></li>
                 </ul>
             </div>
             <div class="w-full lg:w-1/4 text-center relative">

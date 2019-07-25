@@ -18,8 +18,7 @@ class RegionsController extends Controller
         if ($region){
             return view('region', compact('region'));
         }else{
-            
-            return redirect()->route('regiones');
+            return redirect()->route('regions');
         }
     }
 }

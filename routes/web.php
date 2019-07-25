@@ -16,11 +16,11 @@ Route::get('/coming-soon', 'ComingSoonController@index')->name('coming-soon');
 
 Route::get('/jalisco', 'JaliscoController@jalisco')->name('jalisco');
 Route::get('/este-es-mi-jalisco', 'JaliscoController@mijalisco')->name('mi-jalisco');
-Route::get('/agenda', 'ScheduleController@index')->name('agenda');
-Route::get('/regiones', 'RegionsController@index')->name('regiones');
-Route::get('/experiencias', 'ComingSoonController@index')->name('experiencias');
-Route::get('/rutas', 'ComingSoonController@index')->name('rutas');
-Route::get('/eventos', 'ComingSoonController@index')->name('eventos');
+Route::get('/agenda', 'ScheduleController@index')->name('schedule');
+Route::get('/regiones', 'RegionsController@index')->name('regions');
+Route::get('/experiencias', 'ComingSoonController@index')->name('experiences');
+Route::get('/rutas', 'ComingSoonController@index')->name('routes');
+Route::get('/turismo-de-reuniones', 'BusinessTravelController@index')->name('business-travel');
 Route::get('/region/{slug}','RegionsController@getRegion')->name('region');
 
 Route::group(['prefix' => '{locale}'], function($locale) {

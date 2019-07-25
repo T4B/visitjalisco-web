@@ -87,7 +87,7 @@ class RegionsTableSeeder extends Seeder
             'order' => 7,
             'interior_image_default' => 'regions/region_valles_interior.jpg',
             'main_image_default' => 'regions/region_valles_main.jpg',
-            'slug' => 'region-norte',
+            'slug' => 'region-valles',
             'map' => 'regions/region-valles.svg'
         ]);
         Region::create([

@@ -125,7 +125,7 @@
             </div>
         </div> --}}
         <div class="flex w-full">
-            <a class="button font-secondary text-2xl font-bold ml-auto px-8 py-2 shadow-7xl" href="{{ route('eventos') }}">@lang('home.more-events')</a>
+            <a class="button font-secondary text-2xl font-bold ml-auto px-8 py-2 shadow-7xl" href="{{ route('business-travel') }}">@lang('home.more-events')</a>
         </div>
     </div>
 </section>
@@ -167,7 +167,7 @@
             </div>
         </div>
         <div class="flex w-full py-4">
-            <a class="font-serif text-3xl ml-auto text-white" href="{{ route('rutas') }}">@lang('home.more-routes')</a>
+            <a class="font-serif text-3xl ml-auto text-white" href="{{ route('routes') }}">@lang('home.more-routes')</a>
         </div>
     </div>
 </section>
