@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Fields\Text;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 
 class BusinessTravel extends Resource
@@ -63,8 +64,13 @@ class BusinessTravel extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->sortable()
+                ->hideFromIndex(),
+            Text::make('Título', 'title_es')
+                ->rules('required'),
             Markdown::make('Texto', 'text_es')
+                ->rules('required')
                 ->hideFromIndex(),
             Images::make('Galería', 'gallery')
                 ->multiple()
