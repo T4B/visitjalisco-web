@@ -11,6 +11,10 @@
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/VisitJalisco"
         }
     ],
     "require": {
@@ -21,7 +25,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/nova": "~2.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "beebmx/visit-jalisco": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

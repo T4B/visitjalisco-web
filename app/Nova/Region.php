@@ -20,6 +20,7 @@ class Region extends Resource
      * @var string
      */
     public static $model = 'App\Region';
+    public static $group = 'Destinos';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -38,6 +39,26 @@ class Region extends Resource
     ];
 
     /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Regiones';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Región';
+    }
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -46,7 +67,9 @@ class Region extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->sortable()
+                ->hideFromIndex(),
             Text::make('Nombre', 'name_es')
                 ->sortable(),
             Select::make('Color', 'color')->options([
@@ -71,14 +94,16 @@ class Region extends Resource
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
             Image::make('Imagen Interior', 'interior_image')
                 ->disk('public')
                 ->path('regions')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
             Number::make('Orden', 'order')
                 ->sortable(),
 

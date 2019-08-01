@@ -16,6 +16,7 @@ class BusinessTravel extends Resource
      * @var string
      */
     public static $model = 'App\BusinessTravel';
+    public static $group = 'Convenciones';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -32,6 +33,26 @@ class BusinessTravel extends Resource
     public static $search = [
         'id',
     ];
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Turismo de reuniones';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Turismo de reuniones';
+    }
 
     /**
      * Get the fields displayed by the resource.

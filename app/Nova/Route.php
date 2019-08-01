@@ -21,6 +21,7 @@ class Route extends Resource
      * @var string
      */
     public static $model = 'App\Route';
+    public static $group = 'Destinos';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -39,6 +40,26 @@ class Route extends Resource
     ];
 
     /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Rutas';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Ruta';
+    }
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -47,7 +68,9 @@ class Route extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->sortable()
+                ->hideFromIndex(),
             Text::make('Nombre', 'name_es')
                 ->sortable(),
             Select::make('Color', 'color')->options([
@@ -72,25 +95,29 @@ class Route extends Resource
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
             Image::make('Imagen fondo galería', 'gallery_image')
                 ->disk('public')
                 ->path('routes')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
             Image::make('Mapa', 'map_image')
                 ->disk('public')
                 ->path('routes')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
             Number::make('Orden', 'order')
                 ->sortable(),
             Text::make('Slug', 'slug')
-                ->sortable(),
+                ->sortable()
+                ->hideFromIndex(),
 
             Images::make('Galería', 'gallery')
                 ->multiple()

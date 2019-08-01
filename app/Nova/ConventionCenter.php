@@ -17,6 +17,7 @@ class ConventionCenter extends Resource
      * @var string
      */
     public static $model = 'App\ConventionCenter';
+    public static $group = 'Convenciones';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -35,6 +36,26 @@ class ConventionCenter extends Resource
     ];
 
     /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Centros de convenciones';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Centro de convenciones';
+    }
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -43,11 +64,14 @@ class ConventionCenter extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->onlyOnIndex()
+                ->sortable(),
             Text::make('Nombre', 'name')
                 ->sortable(),
             Text::make('Subtítulo', 'subtitle_es')
-                ->sortable(),
+                ->sortable()
+                ->hideFromIndex(),
             Markdown::make('Descripción', 'text_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
@@ -61,7 +85,8 @@ class ConventionCenter extends Resource
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable(),
+                ->prunable()
+                ->hideFromIndex(),
         ];
     }
 

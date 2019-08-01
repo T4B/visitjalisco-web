@@ -18,6 +18,7 @@ class Place extends Resource
      * @var string
      */
     public static $model = 'App\Place';
+    public static $displayInNavigation = false;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -34,6 +35,26 @@ class Place extends Resource
     public static $search = [
         'id',
     ];
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Lugares';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Lugar';
+    }
 
     /**
      * Get the fields displayed by the resource.

@@ -36,6 +36,27 @@ class Event extends Resource
         'id',
     ];
 
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Eventos';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Evento';
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
