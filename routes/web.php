@@ -19,10 +19,13 @@ Route::get('/este-es-mi-jalisco', 'JaliscoController@mijalisco')->name('mi-jalis
 Route::get('/agenda', 'ScheduleController@index')->name('schedule');
 Route::get('/regiones', 'RegionsController@index')->name('regions');
 Route::get('/region/{slug}','RegionsController@getRegion')->name('region');
-Route::get('/experiencias', 'ComingSoonController@index')->name('experiences');
+Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
+Route::get('/experiencias/{category}', 'ExperiencesController@getExperience')->name('experiences.category');
+Route::get('/experiencias/{category}/{destination}', 'ExperiencesController@getExperience')->name('experiences.destination');
 Route::get('/rutas', 'RoutesController@index')->name('routes');
 Route::get('/ruta/{slug}', 'RoutesController@getRoute')->name('route');
 Route::get('/turismo-de-reuniones', 'BusinessTravelController@index')->name('business-travel');
+
 
 
 Route::group(['prefix' => '{locale}'], function($locale) {

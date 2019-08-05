@@ -7,37 +7,19 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use Benjaminhirsch\NovaSlugField\Slug;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\BelongsTo;
 
-class Page extends Resource
+class Destination extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Page';
-
-    /**
-     * Get the displayble label of the resource.
-     *
-     * @return string
-     */
-    public static function label()
-    {
-        return 'Páginas';
-    }
-
-    /**
-     * Get the displayble singular label of the resource.
-     *
-     * @return string
-     */
-    public static function singularLabel()
-    {
-        return 'Página';
-    }
+    public static $model = 'App\Destination';
+    public static $displayInNavigation = false;
+    //public static $group = 'Experiencias';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -56,6 +38,26 @@ class Page extends Resource
     ];
 
     /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Destinos';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Destino';
+    }
+
+    /**
      * Get the fields displayed by the resource.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -65,22 +67,24 @@ class Page extends Resource
     {
         return [
             ID::make()->sortable(),
-
+            BelongsTo::make('Experiencia', 'experience', Experience::class),
             Text::make('Nombre', 'name_es')
-                ->sortable()
-                ->exceptOnForms(),
-            
-            TextWithSlug::make('Nombre', 'name_es')
-                ->slug('slug')
-                ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
-                ->onlyOnForms(),
-
-            Slug::make('Slug')
-                ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:pages,slug')
-                ->showUrlPreview(env('APP_URL') . '/page'),
-
-            Markdown::make('Contenido', 'text')
-                ->rules('required'),
+                ->rules('required', 'max:255'),
+            Text::make('Subtítulo', 'subtitle_es')
+                ->rules('required', 'max:255'),
+            Markdown::make('Descripción', 'short_description_es')
+                ->rules('required')
+                ->hideFromIndex(),
+            Markdown::make('Descripción', 'short_description_es')
+                ->rules('required')
+                ->hideFromIndex(),
+            Image::make('Imagen', 'image')
+                ->disk('public')
+                ->path('destination')
+                ->rules('max:1024')
+                ->creationRules('required')
+                ->updateRules('nullable')
+                ->prunable(),
         ];
     }
 

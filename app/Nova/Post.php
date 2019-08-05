@@ -5,24 +5,21 @@ namespace App\Nova;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Image;
-use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
+use Laravel\Nova\Fields\Select;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Benjaminhirsch\NovaSlugField\Slug;
 
-class Region extends Resource
+class Post extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Region';
-    public static $group = 'Destinos';
+    public static $model = 'App\Post';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -47,7 +44,7 @@ class Region extends Resource
      */
     public static function label()
     {
-        return 'Regiones';
+        return 'Blog';
     }
 
     /**
@@ -57,7 +54,7 @@ class Region extends Resource
      */
     public static function singularLabel()
     {
-        return 'Región';
+        return 'Post';
     }
 
     /**
@@ -72,64 +69,38 @@ class Region extends Resource
             ID::make()
                 ->sortable()
                 ->hideFromIndex(),
-
-            Text::make('Nombre', 'name_es')
+            Text::make('Título', 'title')
                 ->sortable()
                 ->exceptOnForms(),
-
-            TextWithSlug::make('Nombre', 'name_es')
+            TextWithSlug::make('Título', 'title')
                 ->slug('slug')
                 ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
                 ->onlyOnForms(),
-
             Slug::make('Slug')
-                ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:experiences,slug')
-                ->showUrlPreview(env('APP_URL') . '/experiencias'),
+                ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:posts,slug')
+                ->showUrlPreview(env('APP_URL') . '/blog'),
 
-            Select::make('Color', 'color')->options([
-                'orange-100' => 'Naranja',
-                'red-300' => 'Rojo',
-                'green-200' => 'Verde lima',
-                'green-300' => 'Verde primavera',
-                'green-400' => 'Verde',
-                'purple-400' => 'Morado',
-                'blue-400' => 'Azul claro',
-                'blue-500' => 'Azul oscuro',
-            ])->displayUsingLabels(),
+            Select::make('Idioma', 'language')->options([
+                'es' => 'Español',
+                'en' => 'Inglés',
+            ])->displayUsingLabels()
+                ->rules('required')
+                ->creationRules('unique:posts,language')
+                ->updateRules('unique:posts,language,{{resourceId}}'),
 
-            Markdown::make('Descripción corta', 'short_description_es')
-                ->rules('nullable')
+            Markdown::make('Extracto', 'excerpt')
+                ->rules('required')
                 ->hideFromIndex(),
-
-            Markdown::make('Descripción corta', 'full_description_es')
-                ->rules('nullable')
+            Markdown::make('Texto', 'text')
+                ->rules('required')
                 ->hideFromIndex(),
-
-            Image::make('Imagen Principal', 'main_image')
+            Image::make('Imagen', 'image')
                 ->disk('public')
-                ->path('regions')
+                ->path('post')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
-                ->prunable()
-                ->hideFromIndex(),
-
-            Image::make('Imagen Interior', 'interior_image')
-                ->disk('public')
-                ->path('regions')
-                ->rules('max:1024')
-                ->creationRules('required')
-                ->updateRules('nullable')
-                ->prunable()
-                ->hideFromIndex(),
-
-            Number::make('Orden', 'order')
-                ->sortable(),
-
-            Images::make('Galería', 'gallery')
-                ->multiple()
-                ->singleImageRules('image')
-                ->hideFromIndex(),
+                ->prunable(),
         ];
     }
 

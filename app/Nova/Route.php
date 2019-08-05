@@ -12,6 +12,8 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Image;
 use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\HasMany;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Benjaminhirsch\NovaSlugField\Slug;
 
 class Route extends Resource
 {
@@ -28,7 +30,7 @@ class Route extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name_es';
 
     /**
      * The columns that should be searched.
@@ -72,7 +74,16 @@ class Route extends Resource
                 ->sortable()
                 ->hideFromIndex(),
             Text::make('Nombre', 'name_es')
-                ->sortable(),
+                ->sortable()
+                ->exceptOnForms(),
+            TextWithSlug::make('Nombre', 'name_es')
+                ->slug('slug')
+                ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
+                ->onlyOnForms(),
+            Slug::make('Slug')
+                ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:routes,slug')
+                ->showUrlPreview(env('APP_URL') . '/ruta'),
+
             Select::make('Color', 'color')->options([
                 'blue-300' => 'Azul',
                 'green-100' => 'Verde claro',
@@ -115,10 +126,6 @@ class Route extends Resource
                 ->hideFromIndex(),
             Number::make('Orden', 'order')
                 ->sortable(),
-            Text::make('Slug', 'slug')
-                ->sortable()
-                ->hideFromIndex(),
-
             Images::make('Galería', 'gallery')
                 ->multiple()
                 ->singleImageRules('image')

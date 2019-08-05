@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(JaliscoTableSeeder::class);
         $this->call(RegionsTableSeeder::class);
         $this->call(RoutesTableSeeder::class);
+        $this->call(ExperiencesTableSeeder::class);
     }
 }
