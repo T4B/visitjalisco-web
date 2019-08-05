@@ -16,3 +16,11 @@
 .button{
     @apply .bg-red-400 .text-white .rounded-lg;
 }
+
+.main-slider{
+    .slide{
+        @screen lg{
+            max-height: 650px;
+        }
+    }
+}
