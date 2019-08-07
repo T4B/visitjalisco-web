@@ -8,6 +8,7 @@ class ExperiencesController extends Controller
 {
     public function index()
     {
-        return view('experiences');
+        $experiences = \App\Experience::all();
+        return view('experiences', compact('experiences'));
     }
 }
