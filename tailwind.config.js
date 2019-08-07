@@ -4,9 +4,11 @@ module.exports = {
   theme: {
     fontFamily: {
         primary: ['Questrial', 'sans-serif'],
-          secondary: ['Questrial', 'sans-serif'],
+        secondary: ['Questrial', 'sans-serif'],
+        serif: ['Questrial', 'sans-serif'],
         //secondary: ['Arimo', 'sans-serif'],
-        serif: ['Noto Serif SC', 'serif'],
+        //serif: ['Noto Serif SC', 'serif'],
+        
         //montserrat: ['Montserrat', 'sans-serif'],
     },
     colors: {
