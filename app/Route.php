@@ -16,17 +16,17 @@ class Route extends Model implements HasMedia
 
     public function getMainAttribute()
     {
-        return ( Storage::exists($this->header_image) ) ? Storage::url($this->header_image) : asset('images/'.$this->header_image);
+        return ( Storage::disk('public')->exists($this->header_image) ) ? Storage::url($this->header_image) : asset('images/'.$this->header_image);
     }
 
     public function getMapAttribute()
     {
-        return ( Storage::exists($this->map_image) ) ? Storage::url($this->map_image) : asset('images/'.$this->map_image);
+        return ( Storage::disk('public')->exists($this->map_image) ) ? Storage::url($this->map_image) : asset('images/'.$this->map_image);
     }
 
     public function getGallerybackgroundAttribute()
     {
-        return ( Storage::exists($this->gallery_image) ) ? Storage::url($this->gallery_image) : asset('images/'.$this->gallery_image);
+        return ( Storage::disk('public')->exists($this->gallery_image) ) ? Storage::url($this->gallery_image) : asset('images/'.$this->gallery_image);
     }
 
     public function gallery()

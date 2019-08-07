@@ -20,7 +20,7 @@ Route::get('/agenda', 'ScheduleController@index')->name('schedule');
 Route::get('/regiones', 'RegionsController@index')->name('regions');
 Route::get('/region/{slug}','RegionsController@getRegion')->name('region');
 Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
-Route::get('/experiencias/{category}', 'ComingSoonController@index')->name('experiences.category');
+Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
 Route::get('/experiencias/{category}/{destination}', 'ExperiencesController@getExperience')->name('experiences.destination');
 Route::get('/rutas', 'RoutesController@index')->name('routes');
 Route::get('/ruta/{slug}', 'RoutesController@getRoute')->name('route');

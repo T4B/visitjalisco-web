@@ -29,6 +29,7 @@
     </div>
 </section>
 
+@if ( count($route->gallery()) )
 <section class="gallery bg-cover bg-no-repeat bg-center" style="background-image:url({{ $route->gallerybackground }})">
     <div class="container py-12">
         <slider class="shadow-2xl">
@@ -41,6 +42,7 @@
         </slider>
     </div>
 </section>
+@endif
 
 <section class="places">
     <div class="w-full relative">

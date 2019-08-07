@@ -11,6 +11,7 @@ use Laravel\Nova\Fields\Image;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Laravel\Nova\Fields\HasMany;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 
 class Experience extends Resource
 {
@@ -91,6 +92,13 @@ class Experience extends Resource
                 ->updateRules('nullable')
                 ->prunable()
                 ->hideFromIndex(),
+            Images::make('Galería', 'gallery')
+                ->multiple()
+                ->singleImageRules('image')
+                ->hideFromIndex()
+                ->customPropertiesFields([
+                    Markdown::make('Text'),
+                ]),
             HasMany::make('Destinos', 'destinations', Destination::class),
         ];
     }

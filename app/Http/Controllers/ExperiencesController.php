@@ -11,4 +11,14 @@ class ExperiencesController extends Controller
         $experiences = \App\Experience::all();
         return view('experiences', compact('experiences'));
     }
+
+    public function getExperienceCategory(Request $request, $category)
+    {
+        $experience = \App\Experience::where('slug', $category)->first();
+        if ($experience){
+            return view('experience', compact('experience'));
+        }else{
+            return redirect()->route('experiences');
+        }
+    }
 }
