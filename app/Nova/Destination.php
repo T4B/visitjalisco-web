@@ -75,7 +75,7 @@ class Destination extends Resource
             Markdown::make('Descripción', 'short_description_es')
                 ->rules('required')
                 ->hideFromIndex(),
-            Markdown::make('Descripción', 'short_description_es')
+            Markdown::make('Descripción', 'description_es')
                 ->rules('required')
                 ->hideFromIndex(),
             Image::make('Imagen', 'image')

@@ -6,3 +6,23 @@
         }
     }
 }
+
+.visitjalisco-experience{
+    .destinations{
+        .destinations-navigation{
+            .pagination{
+                @apply .relative .flex .flex-row .justify-end .items-end .text-lg;
+            }
+            .page-item{
+                @apply .px-4 .py-1 .bg-gray-400 .text-white .mx-2 .text-2xl;
+                &.active{
+                    @apply .bg-red-400;
+                }
+                &.disabled{
+                    @apply .hidden;
+                }
+            }
+        }
+    }
+    
+}

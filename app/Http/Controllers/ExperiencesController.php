@@ -16,7 +16,8 @@ class ExperiencesController extends Controller
     {
         $experience = \App\Experience::where('slug', $category)->first();
         if ($experience){
-            return view('experience', compact('experience'));
+            $destinations = $experience->destinations()->paginate(1);
+            return view('experience', compact('experience', 'destinations'));
         }else{
             return redirect()->route('experiences');
         }

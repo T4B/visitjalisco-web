@@ -27,6 +27,26 @@
             <h2 class="font-bold text-11xl text-gray-400">{{ $experience->name_es }}</h2>
             @markdown ($experience->description_es )
         </div>
+        @foreach ($destinations as $destination )
+        <div class="flex flex-wrap items-center my-24">
+            <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $destination->url }})"></div>
+            <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-10">
+                <h2 class="text-6xl font-bold text-gray-400">{{ $destination->name_es }}</h2>
+                <p class="text-gray-400">{{ $destination->subtitle_es }}</p>
+                @markdown( $destination->short_description_es )
+                <a href="#" class="button px-8 py-2 shadow-7xl my-8 inline-block">Leer más</a>
+            </div>
+        </div>
+        @endforeach
+        <div class="flex flex-wrap items-center">
+            <div class="w-full lg:w-3/4 destinations-navigation">
+                {{ $destinations->links() }}
+            </div>
+            <div class="w-full lg:w-1/4 text-right my-6 lg:my-0">
+                <a href="{{ route('experiences') }}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">Todas las experiencias</a>
+            </div>
+        </div>
+        
     </div>
 </section>
 
