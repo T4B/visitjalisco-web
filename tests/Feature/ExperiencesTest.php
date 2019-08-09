@@ -17,6 +17,7 @@ class ExperiencesTest extends TestCase
         $response = $this->get('/experiencias')
                     ->assertStatus(200)
                     ->assertViewHas('experiences')
+                    ->assertViewHas('posts')
                     ->assertViewIs('experiences');
         $experiences = $response->original['experiences'];
 

@@ -84,12 +84,10 @@ class Post extends Resource
                 'es' => 'Español',
                 'en' => 'Inglés',
             ])->displayUsingLabels()
-                ->rules('required')
-                ->creationRules('unique:posts,language')
-                ->updateRules('unique:posts,language,{{resourceId}}'),
+                ->rules('required'),
 
             Markdown::make('Extracto', 'excerpt')
-                ->rules('required')
+                ->rules('required', 'max:254')
                 ->hideFromIndex(),
             Markdown::make('Texto', 'text')
                 ->rules('required')

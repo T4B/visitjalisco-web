@@ -12,39 +12,30 @@
    </div>
 </section>
 
+@if ( $posts->count() )
 <section class="blog">
     <div class="container pt-32  px-10 lg:px-0">
         <div class="w-full bg-gray-300 p-10">
-            <img class="w-full" src="{{ asset('images/routes/ruta_banner_fransiscana.jpg') }}">
+            <div class="bg-cover bg-no-repeat bg-center p-48" style="background-image:url({{ $first_post->url }})"></div>
             <div class="text-lg text-white">
-                <h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">@lang('experiences.lorem')</h2>
-                <p>@lang('experiences.lorem-ipsum')</p>
+                <h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">{{ $first_post->title }}</h2>
+                @markdown( $first_post->excerpt )
             </div>
         </div>
+            
 
         <div class="py-16">
             <div class="flex flex-wrap -mx-2">
+                @foreach ($posts as $post)
+                    @if ($loop->first) @continue @endif
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
-                    <div class="bg-gray-300 p-4 text-left text-white text-lg">
-                        <div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_costa_alegre.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">@lang('experiences.lorem')</h2>
-                        <p>@lang('experiences.lorem-ipsum')</p>
+                    <div class="post bg-gray-300 p-4 text-left text-white text-lg">
+                        <div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->url }})"></div>
+                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ $post->title }}</h2>
+                        @markdown ($post->excerpt)
                     </div>
                 </div> 
-                <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0 text-white">
-                    <div class="bg-gray-300 p-4 text-left text-lg">
-                        <div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_huachimontones.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">@lang('experiences.lorem')</h2>
-                        <p>@lang('experiences.lorem-ipsum')</p>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
-                    <div class="bg-gray-300 p-4 text-left text-white text-lg">
-                        <div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ asset('images/routes/ruta_banner_agave.jpg') }})"></div>
-                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">@lang('experiences.lorem')</h2>
-                        <p>@lang('experiences.lorem-ipsum')</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
         <div class="flex w-full py-4">
@@ -52,6 +43,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <section class="categories font-secondary leading-tight">
     <div class="flex flex-wrap text-white text-center font-bold">

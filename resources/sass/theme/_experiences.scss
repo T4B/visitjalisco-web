@@ -5,6 +5,11 @@
             @apply .w-full .h-full .bg-cover .bg-center .bg-no-repeat .flex .items-center .justify-center .multiply;
         }
     }
+    .blog{
+        .post{
+            min-height: 32rem;
+        }
+    }
 }
 
 .visitjalisco-experience{
