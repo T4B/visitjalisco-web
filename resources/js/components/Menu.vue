@@ -9,7 +9,7 @@
         <slot name="top" />
       </div>
       <div class="flex justify-between items-center py-2">
-        <div class="menu-logo">
+        <div class="menu-logo relative">
           <slot name="logo" />
         </div>
         <div class="menu"
