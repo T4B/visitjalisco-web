@@ -22,4 +22,19 @@ class ExperiencesController extends Controller
             return redirect()->route('experiences');
         }
     }
+
+    public function getDestination(Request $request, $category, $slug)
+    {
+        $experience = \App\Experience::where('slug', $category)->first();
+        
+        if ($experience){
+            $destination = \App\Destination::where('slug', $slug)->where('experience_id', $experience->id)->first();
+            if ($destination){
+                return view('destination', compact('experience', 'destination'));
+            }
+            return redirect()->route('experiences.category', ['category' => $experience->slug ]);
+        }else{
+            return redirect()->route('experiences');
+        }
+    }
 }

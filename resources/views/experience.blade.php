@@ -34,7 +34,7 @@
                 <h2 class="text-6xl font-bold text-gray-400">{{ $destination->name_es }}</h2>
                 <p class="text-gray-400">{{ $destination->subtitle_es }}</p>
                 @markdown( $destination->short_description_es )
-                <a href="#" class="button px-8 py-2 shadow-7xl my-8 inline-block">Leer más</a>
+                <a href="{{ route('experiences.destination', ['category' => $experience->slug, 'slug' => $destination->slug ]) }}" class="button px-8 py-2 shadow-7xl my-8 inline-block">Leer más</a>
             </div>
         </div>
         @endforeach

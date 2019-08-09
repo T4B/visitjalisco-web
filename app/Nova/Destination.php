@@ -72,7 +72,7 @@ class Destination extends Resource
                 ->rules('required', 'max:255'),
             Text::make('Subtítulo', 'subtitle_es')
                 ->rules('required', 'max:255'),
-            Markdown::make('Descripción', 'short_description_es')
+            Markdown::make('Descripción corta', 'short_description_es')
                 ->rules('required')
                 ->hideFromIndex(),
             Markdown::make('Descripción', 'description_es')
