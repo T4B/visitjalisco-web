@@ -16,9 +16,9 @@
 <section class="blog">
     <div class="container pt-32  px-10 lg:px-0">
         <div class="w-full bg-gray-300 p-10">
-            <div class="bg-cover bg-no-repeat bg-center p-48" style="background-image:url({{ $first_post->url }})"></div>
+            <a href="{{ route('blog.post', [ 'slug' => $first_post->slug ]) }}"><div class="bg-cover bg-no-repeat bg-center p-48" style="background-image:url({{ $first_post->url }})"></div></a>
             <div class="text-lg text-white">
-                <h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">{{ $first_post->title }}</h2>
+                <a href="{{ route('blog.post', [ 'slug' => $first_post->slug ]) }}"><h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">{{ $first_post->title }}</h2></a>
                 @markdown( $first_post->excerpt )
             </div>
         </div>
@@ -30,8 +30,8 @@
                     @if ($loop->first) @continue @endif
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="post bg-gray-300 p-4 text-left text-white text-lg">
-                        <div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->url }})"></div>
-                        <h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ $post->title }}</h2>
+                        <a href="{{ route('blog.post', [ 'slug' => $post->slug ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->url }})"></div></a>
+                        <a href="{{ route('blog.post', [ 'slug' => $post->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ $post->title }}</h2></a>
                         @markdown ($post->excerpt)
                     </div>
                 </div> 

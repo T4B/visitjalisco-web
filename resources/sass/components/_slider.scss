@@ -22,4 +22,18 @@
     .button-next {
         right: theme('spacing.16');
     }
+
+    &.outside-arrows{
+        .button-prev {
+            left: -2.5rem;
+        }
+
+        .button-next {
+            right: -2.5rem;
+        }
+
+        .swiper-pagination{
+            @apply .hidden;
+        }
+    }
 }

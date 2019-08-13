@@ -28,6 +28,7 @@ if (App::environment('production')) {
     Route::get('/rutas', 'ComingSoonController@index')->name('routes');
     Route::get('/ruta/{slug}', 'ComingSoonController@index')->name('route');
     Route::get('/turismo-de-reuniones', 'ComingSoonController@index')->name('business-travel');
+    Route::get('/blog/{slug}', 'ComingSoonController@index')->name('blog.post');
 }else{
     Route::get('/este-es-mi-jalisco', 'JaliscoController@mijalisco')->name('mi-jalisco');
     Route::get('/regiones', 'RegionsController@index')->name('regions');
@@ -38,6 +39,7 @@ if (App::environment('production')) {
     Route::get('/rutas', 'RoutesController@index')->name('routes');
     Route::get('/ruta/{slug}', 'RoutesController@getRoute')->name('route');
     Route::get('/turismo-de-reuniones', 'BusinessTravelController@index')->name('business-travel');
+    Route::get('/blog/{slug}', 'BlogController@getPost')->name('blog.post');
 }
 
 Route::group(['prefix' => '{locale}'], function($locale) {

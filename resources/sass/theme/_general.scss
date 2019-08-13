@@ -28,3 +28,18 @@
 .headerimage{
     max-height: 450px;
 }
+
+.text-content{
+    p{
+        @apply .text-2xl .leading-tight .mb-8 .text-gray-500;
+    }
+    strong, b{
+        @apply font-bold;
+    }
+    a{
+        @apply .underline .text-red-400;
+    }
+    img{
+        @apply .mx-auto .px-16;
+    }
+}

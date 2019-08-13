@@ -12,16 +12,20 @@ class ExperiencesTest extends TestCase
      *
      * @test
      */
-    public function experiences_view_has_experiences()
+    public function experiences_view_has_experiences_and_posts()
     {
+        factory('App\Post', 10)->create();
+        
         $response = $this->get('/experiencias')
                     ->assertStatus(200)
                     ->assertViewHas('experiences')
                     ->assertViewHas('posts')
                     ->assertViewIs('experiences');
         $experiences = $response->original['experiences'];
+        $posts = $response->original['posts'];
 
         $this->assertEquals(9, count($experiences));  
+        $this->assertEquals(4, count($posts));  
     }
 
     /**

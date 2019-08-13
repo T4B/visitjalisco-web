@@ -37,7 +37,7 @@
     </div>
     <div class="w-full px-10">
         <slider 
-            class="shadow-2xl" 
+            class="shadow-2xl outside-arrows" 
             :slides="3" 
             :space="30"  
             :arrowscolor="'text-red-400'"

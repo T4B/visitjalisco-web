@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('page-name', 'destination')
+@section('page-name', 'post')
 
 @section('css')
     <link rel="stylesheet" href="{{ mix('css/swiper.css') }}" />
@@ -7,11 +7,10 @@
 
 @section('content')
 
-<section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $destination->url }})">
+<section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $post->url }})">
    <div class="container text-content flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
-            <h2 class="text-6xl font-bold">{{ $destination->name_es }}</h2>
-            @markdown( $destination->subtitle_es )
+            <h2 class="text-6xl font-bold">{{ $post->title }}</h2>
         </div>
    </div>
 </section>
@@ -20,8 +19,8 @@
 <section class="destination">
     <div class="container py-12">
         <div class="flex flex-wrap items-center">
-            <div class="w-full px-10 lg:px-0 text-content">
-                @markdown($destination->description_es)
+            <div class="w-full text-2xl text-gray-500 px-10 lg:px-0 text-content">
+                @markdown($post->text)
             </div>
         </div>
     </div>
@@ -78,7 +77,7 @@
                 :outsidearrows="true"
                 ref="carrousel" >
                 <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
+                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->url }})">
                     <div class="text-white absolute bottom-8 font-serif" >
                         <h2 class="font-bold text-xl">Test test test</h2>
                         <p>Test test test</p>
@@ -86,7 +85,7 @@
                     </div>
                 </slide>
                     <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
+                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->url }})">
                     <div class="text-white absolute bottom-8 font-serif" >
                         <h2 class="font-bold text-xl">Test test test</h2>
                         <p>Test test test</p>
@@ -94,7 +93,7 @@
                     </div>
                 </slide>
                     <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
+                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->url }})">
                     <div class="text-white absolute bottom-8 font-serif" >
                         <h2 class="font-bold text-xl">Test test test</h2>
                         <p>Test test test</p>
