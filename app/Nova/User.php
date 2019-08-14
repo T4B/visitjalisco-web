@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\Password;
@@ -16,6 +17,7 @@ class User extends Resource
      * @var string
      */
     public static $model = 'App\\User';
+    public static $group = 'Administración';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -80,6 +82,9 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),
+
+            Boolean::make('Panel'),
+            Boolean::make('Admin'),
         ];
     }
 
