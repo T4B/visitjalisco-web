@@ -25,10 +25,6 @@
     }
 }
 
-.headerimage{
-    max-height: 450px;
-}
-
 .text-content{
     p{
         @apply .text-2xl .leading-tight .mb-8 .text-gray-500;
@@ -43,3 +39,16 @@
         @apply .mx-auto .px-16;
     }
 }
+
+.headerimage{
+    max-height: 450px;
+    .text-content{
+        p, h2{
+            @apply .text-white;
+        }
+        p{
+            @apply .text-lg .leading-tight;
+        }
+    }
+}
+

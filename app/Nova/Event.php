@@ -70,9 +70,11 @@ class Event extends Resource
             Text::make('Nombre', 'name')
                 ->sortable(),
             Text::make('Fecha', 'date_es')
-                ->sortable(),
+                ->sortable()
+                ->rules('required'),
             Text::make('Lugar', 'place')
-                ->sortable(),
+                ->sortable()
+                ->rules('required'),
             Markdown::make('Texto', 'text_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
@@ -82,7 +84,8 @@ class Event extends Resource
             Select::make('Target')->options([
                 '_blank' => 'Blank',
                 '_self' => 'Self',
-            ])->hideFromIndex(),
+            ])->hideFromIndex()
+                ->rules('required'),
             Image::make('Imagen principal', 'thumb_image')
                 ->disk('public')
                 ->path('events')

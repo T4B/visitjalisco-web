@@ -13,7 +13,7 @@ class Region extends Model implements HasMedia
     use HasMediaTrait;
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
-    protected $appends = ['name', 'interior', 'main'];
+    protected $appends = ['name', 'interior', 'main', 'href'];
 
     public function getNameAttribute()
     {
@@ -37,5 +37,10 @@ class Region extends Model implements HasMedia
                 'image' => $item->getFullUrl(),
             ];
         })->toArray();
+    }
+
+    public function getHrefAttribute()
+    {
+        return route('region', ['slug' => $this->slug ]);
     }
 }

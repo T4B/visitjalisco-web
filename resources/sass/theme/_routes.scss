@@ -1,3 +1,9 @@
 .visitjalisco-routes{
-
+    .routes{
+        .text-content{
+            p{
+                @apply .text-lg .leading-tight .text-gray-400;
+            }
+        }
+    }
 }

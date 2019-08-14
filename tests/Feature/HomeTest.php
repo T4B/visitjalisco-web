@@ -44,4 +44,34 @@ class HomeTest extends TestCase
 
         $this->assertEquals(3, count($events));  
     }
+
+    /**
+     *
+     * @test
+     */
+    public function home_view_has_experiences()
+    {
+        $response = $this->get('/')
+                    ->assertStatus(200)
+                    ->assertViewHas('experiences')
+                    ->assertViewIs('home');
+        $experiences = $response->original['experiences'];
+
+        $this->assertEquals(9, count($experiences));  
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function home_view_has_routes()
+    {
+        $response = $this->get('/')
+                    ->assertStatus(200)
+                    ->assertViewHas('routes')
+                    ->assertViewIs('home');
+        $routes = $response->original['routes'];
+
+        $this->assertEquals(4, count($routes));  
+    }
 }

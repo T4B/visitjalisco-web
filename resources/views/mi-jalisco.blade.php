@@ -8,15 +8,15 @@
 @section('content')
 
 <section class="headerimage multiply-40 h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-mi-jalisco.jpg') }})">
-   
+   <div class="container text-content flex w-full font-secondary h-full relative">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-lg px-10 lg:px-0">
+            <h2 class="font-serif text-gray-500 text-6xl">Este es <span class="font-bold">Mi Jalisco</span></h2>
+            <p class="text-lg text-white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
+        </div>
+   </div>
 </section>
 
-<section class="bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
-    <div class="container px-10 py-10 lg:px-0">
-        <div class="w-full">
-            <h2 class="font-serif text-gray-500 text-8xl mb-8">Este es <span class="font-bold">Mi Jalisco</span></h2>
-        </div>
-    </div>
+<section class="bg-cover bg-no-repeat bg-center py-24" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
     <mi-jalisco-videos :videos='@json($videos)'></mi-jalisco-videos>
 </section>
 

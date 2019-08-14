@@ -10,6 +10,13 @@
             min-height: 32rem;
         }
     }
+    .headerimage{
+        .text-content{
+            p{
+                @apply .text-lg .text-white .leading-tight;
+            }
+        }
+    }
 }
 
 .visitjalisco-experience{

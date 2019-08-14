@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/coming-soon', 'ComingSoonController@index')->name('coming-soon');
 Route::get('/jalisco', 'JaliscoController@jalisco')->name('jalisco');
 Route::get('/agenda', 'ScheduleController@index')->name('schedule');
+Route::get('/page/{slug}', 'PageController@getPage')->name('page');
 
 
 

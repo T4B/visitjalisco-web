@@ -459,7 +459,7 @@
                     </h3>
                     <p class="text-xl" v-text="active.short_description_es"></p>
                 </div>
-                <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" href="#">Más información</a>
+                <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" :href="active.href">Más información</a>
             </div>
         </div>
     </div>
