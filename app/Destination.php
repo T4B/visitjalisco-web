@@ -17,4 +17,9 @@ class Destination extends Model
     {
         return Storage::url($this->image);
     }
+
+    public function tags()
+    {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
 }

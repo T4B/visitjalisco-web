@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\MorphToMany;
 
 class Destination extends Resource
 {
@@ -85,6 +86,8 @@ class Destination extends Resource
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable(),
+
+            MorphToMany::make('Tags'),
         ];
     }
 
