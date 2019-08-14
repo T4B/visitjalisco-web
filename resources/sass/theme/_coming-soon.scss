@@ -1,8 +1,5 @@
 .coming-soon{
-    .text-content{
+    .hero-content{
         @apply .h-screen;
-        @screen md{
-            height: 150vh;
-        }  
     }
 }
