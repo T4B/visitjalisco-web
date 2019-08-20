@@ -47,13 +47,17 @@
 
 <section class="categories font-secondary leading-tight">
     <div class="flex flex-wrap text-white text-center font-bold">
-        <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ asset('images/categories/experiensa_home_titulo.jpg') }})">
-            <h2 class="text-2xl">@lang('categories.experiences')</h2>
-        </div>
-        @foreach ($experiences as $experience)
-            <div class="category w-1/2 lg:w-1/5" style="background-image:url({{ $experience->url }})">
-                <h2 class="text-2xl">{{ $experience->name_es }}</h2>
+        <a class="w-1/2 lg:w-1/5" href="{{ route('experiences') }}">
+            <div class="category" style="background-image:url({{ asset('images/categories/experiensa_home_titulo.jpg') }})">
+                <h2 class="text-2xl">@lang('categories.experiences')</h2>
             </div>
+        </a>
+        @foreach ($experiences as $experience)
+            <a class="w-1/2 lg:w-1/5" href="{{ route('experiences.category', ['category' => $experience->slug ]) }}">
+                <div class="category" style="background-image:url({{ $experience->url }})">
+                    <h2 class="text-2xl">{{ $experience->name_es }}</h2>
+                </div>
+            </a>
         @endforeach
     </div>
 </section>

@@ -10,6 +10,7 @@ class ScheduleController extends Controller
     {
         $sliders = \App\Slider::where('position', 'schedule')->get();
         $events = \App\Event::orderBy('id', 'desc')->paginate(4);
-        return view('schedule', compact('sliders', 'events'));
+        $posts = \App\Post::where('language', 'es')->inrandomorder()->take(3)->get();
+        return view('schedule', compact('sliders', 'events', 'posts'));
     }
 }

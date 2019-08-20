@@ -9,8 +9,17 @@ class BlogController extends Controller
     public function getPost(Request $request, $slug)
     {
         $post = \App\Post::where('slug', $slug)->first();
+
+       
         if ($post){
-            return view('post', compact('post'));
+             $posts = \App\Post::where('language', 'es')
+                            ->where('id', '!=', $post->id)
+                            ->inrandomorder()
+                            ->take(6)
+                            ->get();
+
+
+            return view('post', compact('post', 'posts'));
         }else{
             return redirect()->route('experiences');
         }

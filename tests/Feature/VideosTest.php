@@ -8,6 +8,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Events\VideoSaved;
 use App\Listeners\VideoSavedListener;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Queue;
+use Illuminate\Events\CallQueuedListener;
 
 class VideosTest extends TestCase
 {
@@ -39,5 +41,20 @@ class VideosTest extends TestCase
         $listener->handle(new VideoSaved($video));
 
         $this->assertNotNull($video->embed);
+    }
+
+     /**
+     *
+     * @test
+     */
+    public function video_saved_event_is_sent_to_queue()
+    {
+        Queue::fake();
+
+        $video =  factory('App\Video')->create();
+
+        Queue::assertPushed(CallQueuedListener::class, function ($job) {
+            return $job->class == VideoSavedListener::class;
+        });
     }
 }

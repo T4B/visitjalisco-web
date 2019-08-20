@@ -36,7 +36,6 @@ class RegionsTest extends TestCase
             ->assertViewIs('region');
         $page_region = $response->original['region'];
         $this->assertEquals($region->name_es, $page_region->name_es);
-
     }   
     
     /**
@@ -49,4 +48,23 @@ class RegionsTest extends TestCase
         $response = $this->get('/region/beeb-mx')
             ->assertRedirect('/regiones');
     }
+
+     /**
+     *
+     * @test
+     */
+    public function region_view_has_posts()
+    {
+        factory('App\Post', 10)->create();
+
+        $region = \App\Region::inrandomorder()->first();
+        
+        $response = $this->get('/region/'.$region->slug)
+                    ->assertStatus(200)
+                    ->assertViewHas('posts')
+                    ->assertViewIs('region');
+        $posts = $response->original['posts'];
+
+        $this->assertEquals(6, count($posts));  
+    }    
 }

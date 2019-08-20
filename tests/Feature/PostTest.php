@@ -24,4 +24,24 @@ class PostTest extends TestCase
         $page_post = $response->original['post'];
         $this->assertEquals($post->title, $page_post->title);
     }   
+
+     /**
+     *
+     * @test
+     */
+    public function blog_post_view_has_posts_except_current()
+    {
+        factory('App\Post', 10)->create();
+
+        $post = \App\Post::inrandomorder()->first();
+        
+        $response = $this->get('/blog/'.$post->slug)
+                    ->assertStatus(200)
+                    ->assertViewHas('posts')
+                    ->assertViewIs('post');
+        $posts = $response->original['posts'];
+
+        $this->assertEquals(6, count($posts));  
+        $this->assertFalse($posts->contains($post->id));    
+    }  
 }

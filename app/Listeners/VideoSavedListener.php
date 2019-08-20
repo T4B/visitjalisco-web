@@ -6,7 +6,7 @@ use App\Events\VideoSaved;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class VideoSavedListener
+class VideoSavedListener implements ShouldQueue
 {
     /**
      * Create the event listener.
