@@ -23,7 +23,7 @@ class ConventionCenter extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -64,7 +64,7 @@ class ConventionCenter extends Resource
     {
         return [
             ID::make()
-                ->onlyOnIndex()
+                ->onlyOnForms()
                 ->sortable(),
             Text::make('Nombre', 'name')
                 ->sortable(),

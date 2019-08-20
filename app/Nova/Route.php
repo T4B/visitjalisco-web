@@ -72,13 +72,16 @@ class Route extends Resource
             ID::make()
                 ->sortable()
                 ->hideFromIndex(),
+
             Text::make('Nombre', 'name_es')
                 ->sortable()
                 ->exceptOnForms(),
+
             TextWithSlug::make('Nombre', 'name_es')
                 ->slug('slug')
                 ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
                 ->onlyOnForms(),
+
             Slug::make('Slug')
                 ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:routes,slug')
                 ->showUrlPreview(env('APP_URL') . '/ruta'),
@@ -92,14 +95,16 @@ class Route extends Resource
                 'pink-400' => 'Rosa',
                 'purple-300' => 'Morado',
                 'red-600' => 'Rojo',
-            ])->displayUsingLabels()
-            ->hideFromIndex(),
+            ])->displayUsingLabels()->hideFromIndex(),
+
             Markdown::make('Descripción corta', 'short_description_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
+
             Markdown::make('Descripción larga', 'full_description_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
+
             Image::make('Imagen Principal', 'header_image')
                 ->disk('public')
                 ->path('routes')
@@ -108,6 +113,7 @@ class Route extends Resource
                 ->updateRules('nullable')
                 ->prunable()
                 ->hideFromIndex(),
+
             Image::make('Imagen fondo galería', 'gallery_image')
                 ->disk('public')
                 ->path('routes')
@@ -116,6 +122,7 @@ class Route extends Resource
                 ->updateRules('nullable')
                 ->prunable()
                 ->hideFromIndex(),
+
             Image::make('Mapa', 'map_image')
                 ->disk('public')
                 ->path('routes')
@@ -124,12 +131,18 @@ class Route extends Resource
                 ->updateRules('nullable')
                 ->prunable()
                 ->hideFromIndex(),
+
             Number::make('Orden', 'order')
                 ->sortable(),
+
             Images::make('Galería', 'gallery')
                 ->multiple()
                 ->singleImageRules('image')
                 ->hideFromIndex(),
+
+            Text::make('Link', function () {
+                return '<a class="cursor-pointer text-70 hover:text-primary" href="' . route('route', ['slug' => $this->slug]) . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" class="fill-current"><path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/></svg></a>';
+            })->asHtml()->exceptOnForms(),
 
             HasMany::make('Lugares', 'places', Place::class),
         ];
