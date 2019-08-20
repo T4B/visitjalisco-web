@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
@@ -25,7 +24,7 @@ class Event extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -33,9 +32,8 @@ class Event extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name',
     ];
-
 
     /**
      * Get the displayable label of the resource.
@@ -82,8 +80,8 @@ class Event extends Resource
                 ->hideFromIndex()
                 ->sortable(),
             Select::make('Target')->options([
-                '_blank' => 'Blank',
-                '_self' => 'Self',
+                '_blank' => 'Página nueva',
+                '_self' => 'Misma página',
             ])->hideFromIndex()
                 ->rules('required'),
             Image::make('Imagen principal', 'thumb_image')
@@ -93,14 +91,14 @@ class Event extends Resource
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable(),
-            Boolean::make('Destacado', 'highlight'),
             Image::make('Imagen destacados', 'large_image')
                 ->disk('public')
                 ->path('events')
                 ->rules('max:1024')
                 ->updateRules('nullable')
                 ->prunable()
-                ->hideFromIndex()
+                ->hideFromIndex(),
+            Boolean::make('Destacado', 'highlight'),
         ];
     }
 

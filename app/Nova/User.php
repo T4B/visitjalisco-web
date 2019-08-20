@@ -32,7 +32,7 @@ class User extends Resource
      * @var array
      */
     public static $search = [
-        'id', 'name', 'email',
+        'name', 'email',
     ];
 
     /**
@@ -64,7 +64,9 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->sortable()
+                ->onlyOnForms(),
 
             Gravatar::make(),
 

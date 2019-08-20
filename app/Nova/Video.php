@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Select;
@@ -24,7 +23,7 @@ class Video extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'title_es';
 
     /**
      * The columns that should be searched.
@@ -32,7 +31,7 @@ class Video extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'title_es', 'subtitle_es'
     ];
 
     /**
@@ -44,7 +43,9 @@ class Video extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()
+                ->sortable()
+                ->onlyOnForms(),
             Text::make('Título', 'title_es')
                 ->sortable(),
             Text::make('Título', 'subtitle_es')
@@ -66,7 +67,6 @@ class Video extends Resource
                 'mi-jalisco' => 'Mi Jalisco',
                 'jalisco' => 'El estado',
             ])->displayUsingLabels(),
-                
         ];
     }
 

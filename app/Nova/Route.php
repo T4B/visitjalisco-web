@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
@@ -38,7 +37,7 @@ class Route extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name_es',
     ];
 
     /**
@@ -93,7 +92,8 @@ class Route extends Resource
                 'pink-400' => 'Rosa',
                 'purple-300' => 'Morado',
                 'red-600' => 'Rojo',
-            ])->displayUsingLabels(),
+            ])->displayUsingLabels()
+            ->hideFromIndex(),
             Markdown::make('Descripción corta', 'short_description_es')
                 ->rules('nullable')
                 ->hideFromIndex(),

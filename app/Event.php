@@ -14,6 +14,10 @@ class Event extends Model
         'highlight' => 'boolean',
     ];
 
+    protected $attributes = [
+        'target' => '_blank',
+    ];
+
     public function getThumbAttribute()
     {
         return Storage::url($this->thumb_image);

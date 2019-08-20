@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Number;
@@ -31,9 +30,9 @@ class Slider extends Resource
      *
      * @var array
      */
-    public static $search = [
-        'text',
-    ];
+    public static $search = false;
+
+    public static $globallySearchable = false;
 
     /**
      * Get the fields displayed by the resource.
@@ -61,7 +60,7 @@ class Slider extends Resource
                 'home' => 'Home',
                 'schedule' => 'Agenda',
             ])->displayUsingLabels(),
-                
+
             Number::make('Orden', 'order')
                 ->min(1)->max(20)
                 ->sortable(),

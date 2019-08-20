@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
@@ -44,7 +43,7 @@ class Page extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name_es';
 
     /**
      * The columns that should be searched.
@@ -52,7 +51,7 @@ class Page extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name_es',
     ];
 
     /**
@@ -64,12 +63,12 @@ class Page extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()->onlyOnForms(),
 
             Text::make('Nombre', 'name_es')
                 ->sortable()
                 ->exceptOnForms(),
-            
+
             TextWithSlug::make('Nombre', 'name_es')
                 ->slug('slug')
                 ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
@@ -79,7 +78,7 @@ class Page extends Resource
                 ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:pages,slug')
                 ->showUrlPreview(env('APP_URL') . '/page'),
 
-            Markdown::make('Contenido', 'text')
+            Markdown::make('Contenido', 'text_es')
                 ->rules('required'),
         ];
     }

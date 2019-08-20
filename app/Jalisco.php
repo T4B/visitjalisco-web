@@ -12,6 +12,10 @@ class Jalisco extends Model implements HasMedia
 
     protected $table = 'jalisco';
 
+    protected $attributes = [
+        'language' => 'es',
+    ];
+
     public function gallery()
     {
         return $this->getMedia('gallery')->map(function ($item) {

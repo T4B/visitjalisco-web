@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "bf3b39e3d93bad84f001f5c15c4823ed",
@@ -66,8 +66,7 @@
             "dist": {
                 "type": "path",
                 "url": "./nova-components/VisitJalisco",
-                "reference": "cff15c5474ad1170dee756b500a5f99385385a51",
-                "shasum": null
+                "reference": "cff15c5474ad1170dee756b500a5f99385385a51"
             },
             "require": {
                 "php": ">=7.1.0"
@@ -131,9 +130,9 @@
             "authors": [
                 {
                     "name": "Benjamin Hirsch",
+                    "role": "Developer",
                     "email": "mail@benjaminhirsch.net",
-                    "homepage": "https://wwwbenjaminhirsch.net",
-                    "role": "Developer"
+                    "homepage": "https://wwwbenjaminhirsch.net"
                 }
             ],
             "description": "A Laravel Nova field to generate a slugs.",
@@ -1188,16 +1187,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.32",
+            "version": "v5.8.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ee16d719516dfd77ed6c9538000bca49ded284e2"
+                "reference": "58b81842cbdcfbbd8302790ac0f98119ea1c56e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ee16d719516dfd77ed6c9538000bca49ded284e2",
-                "reference": "ee16d719516dfd77ed6c9538000bca49ded284e2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/58b81842cbdcfbbd8302790ac0f98119ea1c56e5",
+                "reference": "58b81842cbdcfbbd8302790ac0f98119ea1c56e5",
                 "shasum": ""
             },
             "require": {
@@ -1331,21 +1330,21 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-08-13T14:11:52+00:00"
+            "time": "2019-08-20T15:45:17+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "v2.0.11",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "055b382736bf2726754e8dcd674b4a0101ab6ac9"
+                "reference": "37d1da0fcae7cd46296597ac80f6cc9ea60367b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-055b382736bf2726754e8dcd674b4a0101ab6ac9-zip-bcb2d5.zip",
-                "reference": "055b382736bf2726754e8dcd674b4a0101ab6ac9",
-                "shasum": "a0dde4bca15de2b3f06aa62043728ce485283a4d"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-37d1da0fcae7cd46296597ac80f6cc9ea60367b5-zip-d81688.zip",
+                "reference": "37d1da0fcae7cd46296597ac80f6cc9ea60367b5",
+                "shasum": "eb28754ccfadd2f1bfaa852b53b97e02e87301fe"
             },
             "require": {
                 "cakephp/chronos": "^1.0",
@@ -1401,7 +1400,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2019-08-13T17:17:17+00:00"
+            "time": "2019-08-20T19:26:49+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1792,16 +1791,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.22.3",
+            "version": "2.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e"
+                "reference": "767617a047e5b8b8b3b0b6023a2650847ed7df02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
-                "reference": "738fbd8d80b2c5e158fda76c29c2de432fcc6f7e",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/767617a047e5b8b8b3b0b6023a2650847ed7df02",
+                "reference": "767617a047e5b8b8b3b0b6023a2650847ed7df02",
                 "shasum": ""
             },
             "require": {
@@ -1848,14 +1847,14 @@
                     "homepage": "http://github.com/kylekatarnls"
                 }
             ],
-            "description": "A simple API extension for DateTime.",
+            "description": "A API extension for DateTime that supports 281 different languages.",
             "homepage": "http://carbon.nesbot.com",
             "keywords": [
                 "date",
                 "datetime",
                 "time"
             ],
-            "time": "2019-08-07T12:36:44+00:00"
+            "time": "2019-08-17T13:57:34+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2544,9 +2543,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
-                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be"
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
                 }
             ],
             "description": "Easily optimize images using PHP",
@@ -5967,8 +5966,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 
 class Tag extends Resource
@@ -29,14 +28,14 @@ class Tag extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name_es',
     ];
 
-     /**
-     * Get the displayable label of the resource.
-     *
-     * @return string
-     */
+    /**
+    * Get the displayable label of the resource.
+    *
+    * @return string
+    */
     public static function label()
     {
         return 'Etiquetas';
@@ -61,7 +60,7 @@ class Tag extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->hideFromIndex(),
+            ID::make()->onlyOnForms(),
             Text::make('Nombre', 'name_es')
                 ->sortable(),
         ];

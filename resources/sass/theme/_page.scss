@@ -1,0 +1,23 @@
+.page-content {
+    h2, h3, h4, h5, h6 {
+        @apply mb-8;
+    }
+    h2, h3 {
+        @apply text-3xl;
+    }
+    h4, h5, h6 {
+        @apply text-2xl;
+    }
+    p {
+        @apply text-xl .leading-tight .mb-6 .text-gray-500;
+    }
+    a {
+        @apply .underline .text-red-400;
+    }
+    img {
+        @apply .mx-auto .px-16;
+    }
+    strong, b {
+        @apply font-bold;
+    }
+}

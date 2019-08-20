@@ -4,7 +4,6 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
@@ -29,7 +28,7 @@ class Region extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name_es';
 
     /**
      * The columns that should be searched.
@@ -37,7 +36,7 @@ class Region extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'name_es',
     ];
 
     /**
@@ -84,7 +83,7 @@ class Region extends Resource
 
             Slug::make('Slug')
                 ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:experiences,slug')
-                ->showUrlPreview(env('APP_URL') . '/experiencias'),
+                ->showUrlPreview(env('APP_URL') . '/region'),
 
             Select::make('Color', 'color')->options([
                 'orange-100' => 'Naranja',
@@ -95,7 +94,8 @@ class Region extends Resource
                 'purple-400' => 'Morado',
                 'blue-400' => 'Azul claro',
                 'blue-500' => 'Azul oscuro',
-            ])->displayUsingLabels(),
+            ])->displayUsingLabels()
+            ->hideFromIndex(),
 
             Markdown::make('Descripción corta', 'short_description_es')
                 ->rules('nullable')
