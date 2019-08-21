@@ -53,7 +53,7 @@ class Post extends Resource
      */
     public static function singularLabel()
     {
-        return 'Post';
+        return 'Publicación';
     }
 
     /**
