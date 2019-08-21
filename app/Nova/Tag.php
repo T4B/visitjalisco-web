@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\MorphedByMany;
 use Laravel\Nova\Fields\Text;
 
 class Tag extends Resource
@@ -63,6 +64,7 @@ class Tag extends Resource
             ID::make()->onlyOnForms(),
             Text::make('Nombre', 'name_es')
                 ->sortable(),
+            MorphedByMany::make('Publicación', 'posts', Post::class)
         ];
     }
 
