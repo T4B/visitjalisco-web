@@ -8,12 +8,11 @@ class BlogController extends Controller
 {
     public function getPost(Request $request, $slug)
     {
-        $post = \App\Post::where('slug', $slug)->first();
+        $post = \App\Post::where('slug_es', $slug)->first();
 
        
         if ($post){
-             $posts = \App\Post::where('language', 'es')
-                            ->where('id', '!=', $post->id)
+             $posts = \App\Post::where('id', '!=', $post->id)
                             ->inrandomorder()
                             ->take(6)
                             ->get();

@@ -67,43 +67,7 @@
     
 </section>
 
-<section class="videos py-12">
-    <div class="container px-10 lg:px-0">
-        <div class="w-full px-10">
-            <slider 
-                class="shadow-2xl outside-arrows" 
-                :slides="3" 
-                :space="30"  
-                :arrowscolor="'text-red-400'"
-                :outsidearrows="true"
-                ref="carrousel" >
-                <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
-                    <div class="text-white absolute bottom-8 font-serif" >
-                        <h2 class="font-bold text-xl">Test test test</h2>
-                        <p>Test test test</p>
-                    </div>
-                    </div>
-                </slide>
-                    <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
-                    <div class="text-white absolute bottom-8 font-serif" >
-                        <h2 class="font-bold text-xl">Test test test</h2>
-                        <p>Test test test</p>
-                    </div>
-                    </div>
-                </slide>
-                    <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $experience->url }})">
-                    <div class="text-white absolute bottom-8 font-serif" >
-                        <h2 class="font-bold text-xl">Test test test</h2>
-                        <p>Test test test</p>
-                    </div>
-                    </div>
-                </slide>
-            </slider>
-        </div>
-    </div>
-</section>
+@component('components.posts-slider', ['posts' =>$posts])
+@endcomponent
 
 @endsection

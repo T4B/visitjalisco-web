@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Benjaminhirsch\NovaSlugField\Slug;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\MorphToMany;
@@ -67,18 +69,27 @@ class Destination extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
             BelongsTo::make('Experiencia', 'experience', Experience::class),
-            Text::make('Nombre', 'name_es')
-                ->rules('required', 'max:255'),
+            
+            TextWithSlug::make('Nombre', 'name_es')
+                ->slug('slug')
+                ->rules('required', 'regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
+                ->onlyOnForms(),
+            
+            Slug::make('Slug')
+                ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:experiences,slug'),
+
             Text::make('Subtítulo', 'subtitle_es')
                 ->rules('required', 'max:255'),
+
             Markdown::make('Descripción corta', 'short_description_es')
                 ->rules('required')
                 ->hideFromIndex(),
+
             Markdown::make('Descripción', 'description_es')
                 ->rules('required')
                 ->hideFromIndex(),
+                
             Image::make('Imagen', 'image')
                 ->disk('public')
                 ->path('destination')

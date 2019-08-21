@@ -22,6 +22,7 @@
         "andreasindal/laravel-markdown": "^3.0",
         "beebmx/visit-jalisco": "*",
         "benjaminhirsch/nova-slug-field": "^1.2",
+        "doctrine/dbal": "^2.9",
         "ebess/advanced-nova-media-library": "^2.7",
         "embed/embed": "^3.4",
         "fideloper/proxy": "^4.0",

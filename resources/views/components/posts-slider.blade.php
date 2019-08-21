@@ -13,7 +13,7 @@
                 <slide>
                     <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->url }})">
                     <div class="text-white absolute bottom-8 font-serif" >
-                        <a href="{{ route('blog.post', ['slug' => $post->slug ]) }}"><h2 class="font-bold text-xl">{{ $post->title }}</h2></a>
+                        <a href="{{ route('blog.post', ['slug' => $post->slug_es ]) }}"><h2 class="font-bold text-xl">{{ $post->title_es }}</h2></a>
                         {{--<p>Test test test</p>--}}
                     </div>
                     </div>

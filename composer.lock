@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf3b39e3d93bad84f001f5c15c4823ed",
+    "content-hash": "4022320f54ba12a16409652eee17b7b7",
     "packages": [
         {
             "name": "andreasindal/laravel-markdown",
@@ -66,7 +66,8 @@
             "dist": {
                 "type": "path",
                 "url": "./nova-components/VisitJalisco",
-                "reference": "cff15c5474ad1170dee756b500a5f99385385a51"
+                "reference": "cff15c5474ad1170dee756b500a5f99385385a51",
+                "shasum": null
             },
             "require": {
                 "php": ">=7.1.0"
@@ -130,9 +131,9 @@
             "authors": [
                 {
                     "name": "Benjamin Hirsch",
-                    "role": "Developer",
                     "email": "mail@benjaminhirsch.net",
-                    "homepage": "https://wwwbenjaminhirsch.net"
+                    "homepage": "https://wwwbenjaminhirsch.net",
+                    "role": "Developer"
                 }
             ],
             "description": "A Laravel Nova field to generate a slugs.",
@@ -2543,9 +2544,9 @@
             "authors": [
                 {
                     "name": "Freek Van der Herten",
+                    "role": "Developer",
                     "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "homepage": "https://spatie.be"
                 }
             ],
             "description": "Easily optimize images using PHP",
@@ -5966,8 +5967,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

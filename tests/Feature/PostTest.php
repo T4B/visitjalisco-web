@@ -17,12 +17,12 @@ class PostTest extends TestCase
         factory('App\Post', 4)->create();
         
         $post = \App\Post::inrandomorder()->first();
-        $response = $this->get('/blog/'.$post->slug)
+        $response = $this->get('/blog/'.$post->slug_es)
             ->assertStatus(200)
             ->assertViewHas('post')
             ->assertViewIs('post');
         $page_post = $response->original['post'];
-        $this->assertEquals($post->title, $page_post->title);
+        $this->assertEquals($post->title_es, $page_post->title_es);
     }   
 
      /**
@@ -35,7 +35,7 @@ class PostTest extends TestCase
 
         $post = \App\Post::inrandomorder()->first();
         
-        $response = $this->get('/blog/'.$post->slug)
+        $response = $this->get('/blog/'.$post->slug_es)
                     ->assertStatus(200)
                     ->assertViewHas('posts')
                     ->assertViewIs('post');
