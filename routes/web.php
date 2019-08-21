@@ -66,7 +66,7 @@ if (App::environment('production')) {
     Route::get('/region/{slug}', 'RegionsController@getRegion')->name('region');
     Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
     Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
-    Route::get('/experiencias/{category}/{destination}', 'ExperiencesController@getDestination')->name('experiences.destination');
+    Route::get('/experiencias/{category}/{slug}', 'ExperiencesController@getDestination')->name('experiences.destination');
     Route::get('/rutas', 'RoutesController@index')->name('routes');
     Route::get('/ruta/{slug}', 'RoutesController@getRoute')->name('route');
     Route::get('/turismo-de-reuniones', 'BusinessTravelController@index')->name('business-travel');

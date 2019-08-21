@@ -11,7 +11,7 @@
 <slider class="main-slider">
     @foreach($experience->gallery() as $slide)
     <slide>
-        <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slide['image']) }})">
+        <div class="slide multiply-40 flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slide['image']) }})">
             <div class="container text-white px-8 py-20 md:py-40">
                 @markdown( $slide['text'] )
             </div>
@@ -38,12 +38,12 @@
             </div>
         </div>
         @endforeach
-        <div class="flex flex-wrap items-center">
+        <div class="flex flex-wrap items-center my-8">
             <div class="w-full lg:w-3/4 destinations-navigation">
                 {{ $destinations->links() }}
             </div>
             <div class="w-full lg:w-1/4 text-right my-6 lg:my-0">
-                <a href="{{ route('experiences') }}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">Todas las experiencias</a>
+                <a href="{{ route('experiences') }}" class="button text-xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">Todas las experiencias</a>
             </div>
         </div>
         

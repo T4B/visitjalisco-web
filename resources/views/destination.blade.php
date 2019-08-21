@@ -10,7 +10,7 @@
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $destination->url }})">
    <div class="container text-content flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
-            <h2 class="text-6xl font-bold">{{ $destination->name_es }}</h2>
+            <h2 class="text-6xl font-bold leading-none">{{ $destination->name_es }}</h2>
             @markdown( $destination->subtitle_es )
         </div>
    </div>

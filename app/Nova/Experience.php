@@ -55,7 +55,7 @@ class Experience extends Resource
      */
     public static function singularLabel()
     {
-        return 'Experiencias';
+        return 'Experiencia';
     }
 
     /**
@@ -77,7 +77,7 @@ class Experience extends Resource
 
             TextWithSlug::make('Nombre', 'name_es')
                 ->slug('slug')
-                ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
+                ->rules('required', 'regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
                 ->onlyOnForms(),
 
             Slug::make('Slug')
