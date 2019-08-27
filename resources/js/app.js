@@ -29,6 +29,15 @@ import './components'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import VModal from 'vue-js-modal'
+Vue.use(VModal, { dialog: true });
+
+import contact from './mixins/contact';
+import './ui'
+
 const app = new Vue({
     el: '#app',
+    mixins: [
+        contact,
+    ]
 });

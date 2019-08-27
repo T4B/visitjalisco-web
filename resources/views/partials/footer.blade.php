@@ -37,7 +37,8 @@
                         </a>
                     </li>
                 </ul>
-                <a class="lg:absolute lg:inset-x-0 lg:bottom-0 no-unerline" href="{{ route('page', ['slug' => 'aviso-de-privacidad' ])}}">aviso de privacidad</a>
+                <button class="no-underline mt-12 mx-auto focus:outline-none block" @click="showContactForm">Contacto</button>
+                <a class="lg:absolute lg:inset-x-0 lg:bottom-0 no-underline" href="{{ route('page', ['slug' => 'aviso-de-privacidad' ])}}">aviso de privacidad</a>
             </div>
             <div class="w-full lg:w-1/3 text-center ml-auto mt-4 lg:mt-0 px-10">
                 @lang('general.footer.text')
@@ -52,4 +53,5 @@
             </div>
         </div>
     </div>
+    <visitjalisco-contact></visitjalisco-contact>
 </footer>

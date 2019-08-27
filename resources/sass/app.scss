@@ -2,6 +2,8 @@
 @import './theme/base';
 
 @tailwind components;
+@import '~lightgallery.js/src/sass/lightgallery';
+
 @import './components/all';
 @import './theme/all';
 
