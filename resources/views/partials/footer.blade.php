@@ -53,5 +53,5 @@
             </div>
         </div>
     </div>
-    <visitjalisco-contact></visitjalisco-contact>
 </footer>
+<visitjalisco-contact></visitjalisco-contact>

@@ -1,5 +1,5 @@
 <template>
-  <modal name="contact" :adaptative="true" width="600" height="auto" :scrollable="true">
+  <modal name="contact" :adaptative="true" height="auto" :scrollable="true">
     <div class="p-8">
       <h2>CONTACTO</h2>
       <p>Si tienes alguna duda o comentario, ponte en contacto con nosotros a través de este formulario.</p>
@@ -62,9 +62,32 @@ export default {
           return false;
         },
         send(){
+          var params = new FormData()
+          params.append('name', this.name)
+          params.append('email', this.email)
+          params.append('phone', this.phone)
+          params.append('message', this.message)
 
-        }
-        
+
+          const config = {
+              headers: {
+                  'content-type': 'text/html'
+              }
+          }
+
+          this.sending = true;
+          this.$http.post('/contact', params, config)
+          .then((response) => {
+              this.sent = true;
+              this.sending = false;
+              //window.location.href = response.data.redirect
+          })
+          .catch(error => {
+              this.sending = false;
+              this.errors = error.response.data.errors;
+              console.log(error)
+          });
+      }
     }
 }
 </script>
