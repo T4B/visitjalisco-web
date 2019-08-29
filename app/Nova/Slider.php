@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Text;
 
 class Slider extends Resource
 {
@@ -63,6 +64,10 @@ class Slider extends Resource
 
             Number::make('Orden', 'order')
                 ->min(1)->max(20)
+                ->sortable(),
+
+            Text::make('Enlace', 'link')
+                ->hideFromIndex()
                 ->sortable(),
         ];
     }

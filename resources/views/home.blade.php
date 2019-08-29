@@ -10,11 +10,21 @@
 <slider class="main-slider">
     @foreach($sliders->sortBy('order') as $slider)
     <slide>
+        @if (empty($slider->link))
         <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container text-white px-8 py-20 md:py-40">
                 @markdown( $slider->text_es )
             </div>
         </div>
+        @else
+            <a href="{{ $slider->link }}">
+            <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
+                <div class="container text-white px-8 py-20 md:py-40">
+                    @markdown( $slider->text_es )
+                </div>
+            </div>
+            </a>
+        @endif
     </slide>
     @endforeach
 </slider>
