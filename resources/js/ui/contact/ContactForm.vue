@@ -1,7 +1,6 @@
 <template>
-  <modal name="contact" :adaptative="true" height="auto" :scrollable="true">
-    <div class="p-8">
-      <h2>CONTACTO</h2>
+  <modal name="contact" :adaptive="true" width="50%" :min-width="300" height="auto" :scrollable="true">
+    <div class="p-8 contact-form" v-show="!sent">
       <p>Si tienes alguna duda o comentario, ponte en contacto con nosotros a través de este formulario.</p>
       <div class="flex flex-wrap justify-between">
         <field :error="error('name')">
@@ -24,6 +23,9 @@
           <button class="button px-8 py-2 shadow-7xl inline-block rounded-none" @click="send" :class="{'is-loading':sending}" :disabled="sending">Enviar</button>
         </div>
       </div>
+    </div>
+    <div class="p-8 contact-form text-center my-4" v-show="sent">
+      <h2 class="font-bold text-red-400 uppercase text-2xl">Gracias, tu mensaje ha sido enviado</h2>
     </div>
   </modal>
 </template>
@@ -78,14 +80,12 @@ export default {
           this.sending = true;
           this.$http.post('/contact', params, config)
           .then((response) => {
-              this.sent = true;
-              this.sending = false;
-              //window.location.href = response.data.redirect
+            this.sent = true;
+            this.sending = false;
           })
           .catch(error => {
-              this.sending = false;
-              this.errors = error.response.data.errors;
-              console.log(error)
+            this.sending = false;
+            this.errors = error.response.data.errors;
           });
       }
     }

@@ -15,6 +15,16 @@
 
 .button{
     @apply .bg-red-400 .text-white .rounded-lg;
+    &.is-loading{
+        &::after{
+            animation: spin .5s infinite linear;
+            -webkit-animation: spin .5s infinite linear;
+            @apply .rounded-full .border .border-white .inline-block .h-4 .w-4 .relative .ml-2;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            content: "";            
+        }
+    }
 }
 
 .main-slider{
