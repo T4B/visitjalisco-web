@@ -13,6 +13,7 @@ use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Laravel\Nova\Fields\HasMany;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Benjaminhirsch\NovaSlugField\Slug;
+use Laravel\Nova\Fields\Boolean;
 
 class Route extends Resource
 {
@@ -79,7 +80,7 @@ class Route extends Resource
 
             TextWithSlug::make('Nombre', 'name_es')
                 ->slug('slug')
-                ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
+                ->rules('required', 'regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
                 ->onlyOnForms(),
 
             Slug::make('Slug')
@@ -134,6 +135,8 @@ class Route extends Resource
 
             Number::make('Orden', 'order')
                 ->sortable(),
+
+            Boolean::make('Destacado', 'highlight'),
 
             Images::make('Galería', 'gallery')
                 ->multiple()

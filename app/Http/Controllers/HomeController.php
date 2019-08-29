@@ -11,7 +11,7 @@ class HomeController extends Controller
         $sliders = \App\Slider::where('position', 'home')->get();
         $events = \App\Event::where('highlight', 1)->orderBy('id', 'desc')->take(3)->get();
         $experiences = \App\Experience::orderBy('order', 'asc')->get();
-        $routes = \App\Route::orderBy('order', 'asc')->take(4)->get();
+        $routes = \App\Route::where('highlight', 1)->orderBy('order', 'asc')->take(4)->get();
         $first_route = $routes->first();
         return view('home', compact('sliders', 'events', 'experiences', 'routes', 'first_route'));
     }
