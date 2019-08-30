@@ -103,6 +103,7 @@ class Experience extends Resource
                 ->hideFromIndex()
                 ->customPropertiesFields([
                     Markdown::make('Text'),
+                    Text::make('Enlace', 'link')
                 ]),
 
             Text::make('Link', function () {

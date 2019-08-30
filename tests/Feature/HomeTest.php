@@ -74,4 +74,22 @@ class HomeTest extends TestCase
 
         $this->assertEquals(4, count($routes));  
     }
+
+    /**
+     *
+     * @test
+     */
+    public function home_view_has_mi_jalisco_videos()
+    {
+        factory('App\Video', 4)->create(['position' => 'mi-jalisco']);
+        factory('App\Video', 3)->create(['position' => 'jalisco']);
+
+        $response = $this->get('/')
+                    ->assertStatus(200)
+                    ->assertViewHas('videos')
+                    ->assertViewIs('home');
+        $videos = $response->original['videos'];
+
+        $this->assertEquals(4, count($videos));  
+    }
 }

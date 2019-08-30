@@ -27,7 +27,8 @@ class Experience extends Model implements HasMedia
         return $this->getMedia('gallery')->map(function ($item) {
             return [
                 'image' => $item->getFullUrl(),
-                'text' => $item->getCustomProperty('text')
+                'text' => $item->getCustomProperty('text'),
+                'link' => $item->getCustomProperty('link')
             ];
         })->toArray();
     }

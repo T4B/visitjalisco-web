@@ -11,11 +11,21 @@
 <slider class="main-slider">
     @foreach($experience->gallery() as $slide)
     <slide>
+        @if (empty($slide['link']))
         <div class="slide multiply-40 flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slide['image']) }})">
             <div class="container text-white px-8 py-20 md:py-40">
                 @markdown( $slide['text'] )
             </div>
         </div>
+        @else
+            <a href="{{ $slide['link'] }}">
+                <div class="slide multiply-40 flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slide['image']) }})">
+                    <div class="container text-white px-8 py-20 md:py-40">
+                        @markdown( $slide['text'] )
+                    </div>
+                </div>
+            </a>
+        @endif
     </slide>
     @endforeach
 </slider>

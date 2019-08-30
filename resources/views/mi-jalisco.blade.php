@@ -17,8 +17,51 @@
 </section>
 
 <section class="bg-cover bg-no-repeat bg-center py-24" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
-    <mi-jalisco-videos :videos='@json($videos)'></mi-jalisco-videos>
+    @foreach ($videos as $video)
+        <div id="{{ $video->slug }}" class="video-container container px-10 pb-10 pt-0 lg:px-0">
+            <div class="w-full">
+                {{--<div style="background-image:url({{ asset($video->preview) }})"
+                     class="py-64 bg-cover bg-no-repeat bg-center w-5/6 mx-auto shadow-7xl mb-8 bg-gray-400"></div>--}}
+                <div class="w-5/6 mx-auto shadow-7xl mb-8">{!! $video->embed !!}</div>
+                <div class="py-8 text-gray-400 text-2xl leading-tight">{{ $video->text_es}}</div>
+             </div>
+            <div class="w-full">
+                <ul class="w-full lg:w-auto flex justify-start text-2xl">
+                    <li class="mr-3 lg:mx-1">
+                        <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="#" target="_blank" rel="noopener">
+                            <font-awesome-icon :icon="['fas', 'plus-square']" fixed-width></font-awesome-icon>
+                        </a>
+                    </li>
+                    <li class="mr-3 lg:mx-1">
+                        <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="https://www.facebook.com/JaliscoEsMexico/" target="_blank" rel="noopener">
+                            <font-awesome-icon :icon="['fab', 'facebook-square']" fixed-width></font-awesome-icon>
+                        </a>
+                    </li>
+                    <li class="mr-3 lg:mx-1">
+                        <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="https://twitter.com/JaliscoEsMexico" target="_blank" rel="noopener">
+                            <font-awesome-icon :icon="['fab', 'twitter-square']" fixed-width></font-awesome-icon>
+                        </a>
+                    </li>
+                    <li class="lg:mr-0 lg:mx-1">
+                        <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="https://www.pinterest.com" target="_blank" rel="noopener">
+                            <font-awesome-icon :icon="['fab', 'pinterest']" fixed-width></font-awesome-icon>
+                        </a>
+                    </li>
+                    <li class="lg:mx-1">
+                        <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="mailto:example@example.com" target="_blank" rel="noopener">
+                            <font-awesome-icon :icon="['far', 'envelope']" fixed-width></font-awesome-icon>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="h-1 bg-gray-400 opacity-25 my-10">
+            </div>
+        </div>
+    @endforeach
 </section>
+
+{{--<section class="bg-cover bg-no-repeat bg-center py-24" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
+    <mi-jalisco-videos :videos='@json($videos)'></mi-jalisco-videos>
+</section>--}}
 
 {{--<section class="bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-mi-jalisco-2.jpg') }})">
     <div class="container px-10 py-10 lg:px-0">

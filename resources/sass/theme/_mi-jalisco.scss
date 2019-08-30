@@ -1,3 +1,12 @@
 .visitjalisco-mi-jalisco{
-
+    .video-container{
+        @apply .hidden;
+        &:target{
+            @apply .block;
+        }
+        iframe{
+            width: 100%;
+            height: 36vw;
+        }
+    }
 }

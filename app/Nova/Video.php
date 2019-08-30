@@ -8,6 +8,8 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Image;
+use Benjaminhirsch\NovaSlugField\TextWithSlug;
+use Benjaminhirsch\NovaSlugField\Slug;
 
 class Video extends Resource
 {
@@ -46,16 +48,27 @@ class Video extends Resource
             ID::make()
                 ->sortable()
                 ->onlyOnForms(),
-            Text::make('Título', 'title_es')
-                ->sortable(),
-            Text::make('Título', 'subtitle_es')
-                ->sortable(),
+            
+            TextWithSlug::make('Título', 'title_es')
+                ->slug('slug')
+                ->rules('regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
+                ->onlyOnForms(),
+
+            Slug::make('Slug')
+                ->rules('alpha_dash', 'max:254', 'sometimes:unique:videos,slug'),
+
+            Text::make('Subtítulo', 'subtitle_es')
+                ->sortable()
+                ->hideFromIndex(),
+
             Markdown::make('Texto', 'text_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
+
             Text::make('Video URL', 'video_url')
                 ->hideFromIndex()
                 ->sortable(),
+
             Image::make('Imagen', 'image')
                 ->disk('public')
                 ->path('videos')
@@ -63,10 +76,12 @@ class Video extends Resource
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable(),
+
             Select::make('Ubicación', 'position')->options([
                 'mi-jalisco' => 'Mi Jalisco',
                 'jalisco' => 'El estado',
             ])->displayUsingLabels(),
+            
         ];
     }
 

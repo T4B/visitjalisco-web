@@ -41,14 +41,18 @@
             </div>
             <div class="w-full md:w-7/12 ml-auto">
                 <slider class="shadow-2xl">
+                    @foreach ($videos as $video)
                     <slide>
-                        <div class="multiply py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset('images/mi_jalisco_home.jpg') }})">
-                            <div class="text-white absolute bottom-16">
-                                <h2>Tapalpa</h2>
-                                <p>La paz e inspiración del bosque</p>
+                        <a href="{{ route('mi-jalisco') }}#{{ $video->slug }}">
+                            <div class="multiply py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset($video->preview) }})">
+                                <div class="text-white absolute bottom-16">
+                                    <h2>{{ $video->title_es }}</h2>
+                                    <p>{{ $video->subtitle_es }}</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </slide>
+                    @endforeach
                 </slider>
             </div>
         </div>
