@@ -15,7 +15,7 @@ class JaliscoController extends Controller
 
     public function mijalisco()
     {
-        $videos = \App\Video::where('position', 'mi-jalisco')->get();
+        $videos = \App\Video::where('position', 'mi-jalisco')->orderBy('id', 'desc')->get();
         return view('mi-jalisco', compact('videos')); 
     }
 }
