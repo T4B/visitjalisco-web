@@ -51,8 +51,7 @@ class Video extends Resource
             
             TextWithSlug::make('Título', 'title_es')
                 ->slug('slug')
-                ->rules('regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
-                ->onlyOnForms(),
+                ->rules('regex:/^[a-zA-Záéíóú\s]+$/', 'max:254'),
 
             Slug::make('Slug')
                 ->rules('alpha_dash', 'max:254', 'sometimes:unique:videos,slug'),
