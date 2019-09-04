@@ -466,7 +466,7 @@ export default {
     //[this.active] = this.regions    
   },
   mounted(){
-    let paths = document.getElementById(this.region.name).getElementsByClassName("region")
+    let paths = document.getElementById(this.region.slug).getElementsByClassName("region")
     if (paths.length)
        paths[0].classList.add("active")
   },

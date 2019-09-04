@@ -11,6 +11,7 @@
    <div class="container text-content flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
             <h2 class="text-7xl inline-block leading-none">@lang('business-travel.title')</h2>
+            <p class="font-secondary text-lg">@lang('business-travel.subtitle')</p>
         </div>
    </div>
 </section>

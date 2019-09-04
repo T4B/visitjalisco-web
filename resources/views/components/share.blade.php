@@ -1,4 +1,4 @@
-<ul class="w-full lg:w-auto flex justify-start text-2xl">
+<ul class="w-full lg:w-1/2 flex justify-start text-2xl">
     {{--<li class="mr-3 lg:mx-1">
         <a class="inline-block text-red-400 w-8 h-8 flex justify-center items-center" href="#" target="_blank" rel="noopener">
             <font-awesome-icon :icon="['fas', 'plus-square']" fixed-width></font-awesome-icon>

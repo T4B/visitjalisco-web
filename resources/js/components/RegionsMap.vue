@@ -481,13 +481,13 @@ export default {
     [this.active] = this.regions    
   },
   mounted(){
-    let paths = document.getElementById(this.active.name).getElementsByClassName("region")
+    let paths = document.getElementById(this.active.slug).getElementsByClassName("region")
     if (paths.length)
        paths[0].classList.add("active")
   },
   methods:{
     activeRegion(event){
-      this.active = _.find(this.regions, function(r) { return r.name === event.currentTarget.id; });
+      this.active = _.find(this.regions, function(r) { return r.slug === event.currentTarget.id; });
       this.removeActiveRegion();
       event.target.classList.add("active")
     },
