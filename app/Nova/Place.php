@@ -78,8 +78,9 @@ class Place extends Resource
                 ->rules('required')
                 ->hideFromIndex(),
             Image::make('Imagen', 'image')
-                ->disk('public')
-                ->path('place')
+                // ->disk('public')
+                // ->path('place')
+                ->store(new StoreImage($this, 'public', 'places', 'image', 'resize', '450') )
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')

@@ -91,9 +91,10 @@ class Destination extends Resource
                 ->hideFromIndex(),
                 
             Image::make('Imagen', 'image')
-                ->disk('public')
-                ->path('destination')
-                ->rules('max:1024')
+                // ->disk('public')
+                // ->path('destination')
+                ->store(new StoreImage($this, 'public', 'destination', 'image', 'resize', 1920) )
+                // ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable(),

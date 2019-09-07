@@ -9,6 +9,9 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Boolean;
+use Intervention\Image\Facades\Image as ImageHandler;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Event extends Resource
 {
@@ -85,17 +88,24 @@ class Event extends Resource
             ])->hideFromIndex()
                 ->rules('required'),
             Image::make('Imagen principal', 'thumb_image')
-                ->disk('public')
-                ->path('events')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
+                ->store(new StoreImage($this, 'public', 'events', 'thumb_image', 'resize', '650') )
+                ->delete(function (Request $request, $model, $disk, $path) {
+                    if (! $path) {
+                        return;
+                    }
+                    Storage::disk($disk)->delete($path);
+                    return [
+                        'thumb_image' => '',
+                    ];
+                })
                 ->prunable(),
             Image::make('Imagen destacados', 'large_image')
-                ->disk('public')
-                ->path('events')
                 ->rules('max:1024')
                 ->updateRules('nullable')
+                ->store(new StoreImage($this, 'public', 'events', 'large_image', 'resize', '500') )
                 ->prunable()
                 ->hideFromIndex(),
             Boolean::make('Destacado', 'highlight'),
@@ -145,4 +155,24 @@ class Event extends Resource
     {
         return [];
     }
+
+    // public function storeImage(Request $request, $field_name, $width)
+    // {
+    //     $fileName = Str::orderedUuid() . '.jpg';
+    //     $resized = ImageHandler::make($request->$field_name)
+    //                 ->resize($width, null, function ($constraint) {
+    //                     $constraint->aspectRatio();
+    //                     $constraint->upsize();
+    //                 })->encode('jpg', 90);
+    //     Storage::disk('public')->put('events/'.$fileName, (string) $resized);
+    //     $resized->destroy();
+    //     return [
+    //         $field_name => 'events/'.$fileName,
+    //     ];
+    //     // return [
+    //         // 'thumb_image' => $request->thumb_image->store('/events'),
+    //         // 'thumb_image_name' => $request->thumb_image->getClientOriginalName(),
+    //         // 'thumb_image_size' => $request->thumb_image->getSize(),
+    //     // ];
+    // }
 }

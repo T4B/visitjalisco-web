@@ -107,18 +107,20 @@ class Route extends Resource
                 ->hideFromIndex(),
 
             Image::make('Imagen Principal', 'header_image')
-                ->disk('public')
-                ->path('routes')
-                ->rules('max:1024')
+                // ->disk('public')
+                // ->path('routes')
+                ->store(new StoreImage($this, 'public', 'routes', 'header_image', 'resize', '1920'))
+                // ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable()
                 ->hideFromIndex(),
 
             Image::make('Imagen fondo galería', 'gallery_image')
-                ->disk('public')
-                ->path('routes')
-                ->rules('max:1024')
+                // ->disk('public')
+                // ->path('routes')
+                ->store(new StoreImage($this, 'public', 'routes', 'gallery_image', 'resize', '1920'))
+                // ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
                 ->prunable()

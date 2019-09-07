@@ -9,7 +9,7 @@ class Post extends Model
 {
     public function getUrlAttribute()
     {
-        return Storage::url($this->image);
+        return ( Storage::disk('public')->exists($this->image) ) ? Storage::url($this->image) : asset('images/'.$this->image);
     }
 
     public function tags()

@@ -106,20 +106,22 @@ class Region extends Resource
                 ->hideFromIndex(),
 
             Image::make('Imagen Principal', 'main_image')
-                ->disk('public')
-                ->path('regions')
+                // ->disk('public')
+                // ->path('regions')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
+                ->store(new StoreImage($this, 'public', 'regions', 'main_image', 'fit', 600, 430) )
                 ->prunable()
                 ->hideFromIndex(),
 
             Image::make('Imagen Interior', 'interior_image')
-                ->disk('public')
-                ->path('regions')
+                // ->disk('public')
+                // ->path('regions')
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
+                ->store(new StoreImage($this, 'public', 'regions', 'interior_image', 'resize', 1920) )
                 ->prunable()
                 ->hideFromIndex(),
 

@@ -75,7 +75,7 @@ class Post extends Resource
 
             TextWithSlug::make('Título', 'title_es')
                 ->slug('slug')
-                ->rules('required', 'regex:/^[a-zA-Z\s]+$/', 'max:254')
+                ->rules('required', 'regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
                 ->onlyOnForms(),
 
             Slug::make('Slug', 'slug_es')
@@ -91,8 +91,9 @@ class Post extends Resource
                 ->hideFromIndex(),
 
             Image::make('Imagen', 'image')
-                ->disk('public')
-                ->path('post')
+                // ->disk('public')
+                // ->path('post')
+                ->store(new StoreImage($this, 'public', 'post', 'image', 'resize', '1920'))
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
