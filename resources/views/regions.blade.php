@@ -8,9 +8,9 @@
 @section('content')
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/regions/bg-regions-main.jpg') }})">
-   <div class="container text-content flex w-full font-secondary h-full relative">
+   <div class="container flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
-            <h2 class="text-7xl">Regiones</h2>
+            <h2 class="text-7xl">@lang('regions.title')</h2>
         </div>
    </div>
 </section>
@@ -28,11 +28,11 @@
                     <div class="w-full lg:w-8/12 px-12 lg:border-l border-gray-400">
                         <div class="flex items-center mb-4">
                             <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 text-5xl inline-block"></font-awesome-icon>
-                            <h2 class="font-secondary text-5xl font-bold inline-block leading-none text-{{ $region->color }}">{{ $region->name_es}}</h2>
+                            <h2 class="font-secondary text-5xl font-bold inline-block leading-none text-{{ $region->color }}">{{ ${'region'}->{'name_' . $locale} }}</h2>
                         </div>
-                        <div class="text-xl text-gray-400">@markdown($region->short_description_es)</div>
+                        <div class="text-xl text-gray-400">@markdown( ${'region'}->{'short_description_' . $locale} )</div>
                         <div class="text-center">
-                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="{{ route('region', ['slug' => $region->slug]) }}">Más información</a>
+                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="{{ route('region', ['slug' => $region->slug]) }}">@lang('regions.info')</a>
                         </div>
                     </div>
                 </div>

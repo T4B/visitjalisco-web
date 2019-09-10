@@ -13,14 +13,14 @@
         @if (empty($slider->link))
         <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container text-white px-8 py-20 md:py-40">
-                @markdown( $slider->text_es )
+                @markdown( ${'slider'}->{'text_' . $locale} )
             </div>
         </div>
         @else
             <a href="{{ $slider->link }}">
             <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
                 <div class="container text-white px-8 py-20 md:py-40">
-                    @markdown( $slider->text_es )
+                    @markdown( ${'slider'}->{'text_' . $locale} )
                 </div>
             </div>
             </a>
@@ -46,8 +46,8 @@
                         <a href="{{ route('mi-jalisco') }}#{{ $video->slug }}">
                             <div class="multiply py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset($video->preview) }})">
                                 <div class="text-white absolute bottom-16">
-                                    <h2>{{ $video->title_es }}</h2>
-                                    <p>{{ $video->subtitle_es }}</p>
+                                    <h2>{{ ${'video'}->{'title_' . $locale} }}</h2>
+                                    <p>{{ ${'video'}->{'subtitle_' . $locale} }}</p>
                                 </div>
                             </div>
                         </a>
@@ -69,7 +69,7 @@
         @foreach ($experiences as $experience)
             <a class="w-1/2 lg:w-1/5" href="{{ route('experiences.category', ['category' => $experience->slug ]) }}">
                 <div class="category" style="background-image:url({{ $experience->url }})">
-                    <h2 class="text-2xl">{{ $experience->name_es }}</h2>
+                    <h2 class="text-2xl">{{ ${'experience'}->{'name_' . $locale} }}</h2>
                 </div>
             </a>
         @endforeach
@@ -87,7 +87,7 @@
                 <div class="w-full md:w-1/2 bg-white p-8">
                     <h2>{{ $event->name }}</h2>
                     <p><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1"></font-awesome-icon>{{ $event->place }}</p>
-                    <p>{{ $event->date_es }}</p>
+                    <p>{{ ${'event'}->{'date_' . $locale} }}</p>
                 </div>
             </div>
         @endforeach
@@ -104,8 +104,8 @@
         <div class="w-full bg-white p-10 rounded-lg">
             <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><div class="w-full bg-cover bg-center bg-no-repeat p-40" style="background-image:url({{ $first_route->main }})"></div></a>
             <div class="px-4 text-sm">
-                <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2">{{ $first_route->name_es }}</h2></a>
-                @markdown( $first_route->short_description_es )
+                <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2">{{ ${'first_route'}->{'name_' . $locale} }}</h2></a>
+                @markdown( ${'first_route'}->{'short_description_' . $locale} )
             </div>
         </div>
 
@@ -116,7 +116,7 @@
                     <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                         <div class="bg-white p-4 rounded-lg text-center">
                             <a href="{{ route('route', ['slug' => $route->slug ]) }}"><div class="bg-cover bg-no-repeat bg-center p-32 mb-6" style="background-image:url({{ $route->main }})"></div></a>
-                            <a href="{{ route('route', ['slug' => $route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none">{{ $route->name_es }}</h2></a>
+                            <a href="{{ route('route', ['slug' => $route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none">{{ ${'route'}->{'name_' . $locale} }}</h2></a>
                         </div>
                     </div>
                 @endforeach

@@ -21,38 +21,7 @@
             <div class="w-full lg:w-5/12 text-2xl text-gray-500 px-10 lg:px-0">
                 @markdown($jalisco->history)
             </div>
-            {{--<div class="w-full lg:w-6/12 ml-auto px-10 lg:px-0">
-                <slider class="slider shadow-2xl">
-                    <slide>
-                        <div class="py-56 px-20  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ asset('images/mazamitla.jpg') }})">
-                            <div class="text-white absolute bottom-16">
-                                <h2>Mazamitla</h2>
-                            </div>
-                        </div>
-                    </slide>
-                </slider>
-                <div class="py-6 w-full">
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full lg:w-1/3">
-                            <div class="bg-transparent p-4 rounded-lg text-center">
-                                <div class="bg-cover bg-no-repeat bg-center p-12 shadow-xl" style="background-image:url({{ asset('images/jalisco-thumb-1.jpg') }})"></div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/3">
-                            <div class="bg-transparent p-4 rounded-lg text-center">
-                                <div class="bg-cover bg-no-repeat bg-center p-12 shadow-xl" style="background-image:url({{ asset('images/jalisco-thumb-2.jpg') }})"></div>
-                            </div>
-                        </div>
-                        <div class="w-full lg:w-1/3">
-                            <div class="bg-transparent p-4 rounded-lg text-center">
-                                <div class="bg-cover bg-no-repeat bg-center p-12 shadow-xl" style="background-image:url({{ asset('images/jalisco-thumb-3.jpg') }})"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>--}}
             <jalisco-slider :gallery='@json($jalisco->gallery())'></jalisco-slider>
-            
         </div>
     </div>
 </section>
@@ -107,20 +76,6 @@
 </section>
 
 <section class="map">
-    {{--<div class="flex flex-wrap">
-        <div class="w-full md:w-1/2 p-12">
-            <regions-map :regions='@json($regions)'></regions-map>
-        </div>
-        <div class="w-full md:w-1/2 multiply bg-cover bg-no-repeat bg-center flex items-center" style="background-image:url({{ asset('images/region.jpg') }})">
-            <div class="px-12 py-12 lg:py-0 lg:pl-24 lg:pr-40 text-white text-center">
-                <div class="text-left">
-                    <h3 class="font-secondary text-5xl"><font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 -ml-12 align-middle"></font-awesome-icon>Región Centro</h3>
-                    <p class="text-xl">Si visitas Jalisco, muy probablemente pases por aquí al disfrutar de la capital, Guadalajara, o al caminar por los bellísimos andadores de Tlaquepaque. ¡Bienvenido! </p>
-                </div>
-                <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" href="{{ route('regions') }}">@lang('general.more-info')</a>
-            </div>
-        </div>
-    </div>--}}
     <regions-map :regions='@json($regions)'></regions-map>
 </section>
 

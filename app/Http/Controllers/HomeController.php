@@ -14,6 +14,7 @@ class HomeController extends Controller
         $routes = \App\Route::where('highlight', 1)->orderBy('order', 'asc')->take(4)->get();
         $first_route = $routes->first();
         $videos = \App\Video::where('position', 'mi-jalisco')->get();
+
         return view('home', compact('sliders', 'events', 'experiences', 'routes', 'first_route', 'videos'));
     }
 }

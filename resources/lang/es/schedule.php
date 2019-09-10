@@ -5,4 +5,5 @@ return [
    'date' => 'Fecha',
    'place' => 'Lugar',
    'info' => 'Más información',
+   'more-info' => 'Más info',
 ];

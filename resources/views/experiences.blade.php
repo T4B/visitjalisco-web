@@ -4,9 +4,9 @@
 @section('content')
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/experiences/bg-experiences-main.jpg') }})">
-   <div class="container text-content flex w-full font-secondary h-full relative">
+   <div class="container flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
-            <h2 class="text-6xl font-bold">Experiencias</h2>
+            <h2 class="text-6xl font-bold">@lang('experiences.title')</h2>
             <p class="font-secondary text-lg">@lang('experiences.subtitle')</p>
         </div>
    </div>

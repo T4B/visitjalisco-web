@@ -13,7 +13,7 @@
     <slide>
         <div class="slide multiply flex h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset($slider->url) }})">
             <div class="container text-white px-8 py-20 md:py-40">
-                @markdown( $slider->text_es )
+                @markdown( ${'slider'}->{'text_' . $locale} )
             </div>
         </div>
     </slide>
@@ -51,14 +51,14 @@
                     <h2 class="text-3xl font-bold font-secondary text-gray-500">{{ $event->name }}</h2>
                 </div>
                 <div class="w-full lg:w-1/5 p-8">
-                    <p>{{ $event->date_es }}</p>
+                    <p>{{ ${'event'}->{'date_' . $locale} }}</p>
                 </div>
                 <div class="w-full lg:w-1/5 p-8">
                     <p>{{ $event->place }}</p>
                 </div>
                 <div class="w-full lg:w-1/5 p-8">
-                    <p>{{ $event->text_es }}</p>
-                    <a href="{{ $event->url }}" target="{{ $event->target }}" class="button text-xl mx-auto  w-full text-center shadow-7xl mt-8 inline-block">Más info</a>
+                    <p>{{ ${'event'}->{'text_' . $locale} }}</p>
+                    <a href="{{ $event->url }}" target="{{ $event->target }}" class="button text-xl mx-auto  w-full text-center shadow-7xl mt-8 inline-block">@lang('schedule.more-info')</a>
                 </div>
             </div>
         @endforeach

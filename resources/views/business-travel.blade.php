@@ -8,7 +8,7 @@
 @section('content')
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/bg-turismo-reuniones.jpg') }})">
-   <div class="container text-content flex w-full font-secondary h-full relative">
+   <div class="container flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
             <h2 class="text-7xl inline-block leading-none">@lang('business-travel.title')</h2>
             <p class="font-secondary text-lg">@lang('business-travel.subtitle')</p>
@@ -18,7 +18,7 @@
 
 <section class="info">
     <div class="container px-10 py-10 lg:px-0 text-2xl text-gray-500">
-        @markdown($page->text_es)
+        @markdown( ${'page'}->{'text_' . $locale} )
     </div>
 </section>
 
@@ -50,8 +50,8 @@
             </div>
             <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-10 lg:px-0">
                 <h2 class="text-6xl font-bold text-gray-400 leading-none">{{ $center->name }}</h2>
-                <p class="text-gray-400">{{ $center->subtitle_es }}</p>
-                @markdown( $center->text_es )
+                <p class="text-gray-400">{{ ${'center'}->{'subtitle_' . $locale} }}</p>
+                @markdown( ${'center'}->{'text_' . $locale} )
                 <p class="text-gray-400"><font-awesome-icon :icon="['far', 'envelope']" fixed-width class="text-red-400 mr-1 align-middle"></font-awesome-icon><a href="mailto:{{ $center->email }}">{{ $center->email }}</a></p>
                 <p class="text-gray-400"><font-awesome-icon :icon="['fas', 'phone']" fixed-width class="text-red-400 mr-1 align-middle fa-flip-horizontal"></font-awesome-icon>{{ $center->phone }} </p>
             </div>
