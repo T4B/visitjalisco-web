@@ -91,9 +91,9 @@ class Post extends Resource
                 ->hideFromIndex(),
 
             Image::make('Imagen', 'image')
-                // ->disk('public')
-                // ->path('post')
-                ->store(new StoreImage($this, 'public', 'post', 'image', 'resize', '1920'))
+                ->disk('public')
+                ->path('post')
+                //->store(new StoreImage($this, 'public', 'post', 'image', 'resize', '1920'))
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')

@@ -38,6 +38,16 @@ class StoreImage
         Storage::disk($this->disk)->put($this->path.'/'.$fileName, (string) $resized);
         $resized->destroy();
 
+        //OG image for social media
+        $ogfileName = Str::orderedUuid() . '-og.jpg';
+        $og = ImageHandler::make($request->{$this->field})
+                    ->fit(1200, 630, function ($constraint) {
+                        $constraint->aspectRatio();
+                        $constraint->upsize();
+                    })->encode('jpg', 90);
+        Storage::disk($this->disk)->put($this->path.'/'.$ogfileName, (string) $og);
+        $og->destroy();
+
         return [
             $this->field => $this->path.'/'.$fileName,
         ];

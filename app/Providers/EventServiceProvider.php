@@ -21,6 +21,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\VideoSaved' => [
             'App\Listeners\VideoSavedListener',
         ],
+        'App\Events\PostSaved' => [
+            'App\Listeners\PostSavedListener',
+        ],
     ];
 
     /**
