@@ -41,7 +41,7 @@
                 ref="carrousel" >
                 @foreach ($videos->sortBy('id') as $slide)
                 <slide>
-                    <a href="{{ route('mi-jalisco') }}#{{ $slide->slug }}">
+                    <a href="{{ $locale == config('app.fallback_locale') ? route('mi-jalisco') : route('localized.mi-jalisco', ['lang' => $locale ]) }}#{{ $slide->slug }}">
                         <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $slide->preview }})">
                             <div class="text-white absolute bottom-8 font-serif" >
                                 <h2 class="font-bold text-xl">{{ ${'slide'}->{'title_' . $locale} }}</h2>
