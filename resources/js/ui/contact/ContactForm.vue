@@ -4,7 +4,7 @@
       <p>Si tienes alguna duda o comentario, ponte en contacto con nosotros a través de este formulario.</p>
       <div class="flex flex-wrap justify-between">
         <field :error="error('name')">
-          <form-label id="name">Nombre</form-label>
+          <form-label id="name" v-text="txt_name"></form-label>
           <form-input id="name" v-model="name"/>
         </field>
         <field :error="error('email')">
@@ -20,12 +20,12 @@
           <form-textarea id="message" v-model="message"/>
         </field>
         <div class="text-center my-2">
-          <button class="button px-8 py-2 shadow-7xl inline-block rounded-none" @click="send" :class="{'is-loading':sending}" :disabled="sending">Enviar</button>
+          <button class="button px-8 py-2 shadow-7xl inline-block rounded-none" @click="send" :class="{'is-loading':sending}" :disabled="sending" v-text="txt_send"></button>
         </div>
       </div>
     </div>
     <div class="p-8 contact-form text-center my-4" v-show="sent">
-      <h2 class="font-bold text-red-400 uppercase text-2xl">Gracias, tu mensaje ha sido enviado</h2>
+      <h2 class="font-bold text-red-400 uppercase text-2xl" v-text="txt_success"></h2>
     </div>
   </modal>
 </template>
@@ -34,7 +34,30 @@
 export default {
     //mixins: [contact],
     props: {
-
+      txt_name: {
+        type: String,
+        default: 'Nombre'
+      },
+      txt_email: {
+        type: String,
+        default: 'Email'
+      },
+      txt_phone: {
+        type: String,
+        default: 'Phone'
+      },
+      txt_message: {
+        type: String,
+        default: 'Message'
+      },
+      txt_send: {
+        type: String,
+        default: 'Send'
+      },
+      txt_success: {
+        type: String,
+        default: 'Success'
+      },
     },
     data() {
         return {

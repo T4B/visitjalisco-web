@@ -54,4 +54,11 @@
         </div>
     </div>
 </footer>
-<visitjalisco-contact></visitjalisco-contact>
+<visitjalisco-contact 
+    txt_name="@lang('contact.name')"
+    txt_email="@lang('contact.email')" 
+    txt_phone="@lang('contact.phone')" 
+    txt_message="@lang('contact.message')" 
+    txt_send="@lang('contact.send')" 
+    txt_success="@lang('contact.success')">
+</visitjalisco-contact>
