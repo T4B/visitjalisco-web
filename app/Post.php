@@ -30,14 +30,26 @@ class Post extends Model
         ],
     ];
 
-     protected $dispatchesEvents = [
-        'created' => PostSaved::class,
+    protected $dispatchesEvents = [
+        'saved' => PostSaved::class,
         //'deleted' => PostDeleted::class,
     ];
+
+    protected $appends = ['sizes'];
 
     public function getUrlAttribute()
     {
         return ( Storage::disk('public')->exists($this->image) ) ? Storage::url($this->image) : asset('images/'.$this->image);
+    }
+
+    public function getSizesAttribute()
+    {
+        return [
+            'thumb' => $this->file_url('thumb'),
+            'medium' => $this->file_url('medium'),
+            'large' => $this->file_url('large'),
+            'og' => $this->file_url('og'),
+        ];
     }
 
     public function tags()
@@ -71,6 +83,20 @@ class Post extends Model
     public function file_reference($size)
     {
         return $this->path() . $this->name() . '-' . $size . '.' . $this->extension();
+    }
+
+    public function file_url($size = null)
+    {
+        if (!$size) {
+            return Storage::url($this->file);
+        }
+
+        $url = Storage::url($this->file_reference($size));
+        if ($size && $url) {
+            return $url;
+        }
+
+        return false;
     }
 
 }

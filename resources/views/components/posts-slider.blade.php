@@ -11,7 +11,7 @@
                 ref="carrousel" >
                 @foreach ($posts as $post)
                 <slide>
-                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->url }})">
+                    <div class="multiply py-32 px-10  bg-cover bg-no-repeat bg-center relative" style="background-image:url({{ $post->sizes['thumb'] }})">
                     <div class="text-white absolute bottom-8 font-serif" >
                         <a href="{{ route('blog.post', ['slug' => $post->slug_es ]) }}"><h2 class="font-bold text-xl">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
                     </div>

@@ -1,12 +1,12 @@
 @extends('layouts.default')
 @section('page-name', 'post')
+@section('og.image', $post->sizes['og'] ?? asset('/images/og.jpg'))
 
 @section('css')
     <link rel="stylesheet" href="{{ mix('css/swiper.css') }}" />
 @endsection
 
 @section('content')
-
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $post->url }})">
    <div class="container flex w-full font-secondary h-full relative">
         <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">

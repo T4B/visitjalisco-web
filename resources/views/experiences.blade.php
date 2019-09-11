@@ -16,7 +16,7 @@
 <section class="blog">
     <div class="container pt-32  px-10 lg:px-0">
         <div class="w-full bg-gray-300 p-10">
-            <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $first_post->slug_es ]) : route('localized.blog.post', [ 'slug' => $first_post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-48" style="background-image:url({{ $first_post->url }})"></div></a>
+            <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $first_post->slug_es ]) : route('localized.blog.post', [ 'slug' => $first_post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-48" style="background-image:url({{ $first_post->sizes['medium'] }})"></div></a>
             <div class="text-lg text-white">
                 <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $first_post->slug_es ]) : route('localized.blog.post', [ 'slug' => $first_post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">{{ ${'first_post'}->{'title_' . $locale} }}</h2></a>
                 @markdown( ${'first_post'}->{'excerpt_' . $locale} )
@@ -30,7 +30,7 @@
                     @if ($loop->first) @continue @endif
                 <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                     <div class="post bg-gray-300 p-4 text-left text-white text-lg">
-                        <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->url }})"></div></a>
+                        <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->sizes['thumb'] }})"></div></a>
                         <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
                         @markdown( ${'post'}->{'excerpt_' . $locale} )
                     </div>
