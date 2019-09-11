@@ -36,7 +36,7 @@
                 'href' => route('experiences.destination', ['category' => $destination->experience->slug, 'destination' => $destination->slug ])])
             @endcomponent
             <div class="w-full lg:w-1/2 text-right my-6 lg:my-0">
-                <a href="{{ route('experiences') }}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">@lang('experiences.all')</a>
+                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences') : route('localized.experiences', [ 'lang' => $locale ]) }}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">@lang('experiences.all')</a>
             </div>
         </div>
         

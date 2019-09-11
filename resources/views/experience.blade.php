@@ -44,7 +44,7 @@
                 <h2 class="text-6xl font-bold text-gray-400">{{ ${'destination'}->{'name_' . $locale} }}</h2>
                 <p class="text-gray-400">{{ ${'destination'}->{'subtitle_' . $locale} }}</p>
                 @markdown( ${'destination'}->{'short_description_' . $locale} )
-                <a href="{{ route('experiences.destination', ['category' => $experience->slug, 'slug' => $destination->slug ]) }}" class="button px-8 py-2 shadow-7xl my-8 inline-block">Leer más</a>
+                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.destination', ['category' => $experience->slug, 'slug' => $destination->slug ]) : route('localized.experiences.destination', ['category' => $experience->slug, 'slug' => $destination->slug, 'lang' => $locale ]) }}" class="button px-8 py-2 shadow-7xl my-8 inline-block">Leer más</a>
             </div>
         </div>
         @endforeach
@@ -53,7 +53,7 @@
                 {{ $destinations->links() }}
             </div>
             <div class="w-full lg:w-1/4 text-right my-6 lg:my-0">
-                <a href="{{ route('experiences') }}" class="button text-xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">@lang('experiences.all')</a>
+                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences') : route('localized.experiences', [ 'lang' => $locale ]) }}" class="button text-xl font-bold mx-auto  px-8 py-2 shadow-md bg-purple-500">@lang('experiences.all')</a>
             </div>
         </div>
         

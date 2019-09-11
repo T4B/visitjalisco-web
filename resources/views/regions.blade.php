@@ -32,7 +32,7 @@
                         </div>
                         <div class="text-xl text-gray-400">@markdown( ${'region'}->{'short_description_' . $locale} )</div>
                         <div class="text-center">
-                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="{{ route('region', ['slug' => $region->slug]) }}">@lang('regions.info')</a>
+                            <a class="button px-8 py-2 shadow-3xl mt-8 mb-4 inline-block rounded-none bg-{{ $region->color }}" href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug]) :  route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}">@lang('regions.info')</a>
                         </div>
                     </div>
                 </div>

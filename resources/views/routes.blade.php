@@ -23,7 +23,7 @@
                     <h2 class="text-5xl lg:text-6xl font-bold text-{{ $route->color }}">{{ ${'route'}->{'name_' . $locale} }}</h2>
                     @markdown( ${'route'}->{'short_description_' . $locale} )
                 </div>   
-                <a href="{{ route('route', ['slug' => $route->slug ]) }}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md">@lang('routes.read-more')</a>
+                <a href="{{ $locale == config('app.fallback_locale') ? route('route', ['slug' => $route->slug ]) :  route('localized.route', ['slug' => $route->slug, 'lang' => $locale ])}}" class="button text-xl lg:text-2xl font-bold mx-auto  px-8 py-2 shadow-md">@lang('routes.read-more')</a>
                 @if ($loop->even)
                     <hr class="hidden lg:block absolute rounded bg-gray-200 top-0 w-1 left-0 h-full">
                 @endif
