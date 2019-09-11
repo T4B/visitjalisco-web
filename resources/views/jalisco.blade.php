@@ -76,7 +76,7 @@
 </section>
 
 <section class="map">
-    <regions-map :regions='@json($regions)'></regions-map>
+    <regions-map :regions='@json($regions)' :locale='@json($locale)'></regions-map>
 </section>
 
 @endsection

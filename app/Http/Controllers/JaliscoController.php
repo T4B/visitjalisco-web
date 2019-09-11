@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App;
 
 class JaliscoController extends Controller
 {
@@ -13,6 +14,20 @@ class JaliscoController extends Controller
             $jalisco = \App\Jalisco::where('language', 'es')->first();
         }
         $regions = \App\Region::all();
+        
+        $locale = App::getLocale();
+        $regions_raw = \App\Region::all();
+
+        $regions = $regions_raw->map(function ($region) use ($locale) {
+            return [
+                    'name' => ${'region'}->{'name_' . $locale},
+                    'short_description' => ${'region'}->{'short_description_' . $locale},
+                    'slug' => $region->slug,
+                    'href' => $region->href,
+                    'interior' => $region->interior,
+                ];
+        });
+
         return view('jalisco', compact('jalisco', 'regions'));
     }
 

@@ -455,9 +455,9 @@
                 <div class="text-left">
                     <h3 class="font-secondary text-5xl leading-tight">
                       <font-awesome-icon :icon="['fas', 'map-marker-alt']" fixed-width class="text-red-400 mr-1 -ml-12 align-middle"></font-awesome-icon>
-                      {{ active.name_es }}
+                      {{ active.name }}
                     </h3>
-                    <p class="text-xl" v-text="active.short_description_es"></p>
+                    <p class="text-xl" v-text="active.short_description"></p>
                 </div>
                 <a class="button px-8 py-2 shadow-7xl my-8 inline-block rounded-none" :href="active.href">Más información</a>
             </div>

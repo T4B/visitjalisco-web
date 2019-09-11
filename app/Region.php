@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
+use App;
 
 class Region extends Model implements HasMedia
 {
@@ -36,6 +37,7 @@ class Region extends Model implements HasMedia
 
     public function getHrefAttribute()
     {
-        return route('region', ['slug' => $this->slug ]);
+        $locale = App::getLocale();
+        return ( $locale == config('app.fallback_locale') ? route('region', ['slug' => $this->slug ]) : route('localized.region', ['slug' => $this->slug, 'lang' => $locale ]) ) ;
     }
 }
