@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Storage;
 use App\Destination;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Experience extends Model implements HasMedia
 {
-    use HasMediaTrait;
+    use HasMediaTrait, SoftDeletes;
 
     public function destinations()
     {

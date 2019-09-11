@@ -3,11 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use App\Events\PostSaved;
+use App\Events\PostDeleted;
 
 class Post extends Model
 {
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
     protected $sizes = [
         'thumb' => [
             'width' => 400,
@@ -32,7 +38,7 @@ class Post extends Model
 
     protected $dispatchesEvents = [
         'saved' => PostSaved::class,
-        //'deleted' => PostDeleted::class,
+        'deleted' => PostDeleted::class,
     ];
 
     protected $appends = ['sizes'];
@@ -64,7 +70,7 @@ class Post extends Model
 
     public function path()
     {
-        list($path, $name)  = explode("/", $this->image);;
+        $path = explode("/", $this->image)[0];
         return $path . '/';
     }
 

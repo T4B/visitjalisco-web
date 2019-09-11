@@ -6,7 +6,9 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Events\PostSaved;
+use App\Events\PostDeleted;
 use App\Listeners\PostSavedListener;
+use App\Listeners\PostDeletedListener;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Events\CallQueuedListener;
@@ -77,6 +79,38 @@ class PostTest extends TestCase
 
         Queue::assertPushed(CallQueuedListener::class, function ($job) {
             return $job->class == PostSavedListener::class;
+        });
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function an_event_is_dispatched_when_post_is_deleted()
+    {
+        Event::fake();
+
+        $post =  factory('App\Post')->create();
+        $post->delete();
+        
+        Event::assertDispatched(PostDeleted::class, function ($e) use ($post) {
+            return $e->post->id === $post->id;
+        });
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function post_deleted_event_is_sent_to_queue()
+    {
+        Queue::fake();
+
+        $post =  factory('App\Post')->create();
+        $post->delete();
+
+        Queue::assertPushed(CallQueuedListener::class, function ($job) {
+            return $job->class == PostDeletedListener::class;
         });
     }
 }

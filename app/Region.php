@@ -7,11 +7,12 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use App;
 
 class Region extends Model implements HasMedia
 {
-    use HasMediaTrait;
+    use HasMediaTrait, SoftDeletes;
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
     protected $appends = ['interior', 'main', 'href'];
