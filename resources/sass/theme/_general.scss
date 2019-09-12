@@ -68,6 +68,12 @@
         p{
             @apply .text-lg .leading-tight;
         }
+        h2{
+            @apply .text-4xl .mb-4 .leading-none;
+            @screen lg{
+                @apply .text-6xl;
+            }
+        }
     }
 }
 

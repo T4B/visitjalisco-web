@@ -9,7 +9,7 @@
 
 <section class="headerimage multiply-40 h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-mi-jalisco.jpg') }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-lg px-10 lg:px-0">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-lg px-10 lg:px-0 text-content">
             <h2 class="font-serif text-6xl text-white">@lang('mi-jalisco.this-is') <span class="font-bold">@lang('mi-jalisco.mi-jalisco')</span></h2>
             <p class="text-lg text-white">@lang('mi-jalisco.subtitle')</p>
         </div>

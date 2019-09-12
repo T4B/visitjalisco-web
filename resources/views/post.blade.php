@@ -9,7 +9,7 @@
 @section('content')
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $post->url }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0 text-content">
             <h2 class="text-6xl font-bold leading-none">{{ ${'post'}->{'title_' . $locale} }}</h2>
         </div>
    </div>
