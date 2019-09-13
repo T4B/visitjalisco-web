@@ -77,3 +77,12 @@
     }
 }
 
+.search{
+    .search-icon{
+        @apply .text-gray-700 .absolute .text-xl;
+        top: 50%;
+        right: 0.5rem;
+        transform: translateY(-50%);
+    }
+}
+

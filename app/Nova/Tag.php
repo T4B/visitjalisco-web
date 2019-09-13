@@ -15,6 +15,7 @@ class Tag extends Resource
      * @var string
      */
     public static $model = 'App\Tag';
+    public static $displayInNavigation = false;
 
     /**
      * The single value that should be used to represent the resource when being displayed.

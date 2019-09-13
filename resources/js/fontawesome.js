@@ -14,6 +14,7 @@ import { faPlayCircle as fasPlayCircle } from '@fortawesome/pro-solid-svg-icons/
 import { faHorizontalRule as fasHorizontalRule } from '@fortawesome/pro-solid-svg-icons/faHorizontalRule'
 import { faPlusSquare as fasPlusSquare } from '@fortawesome/pro-solid-svg-icons/faPlusSquare'
 import { faPhone as fasPhone } from '@fortawesome/pro-solid-svg-icons/faPhone'
+import { faSearch as fasSearch } from '@fortawesome/pro-solid-svg-icons/faSearch'
 import { faEnvelope as farEnvelope } from '@fortawesome/pro-regular-svg-icons/faEnvelope'
 
 library.add(
@@ -31,5 +32,6 @@ library.add(
     fasHorizontalRule,
     fasPlusSquare,
     fasPhone,
+    fasSearch,
     farEnvelope,
 );

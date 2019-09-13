@@ -63,6 +63,16 @@ class Post extends Model
         return $this->morphToMany('App\Tag', 'taggable');
     }
 
+    public function experiences()
+    {
+        return $this->belongsToMany(Experience::class);
+    }
+
+    public function regions()
+    {
+        return $this->belongsToMany(Region::class);
+    }
+
     public function getSizes()
     {
         return $this->sizes;

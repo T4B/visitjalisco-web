@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use App\Destination;
+// use App\Destination;
+use App\Post;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -13,10 +14,10 @@ class Experience extends Model implements HasMedia
 {
     use HasMediaTrait, SoftDeletes;
 
-    public function destinations()
-    {
-        return $this->hasMany(Destination::class);
-    }
+    // public function destinations()
+    // {
+    //     return $this->hasMany(Destination::class);
+    // }
 
     public function getUrlAttribute()
     {
@@ -32,5 +33,15 @@ class Experience extends Model implements HasMedia
                 'link' => $item->getCustomProperty('link')
             ];
         })->toArray();
+    }
+
+    // public function destinations()
+    // {
+    //     return $this->hasMany(Destination::class);
+    // }
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
     }
 }

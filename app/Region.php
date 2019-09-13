@@ -41,4 +41,9 @@ class Region extends Model implements HasMedia
         $locale = App::getLocale();
         return ( $locale == config('app.fallback_locale') ? route('region', ['slug' => $this->slug ]) : route('localized.region', ['slug' => $this->slug, 'lang' => $locale ]) ) ;
     }
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }
