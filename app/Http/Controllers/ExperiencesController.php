@@ -9,7 +9,7 @@ class ExperiencesController extends Controller
     public function index()
     {
         $experiences = \App\Experience::all();
-        $posts = \App\Post::orderBy('id', 'desc')->take(4)->get();
+        $posts = \App\Post::with('experiences', 'regions')->orderBy('id', 'desc')->take(4)->get();
         $first_post = $posts->first();
         return view('experiences', compact('experiences', 'posts', 'first_post'));
     }
@@ -18,8 +18,8 @@ class ExperiencesController extends Controller
     {
         $experience = \App\Experience::where('slug', $category)->first();
         if ($experience){
-            $destinations = $experience->destinations()->paginate(1);
-            return view('experience', compact('experience', 'destinations'));
+            $posts = $experience->posts()->paginate(1);
+            return view('experience', compact('experience', 'posts'));
         }else{
             return redirect()->route('experiences');
         }

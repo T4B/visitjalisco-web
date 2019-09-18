@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use App\Events\PostSaved;
 use App\Events\PostDeleted;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, Searchable;
 
     protected $dates = ['deleted_at'];
 
@@ -113,6 +114,11 @@ class Post extends Model
         }
 
         return false;
+    }
+
+    public function searchableAs()
+    {
+        return 'posts_index';
     }
 
 }

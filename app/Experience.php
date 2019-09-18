@@ -35,10 +35,10 @@ class Experience extends Model implements HasMedia
         })->toArray();
     }
 
-    // public function destinations()
-    // {
-    //     return $this->hasMany(Destination::class);
-    // }
+    public function destinations()
+    {
+        return $this->hasMany(Destination::class);
+    }
 
     public function posts()
     {

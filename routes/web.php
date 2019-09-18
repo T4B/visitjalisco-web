@@ -17,6 +17,7 @@ Route::get('/jalisco', 'JaliscoController@jalisco')->name('jalisco');
 Route::get('/agenda', 'ScheduleController@index')->name('schedule');
 Route::get('/page/{slug}', 'PageController@getPage')->name('page');
 Route::post('contact', 'ContactController@send')->name('contact');
+Route::get('search', 'SearchController@search')->name('search');
 
 if (App::environment('production')) {
     if (!env('PAGE_JALISCO', false)) {
