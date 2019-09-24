@@ -8,10 +8,11 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Place;
+use Laravel\Scout\Searchable;
 
 class Route extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes;
+    use HasMediaTrait, SoftDeletes, Searchable;
 
     protected $appends = ['main', 'map', 'gallerybackground'];
 
@@ -42,5 +43,18 @@ class Route extends Model implements HasMedia
     public function places()
     {
         return $this->hasMany(Place::class);
+    }
+
+    public function toSearchableArray()
+    {
+        //$array = $this->toArray();
+        //$array = $this->transform($array);
+
+        $array['title_es'] = $this->name_es;
+        $array['excerpt_es'] = $this->short_description_es;
+        $array['text_es'] = $this->full_description_es;
+        $array['slug_es'] = $this->slug;
+
+        return $array;
     }
 }

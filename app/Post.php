@@ -44,6 +44,10 @@ class Post extends Model
 
     protected $appends = ['sizes'];
 
+    protected $casts = [
+        'status' => 'boolean',
+    ];
+
     public function getUrlAttribute()
     {
         return ( Storage::disk('public')->exists($this->image) ) ? Storage::url($this->image) : asset('images/'.$this->image);
@@ -119,6 +123,43 @@ class Post extends Model
     public function searchableAs()
     {
         return 'posts_index';
+    }
+
+    public function isPublished()
+    {
+        return $this->status;
+    }
+
+    public function shouldBeSearchable()
+    {
+        return $this->isPublished();
+    }
+
+    public function toSearchableArray()
+    {
+        //$array = $this->toArray();
+        //$array = $this->transform($array);
+
+        $array['title_es'] = $this->title_es;
+        $array['excerpt_es'] = $this->excerpt_es;
+        $array['text_es'] = $this->text_es;
+        $array['slug_es'] = $this->slug_es;
+
+        $array['regions'] = $this->regions->map(function ($data) {
+            return [
+                'name_es' => $data['name_es']
+            ];
+
+        })->toArray();
+
+        $array['experiences'] = $this->experiences->map(function ($data) {
+            return [
+                'name_es' => $data['name_es']
+            ];
+
+        })->toArray();
+
+        return $array;
     }
 
 }

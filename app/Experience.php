@@ -9,10 +9,11 @@ use App\Post;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Experience extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes;
+    use HasMediaTrait, SoftDeletes, Searchable;
 
     // public function destinations()
     // {
@@ -43,5 +44,17 @@ class Experience extends Model implements HasMedia
     public function posts()
     {
         return $this->belongsToMany(Post::class);
+    }
+
+    public function toSearchableArray()
+    {
+        //$array = $this->toArray();
+        //$array = $this->transform($array);
+
+        $array['title_es'] = $this->name_es;
+        $array['excerpt_es'] = $this->description_es;
+        $array['slug_es'] = $this->slug;
+
+        return $array;
     }
 }

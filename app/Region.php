@@ -9,10 +9,11 @@ use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App;
+use Laravel\Scout\Searchable;
 
 class Region extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes;
+    use HasMediaTrait, SoftDeletes, Searchable;
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
     protected $appends = ['interior', 'main', 'href'];
@@ -45,5 +46,18 @@ class Region extends Model implements HasMedia
     public function posts()
     {
         return $this->belongsToMany(Post::class);
+    }
+
+    public function toSearchableArray()
+    {
+        //$array = $this->toArray();
+        //$array = $this->transform($array);
+
+        $array['title_es'] = $this->name_es;
+        $array['excerpt_es'] = $this->short_description_es;
+        $array['text_es'] = $this->full_description_es;
+        $array['slug_es'] = $this->slug;
+
+        return $array;
     }
 }
