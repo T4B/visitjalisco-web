@@ -29,7 +29,7 @@
                     <h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none pt-8 lg:pt-0">{{ ${'result'}->{'title_' . $locale} }}</h2>
                     <div class="tags mb-4">
                         @foreach ($result->experiences as $category)
-                            <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.blog.post', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
+                            <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
                         @endforeach
                         @foreach ($result->regions as $region)
                             <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>

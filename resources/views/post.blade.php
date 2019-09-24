@@ -49,7 +49,7 @@
                     <div class="body pt-4 pb-8 px-4 flex flex-wrap py-2">
                         @foreach ($categories as $category)
                             <div class="w-1/2 text-center py-2">
-                                <a href="#" class="text-white py-1 px-4 inline-block rounded-lg text-lg leading-tight {{ $post->experiences->contains($category->id)  ? 'bg-red-400' : 'bg-gray-700' }}">{{ ${'category'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="text-white py-1 px-4 inline-block rounded-lg text-lg leading-tight {{ $post->experiences->contains($category->id)  ? 'bg-red-400' : 'bg-gray-700' }}">{{ ${'category'}->{'name_' . $locale} }}</a>
                             </div>
                         @endforeach
                     </div>
@@ -61,7 +61,7 @@
                     <div class="body pt-4 pb-8 px-4 flex flex-wrap py-2 bg-white rounded-b-xl border border-gray-50">
                         @foreach ($regions as $region)
                             <div class="flex-1 text-center">
-                                <a href="#" class="py-1 px-4 inline-block text-lg leading-tight {{ $post->regions->contains($region->id)  ? 'text-green-200 font-bold' : 'text-gray-400' }}">{{ Str::replaceFirst( 'Región', '', ${'region'}->{'name_' . $locale}) }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="py-1 px-4 inline-block text-lg leading-tight {{ $post->regions->contains($region->id)  ? 'text-green-200 font-bold' : 'text-gray-400' }}">{{ Str::replaceFirst( 'Región', '', ${'region'}->{'name_' . $locale}) }}</a>
                             </div>
                         @endforeach
                     </div>

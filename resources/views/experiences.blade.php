@@ -29,10 +29,10 @@
                     <a class="inline-block" href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $first_post->slug_es ]) : route('localized.blog.post', [ 'slug' => $first_post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-4xl my-2 text-gray-500">{{ ${'first_post'}->{'title_' . $locale} }}</h2></a>
                     <div class="tags inline-block ml-8">
                         @foreach ($first_post->experiences as $category)
-                            <a href="#" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
+                            <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.blog.post', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
                         @endforeach
                         @foreach ($first_post->regions as $region)
-                            <a href="#" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>
+                            <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>
                         @endforeach
                     </div>
                 </div>
@@ -51,10 +51,10 @@
                         @markdown( ${'post'}->{'excerpt_' . $locale} )
                         <div class="tags absolute bottom-4">
                             @foreach ($post->experiences as $category)
-                                <a href="#" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
                             @endforeach
                             @foreach ($post->regions as $region)
-                                <a href="#" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>
                             @endforeach
                         </div>
                     </div>
