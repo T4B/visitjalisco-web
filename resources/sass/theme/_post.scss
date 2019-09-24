@@ -1,0 +1,9 @@
+.visitjalisco-post{
+    .post{
+        figcaption{
+            .attachment__name, .attachment__size{
+                @apply .hidden;
+            }
+        }
+    }
+}

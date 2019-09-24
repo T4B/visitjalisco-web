@@ -12,6 +12,7 @@ use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Trix;
 
 class Post extends Resource
 {
@@ -91,9 +92,10 @@ class Post extends Resource
                 ->rules('required', 'max:254')
                 ->hideFromIndex(),
 
-            Markdown::make('Texto', 'text_es')
+            Trix::make('Texto', 'text_es')
                 ->rules('required')
-                ->hideFromIndex(),
+                ->hideFromIndex()
+                ->withFiles('public'),
 
             Image::make('Imagen', 'image')
                 ->disk('public')
