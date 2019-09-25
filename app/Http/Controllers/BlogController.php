@@ -15,6 +15,7 @@ class BlogController extends Controller
             $regions = \App\Region::all();
 
             $posts = \App\Post::where('id', '!=', $post->id)
+                            ->where('status', 1)
                             ->inrandomorder()
                             ->take(6)
                             ->get();

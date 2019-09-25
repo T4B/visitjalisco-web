@@ -22,7 +22,7 @@
              <div class="post-content w-full lg:w-8/12">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full text-2xl text-gray-500 px-10 lg:px-0 text-content">
-                        @markdown( ${'post'}->{'text_' . $locale} )
+                        {!! html_entity_decode(${'post'}->{'text_' . $locale}, ENT_HTML5) !!}
                     </div>
                 </div>
                 <div class="social">

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Events\PostSaved;
 use App\Events\PostDeleted;
 use Laravel\Scout\Searchable;
+use App\Experience;
+use App\Region;
 
 class Post extends Model
 {
@@ -43,10 +45,6 @@ class Post extends Model
     ];
 
     protected $appends = ['sizes'];
-
-    protected $casts = [
-        'status' => 'boolean',
-    ];
 
     public function getUrlAttribute()
     {
