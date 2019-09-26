@@ -39,9 +39,9 @@
         </div>
         @foreach ($posts as $post )
         <div class="flex flex-wrap items-center my-24">
-            <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $post->sizes['medium'] }})"></div>
+            <a class="w-full lg:w-5/12" href="{{ $locale == config('app.fallback_locale') ? route('blog.post', ['slug' => $post->slug_es ]) : route('localized.blog.post', ['slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $post->sizes['medium'] }})"></div></a>
             <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-10">
-                <h2 class="text-6xl font-bold text-gray-400 leading-none">{{ ${'post'}->{'title_' . $locale} }}</h2>
+                <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', ['slug' => $post->slug_es ]) : route('localized.blog.post', ['slug' => $post->slug_es, 'lang' => $locale ]) }}"><h2 class="text-6xl font-bold text-gray-400 leading-none">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
                 {{--<p class="text-gray-400">{{ ${'post'}->{'subtitle_' . $locale} }}</p>--}}
                 <div class="tags mb-4">
                     @foreach ($post->experiences as $category)

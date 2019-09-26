@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -10,7 +11,7 @@ class BlogController extends Controller
     {
         $post = \App\Post::where('slug_es', $slug)->first();
        
-        if ($post){
+        if ($post->isPublished() || Auth::check()){
             $categories = \App\Experience::all();
             $regions = \App\Region::all();
 
