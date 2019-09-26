@@ -24,9 +24,9 @@
         <div class="flex flex-wrap items-center my-24">
             @switch (get_class($result))
             @case ("App\Post")
-                <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->sizes['medium'] }})"></div>
+                <a class="w-full lg:w-5/12 " href="{{ $locale == config('app.fallback_locale') ? route('blog.post', ['slug' => $result->slug_es ]) : route('localized.blog.post', ['slug' => $result->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->sizes['medium'] }})"></div></a>
                 <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-0 lg:px-10">
-                    <h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none pt-8 lg:pt-0">{{ ${'result'}->{'title_' . $locale} }}</h2>
+                    <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', ['slug' => $result->slug_es ]) : route('localized.blog.post', ['slug' => $result->slug_es, 'lang' => $locale ]) }}"><h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none pt-8 lg:pt-0">{{ ${'result'}->{'title_' . $locale} }}</h2></a>
                     <div class="tags mb-4">
                         @foreach ($result->experiences as $category)
                             <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
@@ -40,25 +40,25 @@
                 </div>
             @break
             @case ("App\Experience")
-                <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->url }})"></div>
+                <a class="w-full lg:w-5/12" href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $result->slug ] ) : route('localized.blog.post', ['category' => $result->slug, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->url }})"></div></a>
                 <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-0 lg:px-10">
-                    <h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none  pt-8 lg:pt-0">{{ ${'result'}->{'name_' . $locale} }}</h2>
+                    <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $result->slug ] ) : route('localized.blog.post', ['category' => $result->slug, 'lang' => $locale ]) }}"><h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none  pt-8 lg:pt-0">{{ ${'result'}->{'name_' . $locale} }}</h2></a>
                     @markdown( \Str::words ( ${'result'}->{'description_' . $locale} , 30 ) )
                     <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $result->slug ] ) : route('localized.blog.post', ['category' => $result->slug, 'lang' => $locale ]) }}" class="button px-10 py-1 shadow-7xl my-8 inline-block">Leer más</a>   
                 </div>
             @break
             @case ("App\Region")
-                <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->main }})"></div>
+                <a class="w-full lg:w-5/12" href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $result->slug ]) : route('localized.region', ['slug' => $result->slug, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->main }})"></div></a>
                 <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-0 lg:px-10">
-                    <h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none  pt-8 lg:pt-0">{{ ${'result'}->{'name_' . $locale} }}</h2>
+                    <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $result->slug ]) : route('localized.region', ['slug' => $result->slug, 'lang' => $locale ]) }}"><h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none  pt-8 lg:pt-0">{{ ${'result'}->{'name_' . $locale} }}</h2></a>
                     @markdown( ${'result'}->{'short_description_' . $locale} )
                     <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $result->slug ]) : route('localized.region', ['slug' => $result->slug, 'lang' => $locale ]) }}" class="button px-10 py-1 shadow-7xl my-8 inline-block">Leer más</a>   
                 </div>
             @break
             @case ("App\Route")
-                <div class="w-full lg:w-5/12 bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->main }})"></div>
+                <a class="w-full lg:w-5/12" href="{{ $locale == config('app.fallback_locale') ? route('route', ['slug' => $result->slug ]) : route('localized.route', ['slug' => $result->slug, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->main }})"></div></a>
                 <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-0 lg:px-10  pt-8 lg:pt-0">
-                    <h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none">{{ ${'result'}->{'name_' . $locale} }}</h2>
+                    <a href="{{ $locale == config('app.fallback_locale') ? route('route', ['slug' => $result->slug ]) : route('localized.route', ['slug' => $result->slug, 'lang' => $locale ]) }}"><h2 class="text-5xl lg:text-6xl font-bold text-gray-400 leading-none">{{ ${'result'}->{'name_' . $locale} }}</h2></a>
                     @markdown( ${'result'}->{'short_description_' . $locale} )
                     <a href="{{ $locale == config('app.fallback_locale') ? route('route', ['slug' => $result->slug ]) : route('localized.route', ['slug' => $result->slug, 'lang' => $locale ]) }}" class="button px-10 py-1 shadow-7xl my-8 inline-block">Leer más</a>   
                 </div>

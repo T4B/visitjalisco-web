@@ -10,14 +10,13 @@ class SearchController extends Controller
     public function search (Request $request)
     {
         if($request->has('q')){	
-            $query = $request->get('q');
-            $results = \App\Search\VisitJalisco::search($query)->paginate(4);
-            $results->appends(['q' => $query ]);
+            $q = $request->get('q');
+            $results = \App\Search\VisitJalisco::search($q)->paginate(4);
+            $results->appends(['q' => $q ]);
+            return view('search', compact('results'));
+        }else{
+            return redirect()->route('experiences');
         }
-        // else{
-    	// 	$posts = \App\Post::with('experiences', 'regions')->orderBy('id', 'desc')->paginate(4);
-    	// }
-
-        return view('search', compact('results'));
+        
     }
 }

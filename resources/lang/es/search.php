@@ -2,5 +2,6 @@
 
 return [
     'title' => 'Búsqueda',
-    'back' => 'Regresar'
+    'back' => 'Regresar',
+    'placeholder' => 'Buscar',
 ];
