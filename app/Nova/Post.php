@@ -74,14 +74,13 @@ class Post extends Resource
                 ->sortable()
                 ->hideFromIndex(),
 
-            Text::make('Título', 'title_es')
-                ->sortable()
-                ->exceptOnForms(),
+            // Text::make('Título', 'title_es')
+            //     ->sortable()
+            //     ->exceptOnForms(),
 
             TextWithSlug::make('Título', 'title_es')
                 ->slug('slug_es')
-                ->rules('required', 'regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
-                ->onlyOnForms(),
+                ->rules('required', 'regex:/^[a-zA-Záéíóú\s0-9]+$/', 'max:254'),
 
             Slug::make('Slug', 'slug_es')
                 ->rules('required', 'alpha_dash', 'max:254', 'sometimes:unique:posts,slug_es')

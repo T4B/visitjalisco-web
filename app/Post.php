@@ -8,14 +8,16 @@ use Illuminate\Support\Facades\Storage;
 use App\Events\PostSaved;
 use App\Events\PostDeleted;
 use Laravel\Scout\Searchable;
-use App\Experience;
-use App\Region;
 
 class Post extends Model
 {
     use SoftDeletes, Searchable;
 
     protected $dates = ['deleted_at'];
+
+    protected $attributes = [
+        'status' => 0,
+    ];
 
     protected $sizes = [
         'thumb' => [
@@ -48,7 +50,7 @@ class Post extends Model
 
     public function getUrlAttribute()
     {
-        return ( Storage::disk('public')->exists($this->image) ) ? Storage::url($this->image) : asset('images/'.$this->image);
+        return (Storage::disk('public')->exists($this->image)) ? Storage::url($this->image) : asset('images/' . $this->image);
     }
 
     public function getSizesAttribute()
@@ -83,7 +85,7 @@ class Post extends Model
 
     public function path()
     {
-        $path = explode("/", $this->image)[0];
+        $path = explode('/', $this->image)[0];
         return $path . '/';
     }
 
@@ -147,17 +149,14 @@ class Post extends Model
             return [
                 'name_es' => $data['name_es']
             ];
-
         })->toArray();
 
         $array['experiences'] = $this->experiences->map(function ($data) {
             return [
                 'name_es' => $data['name_es']
             ];
-
         })->toArray();
 
         return $array;
     }
-
 }
