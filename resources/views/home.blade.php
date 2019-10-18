@@ -105,7 +105,7 @@
             <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><div class="w-full bg-cover bg-center bg-no-repeat p-40" style="background-image:url({{ $first_route->main }})"></div></a>
             <div class="px-4 text-sm">
                 <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2">{{ ${'first_route'}->{'name_' . $locale} }}</h2></a>
-                @markdown( ${'first_route'}->{'short_description_' . $locale} )
+                {{-- @markdown( ${'first_route'}->{'short_description_' . $locale} ) --}}
             </div>
         </div>
 
