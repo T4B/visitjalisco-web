@@ -48,7 +48,7 @@
                     <div class="post bg-gray-300 p-4 text-left text-white text-lg relative">
                         <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->sizes['thumb'] }})"></div></a>
                         <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
-                        @markdown( \Str::words(${'post'}->{'excerpt_' . $locale}, 15) )
+                        @markdown( \Str::words(${'post'}->{'excerpt_' . $locale}, 17) )
                         <div class="tags absolute bottom-4">
                             @foreach ($post->experiences as $category)
                                 <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
