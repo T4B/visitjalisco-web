@@ -276,9 +276,9 @@
             "authors": [
                 {
                     "name": "Benjamin Hirsch",
-                    "role": "Developer",
                     "email": "mail@benjaminhirsch.net",
-                    "homepage": "https://wwwbenjaminhirsch.net"
+                    "homepage": "https://wwwbenjaminhirsch.net",
+                    "role": "Developer"
                 }
             ],
             "description": "A Laravel Nova field to generate a slugs.",
@@ -6288,8 +6288,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",

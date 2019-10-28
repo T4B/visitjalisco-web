@@ -1,6 +1,6 @@
 <template>
     <label
-        class="form-label text-grey-lighter"
+        class="form-label"
         :for="id">
         <slot />
     </label>

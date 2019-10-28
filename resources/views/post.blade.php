@@ -19,7 +19,7 @@
 <section class="post">
     <div class="container py-12">
         <div class="flex flex-wrap">
-             <div class="post-content w-full lg:w-8/12">
+            <div class="post-content w-full lg:w-7/12 xl:w-8/12">
                 <div class="flex flex-wrap items-center">
                     <div class="w-full text-2xl text-gray-500 px-10 lg:px-0 text-content">
                         {!! html_entity_decode(${'post'}->{'text_' . $locale}, ENT_HTML5) !!}
@@ -40,7 +40,7 @@
                 </div>
 
             </div>
-            <div class="sidebar mx-8 lg:mx-0 w-full lg:w-3/12 lg:ml-auto py-12">
+            <div class="sidebar mx-8 lg:mx-0 w-full lg:w-4/12 xl:w-3/12 lg:ml-auto py-12">
                 <div class="categories bg-gray-50 rounded-xl">
                     <div class="head text-center py-2 px-4">
                         <h3 class="text-2xl font-bold text-gray-400 my-2">@lang('post.more-experiences')</h3>
@@ -49,7 +49,7 @@
                     <div class="body pt-4 pb-8 px-4 flex flex-wrap py-2">
                         @foreach ($categories as $category)
                             <div class="w-1/2 text-center py-2">
-                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="text-white py-1 px-4 inline-block rounded-lg text-lg leading-tight {{ $post->experiences->contains($category->id)  ? 'bg-red-400' : 'bg-gray-700' }}">{{ ${'category'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="text-white py-1 px-4 inline-block rounded-lg text-base leading-tight {{ $post->experiences->contains($category->id)  ? 'bg-red-400' : 'bg-gray-700' }}">{{ ${'category'}->{'name_' . $locale} }}</a>
                             </div>
                         @endforeach
                     </div>

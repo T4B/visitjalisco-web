@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Boolean;
 use Benjaminhirsch\NovaSlugField\TextWithSlug;
 use Benjaminhirsch\NovaSlugField\Slug;
 use Laravel\Nova\Fields\MorphToMany;
@@ -116,6 +117,8 @@ class Post extends Resource
                 1 => 'Publicado',
             ])->rules('required')
             ->displayUsingLabels(),
+
+            Boolean::make('Destacado', 'highlight'),
 
             BelongsToMany::make('Categorías', 'experiences', Experience::class)->searchable(),
             BelongsToMany::make('Regiones', 'regions', Region::class)->searchable(),

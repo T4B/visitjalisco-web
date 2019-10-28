@@ -9,7 +9,7 @@ class ExperiencesController extends Controller
     public function index()
     {
         $experiences = \App\Experience::all();
-        $posts = \App\Post::with('experiences', 'regions')->where('status', 1)->orderBy('id', 'desc')->take(4)->get();
+        $posts = \App\Post::with('experiences', 'regions')->where('status', 1)->where('highlight', 1)->orderBy('id', 'desc')->take(4)->get();
         $first_post = $posts->first();
         return view('experiences', compact('experiences', 'posts', 'first_post'));
     }

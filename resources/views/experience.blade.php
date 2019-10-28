@@ -33,7 +33,7 @@
 
 <section class="destinations py-16">
     <div class="container">
-        <div class="w-full text-grey">
+        <div class="w-full text-grey-100">
             <h2 class="font-bold text-11xl text-gray-400">{{ ${'experience'}->{'name_' . $locale} }}</h2>
             @markdown ( ${'experience'}->{'description_' . $locale} )
         </div>

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Blade;
 use App\Search\VisitJalisco;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,5 +28,9 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('locale', app()->getLocale());
         VisitJalisco::bootSearchable();
+
+        Blade::if('env', function ($environment) {
+            return app()->environment($environment);
+        });
     }
 }

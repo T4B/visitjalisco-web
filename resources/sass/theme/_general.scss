@@ -49,7 +49,7 @@
         @apply .text-2xl .leading-tight .mb-8 .text-gray-500;
     }
     strong, b{
-        @apply font-bold;
+        @apply .font-bold .text-grey-200;
     }
     a{
         @apply .underline .text-red-400;

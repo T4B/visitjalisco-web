@@ -16,7 +16,11 @@ module.exports = {
         white: theme.colors['white'],
         black: theme.colors['black'],
 
-        grey: '#3C3C3B',
+        //grey: '#3C3C3B',
+        grey: {
+            '100': '#3C3C3B',
+            '200': '#1A1A19',
+        },
         gray: {
             '50':  '#EDEDED',
             '100': '#F4F4F4',
