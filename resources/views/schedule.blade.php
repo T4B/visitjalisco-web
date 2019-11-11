@@ -23,8 +23,8 @@
 
 <section class="schedule text-gray-500 bg-contain bg-no-repeat bg-bottom bg-gray-100" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
     <div class="container pt-16">
-        <div class="w-full mb-8">
-            <h2 class="text-8xl text-gray-600 font-bold">@lang('schedule.upcoming-events')</h2>
+        <div class="w-full mb-8 px-6 lg:px-0">
+            <h2 class="text-8xl text-gray-600 font-bold leading-none">@lang('schedule.upcoming-events')</h2>
         </div>
         <div class="hidden lg:flex w-full justify-end text-center text-red-400">
             <div class="w-1/5 mb-4">
@@ -41,7 +41,7 @@
     <div class="w-full relative mb-12">
         <hr class="hidden lg:block line absolute bg-red-400 h-1 w-2/3 bottom-0 right-0">
     </div>
-    <div class="container pb-16">
+    <div class="container pb-16 px-6 lg:px-0">
         @foreach($events as $event)
             <div class="event flex flex-wrap mb-20 items-center bg-white text-center shadow-7xl relative">
                 <div class="w-full lg:w-1/5 z-0">

@@ -1,6 +1,6 @@
 @if (count($posts))
 <section class="posts-slider py-12">
-    <div class="container px-10 lg:px-0">
+    <div class="container px-6 lg:px-0">
         <div class="w-full px-10">
             <slider 
                 class="outside-arrows" 

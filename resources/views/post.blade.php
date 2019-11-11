@@ -1,6 +1,9 @@
 @extends('layouts.default')
 @section('page-name', 'post')
 @section('og.image', $post->sizes['og'] ?? asset('/images/og.jpg'))
+@section('og.title', ${'post'}->{'title_' . $locale}) 
+@section('og.description', ${'post'}->{'excerpt_' . $locale}) 
+
 
 @section('css')
     <link rel="stylesheet" href="{{ mix('css/swiper.css') }}" />
@@ -9,7 +12,7 @@
 @section('content')
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $post->url }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0 text-content">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0 text-content">
             <h2 class="text-6xl font-bold leading-none">{{ ${'post'}->{'title_' . $locale} }}</h2>
         </div>
    </div>
@@ -21,13 +24,13 @@
         <div class="flex flex-wrap">
             <div class="post-content w-full lg:w-7/12 xl:w-8/12">
                 <div class="flex flex-wrap items-center">
-                    <div class="w-full text-2xl text-gray-500 px-10 lg:px-0 text-content">
+                    <div class="w-full text-2xl text-gray-500 px-6 lg:px-0 text-content">
                         {!! html_entity_decode(${'post'}->{'text_' . $locale}, ENT_HTML5) !!}
                     </div>
                 </div>
                 <div class="social">
                     <div class="container">
-                        <div class="w-full my-12 flex flex-wrap px-10 lg:px-0">
+                        <div class="w-full my-12 flex flex-wrap px-2 lg:px-0">
                             @component('components.share', [
                                 'title' => ${'post'}->{'title_' . $locale}, 
                                 'href' => route('blog.post', ['slug' => ${'post'}->{'slug_' . $locale} ])])

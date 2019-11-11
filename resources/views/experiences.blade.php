@@ -5,7 +5,7 @@
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/experiences/bg-experiences-main.jpg') }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0 text-content">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0 text-content">
             <h2 class="text-6xl font-bold">@lang('experiences.title')</h2>
             <p class="font-secondary text-lg">@lang('experiences.subtitle')</p>
         </div>
@@ -13,7 +13,7 @@
 </section>
 
 <section class="search">
-    <div class="container pt-20 pb-12 px-10 lg:px-0">
+    <div class="container pt-20 pb-12 px-6 lg:px-0">
         @component('components.search')
         @endcomponent
     </div>
@@ -21,7 +21,7 @@
 
 @if ( $posts->count() )
 <section class="blog">
-    <div class="container px-10 lg:px-0">
+    <div class="container px-6 lg:px-0">
         <div class="w-full bg-gray-300 p-10">
             <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $first_post->slug_es ]) : route('localized.blog.post', [ 'slug' => $first_post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 lg:p-48" style="background-image:url({{ $first_post->sizes['medium'] }})"></div></a>
             <div class="text-lg text-white">

@@ -9,7 +9,7 @@
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ $route->main }})">
    <div class="container text-content flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0">
             <h2 class="text-6xl font-bold">{{ ${'route'}->{'name_' . $locale} }}</h2>
         </div>
    </div>
@@ -19,7 +19,7 @@
 <section class="route">
     <div class="container py-12">
         <div class="flex flex-wrap items-center">
-            <div class="w-full lg:w-1/2 text-2xl text-gray-500 px-10 lg:px-0">
+            <div class="w-full lg:w-1/2 text-2xl text-gray-500 px-6 lg:px-0">
                 @markdown( ${'route'}->{'full_description_' . $locale} )
             </div>
             <div class="w-full lg:w-1/2 px-12">
@@ -52,14 +52,14 @@
         @foreach ($route->places as $place )
         <div class="flex flex-wrap items-center my-24">
             <div class="w-full lg:w-1/3 bg-cover bg-no-repeat bg-center p-32 shadow-7xl" style="background-image:url({{ $place->url }})"></div>
-            <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-10 lg:px-0">
+            <div class="w-full lg:w-7/12 ml-auto font-secondary text-2xl px-6 lg:px-0">
                 <h2 class="text-6xl font-bold text-gray-400">{{ ${'place'}->{'name_' . $locale} }}</h2>
                 <p class="text-gray-400">{{ ${'place'}->{'subtitle_' . $locale} }}</p>
                 @markdown( ${'place'}->{'description_' . $locale} )
             </div>
         </div>
         @endforeach
-        <div class="w-full my-12 flex flex-wrap px-10 lg:px-0">
+        <div class="w-full my-12 flex flex-wrap px-6 lg:px-0">
             @component('components.share', [
                 'title' => ${'route'}->{'name_' . $locale}, 
                 'href' => route('route', ['slug' => $route->slug ])])

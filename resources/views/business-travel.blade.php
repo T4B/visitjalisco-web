@@ -9,7 +9,7 @@
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/bg-turismo-reuniones.jpg') }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0 text-content">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-2 lg:px-0 text-content">
             <h2 class="text-7xl inline-block leading-none">@lang('business-travel.title')</h2>
             {{--<p class="font-secondary text-lg">@lang('business-travel.subtitle')</p>--}}
         </div>
@@ -18,7 +18,7 @@
 
 @if($page)
 <section class="info">
-    <div class="container px-10 py-10 lg:px-0 text-2xl text-gray-500">
+    <div class="container px-6 py-10 lg:px-4 text-2xl text-gray-500">
         @markdown( ${'page'}->{'text_' . $locale} )
     </div>
 </section>
@@ -35,7 +35,7 @@
 @endif
 
 <section class="convention-centers">
-    <div class="container px-10 py-10 lg:px-0">
+    <div class="container px-6 py-10 lg:px-0">
         <div class="text-center text-gray-400 font-secondary font-bold leading-none my-4">
             <h2 class="text-2xl lg:text-6xl">@lang('business-travel.centers.title')</h2>
             <p class="text-xl lg:text-5xl">@lang('business-travel.centers.subtitle')</p>
@@ -47,10 +47,10 @@
     <div class="container">
         @foreach ($centers as $center)
         <div class="flex flex-wrap items-center my-12">
-            <div class="w-full lg:w-1/3 py-12 px-10 lg:px-0">
+            <div class="w-full lg:w-1/3 py-12 px-6 lg:px-0">
                 <img src="{{ $center->url }}">
             </div>
-            <div class="w-full lg:w-7/12 ml-auto font-secondary text-xl lg:text-2xl px-10 lg:px-0">
+            <div class="w-full lg:w-7/12 ml-auto font-secondary text-xl lg:text-2xl px-6 lg:px-0">
                 <h2 class="text-3xl lg:text-6xl font-bold text-gray-400 leading-none">{{ $center->name }}</h2>
                 <p class="text-gray-400">{{ ${'center'}->{'subtitle_' . $locale} }}</p>
                 @markdown( ${'center'}->{'text_' . $locale} )

@@ -1,5 +1,5 @@
 <template>
-    <div class="slider w-full lg:w-6/12 ml-auto px-10 lg:px-0">
+    <div class="slider w-full lg:w-6/12 ml-auto px-6 lg:px-0">
       <div class="swiper-top my-4">  
         <swiper :options="swiperOptionTop" class="gallery-top shadow-2xl" ref="swiperTop">
           <slide 

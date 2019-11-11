@@ -5,23 +5,23 @@
 
 <section class="headerimage multiply-40 bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/bg-search.jpg') }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0 text-content">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0 text-content">
             <h2 class="text-6xl font-bold">@lang('search.title')</h2>
         </div>
    </div>
 </section>
 
 <section class="search">
-    <div class="container pt-20 pb-4 px-10 lg:px-0">
+    <div class="container pt-20 pb-4">
         @component('components.search')
         @endcomponent
     </div>
 </section>
 
 <section class="seearch-result py-4">
-    <div class="container px-10">
+    <div class="container">
         @foreach ($results as $result )
-        <div class="flex flex-wrap items-center my-24">
+        <div class="flex flex-wrap items-center my-24 px-0">
             @switch (get_class($result))
             @case ("App\Post")
                 <a class="w-full lg:w-5/12 " href="{{ $locale == config('app.fallback_locale') ? route('blog.post', ['slug' => $result->slug_es ]) : route('localized.blog.post', ['slug' => $result->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-40 shadow-7xl" style="background-image:url({{ $result->sizes['medium'] }})"></div></a>

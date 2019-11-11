@@ -9,7 +9,7 @@
 
 <section class="headerimage multiply-40 h-screen bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-jalisco.jpg') }})">
     <div class="container text-content flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0">
             @markdown($jalisco->header_text)
         </div>
     </div>
@@ -18,7 +18,7 @@
 <section class="history">
     <div class="container py-12">
         <div class="flex flex-wrap">
-            <div class="w-full lg:w-5/12 text-2xl text-gray-500 px-10 lg:px-0">
+            <div class="w-full lg:w-5/12 text-2xl text-gray-500 px-6 lg:px-0">
                 @markdown($jalisco->history)
             </div>
             <jalisco-slider :gallery='@json($jalisco->gallery())'></jalisco-slider>
@@ -34,7 +34,7 @@
                 <p>@lang('jalisco.foundation')</p>
                 <p>16 de junio de 1823 (195 años)</p>
             </div>
-            <div class="w-full lg:w-2/3 flex flex-wrap px-10 lg:px-0">
+            <div class="w-full lg:w-2/3 flex flex-wrap px-6 lg:px-0">
                 <div class="w-full my-4">
                     <p>@lang('jalisco.coordinates'): 20°34′00″N 103°40′35″O</br>
                     @lang('jalisco.capital'): Guadalajara</br>
@@ -61,7 +61,7 @@
 
 <section class="jalisco-info bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-jalisco-info.jpg') }})">
     <div class="container py-12">
-        <div class="flex flex-wrap w-full text-2xl text-gray-500 px-10 lg:px-0">
+        <div class="flex flex-wrap w-full text-2xl text-gray-500 px-6 lg:px-0">
             <div class="w-full">
                 @markdown($jalisco->info_top)
             </div>

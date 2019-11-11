@@ -5,7 +5,7 @@
 
 <section class="headerimage bg-cover bg-no-repeat bg-center h-screen" style="background-image:url({{ asset('images/routes/bg-routes-main.jpg') }})">
    <div class="container flex w-full font-secondary h-full relative">
-        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-10 lg:px-0">
+        <div class="flex-1 text-left text-white absolute bottom-0 pb-8 text-2xl px-6 lg:px-0">
             <h2 class="text-6xl font-bold">@lang('routes.title')</h2>
             <p class="font-secondary text-lg">@lang('routes.subtitle')</p>
         </div>

@@ -33,7 +33,7 @@
 <section class="regions font-serif">
     <div class="container py-16">
         <div class="flex flex-wrap text-black">
-            <div class="flex flex-row items-center w-full md:w-1/3 px-10 lg:px-0 py-8">
+            <div class="flex flex-row items-center w-full md:w-1/3 px-6 lg:px-0 py-8">
                 <div class="w-full flex-1 leading-tight font-light">
                     <h1 class="text-5xl">@lang('home.this-is') </br><span class="font-bold">@lang('home.mi-jalisco')</span></h1>
                     <p class="text-2xl py-8">@lang('home.mi-jalisco-text')</p>
@@ -100,7 +100,7 @@
 
 @if (count($routes))
 <section class="routes multiply bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-routes.jpg') }})">
-    <div class="container py-10 px-10 lg:px-0">
+    <div class="container py-10 px-6 lg:px-0">
         <div class="w-full bg-white p-4 lg:p-10 rounded-lg">
             <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><div class="w-full bg-cover bg-center bg-no-repeat py-32 lg:py-40" style="background-image:url({{ $first_route->main }})"></div></a>
             <div class="px-4 text-sm">
