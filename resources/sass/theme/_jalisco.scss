@@ -10,6 +10,12 @@
                 @apply .text-6xl;
             }
         }
+        .text-content{
+            strong, b{
+                @apply text-white;
+            }
+        }
+        
     }
 
     .history, .jalisco-info{

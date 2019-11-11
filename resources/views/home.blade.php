@@ -101,8 +101,8 @@
 @if (count($routes))
 <section class="routes multiply bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-routes.jpg') }})">
     <div class="container py-10 px-10 lg:px-0">
-        <div class="w-full bg-white p-10 rounded-lg">
-            <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><div class="w-full bg-cover bg-center bg-no-repeat p-40" style="background-image:url({{ $first_route->main }})"></div></a>
+        <div class="w-full bg-white p-4 lg:p-10 rounded-lg">
+            <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><div class="w-full bg-cover bg-center bg-no-repeat py-32 lg:py-40" style="background-image:url({{ $first_route->main }})"></div></a>
             <div class="px-4 text-sm">
                 <a href="{{ route('route', ['slug' => $first_route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2">{{ ${'first_route'}->{'name_' . $locale} }}</h2></a>
                 {{-- @markdown( ${'first_route'}->{'short_description_' . $locale} ) --}}
@@ -115,7 +115,7 @@
                     @if ($loop->first) @continue @endif
                     <div class="w-full lg:w-1/3 px-2 py-8 lg:py-0">
                         <div class="bg-white p-4 rounded-lg text-center">
-                            <a href="{{ route('route', ['slug' => $route->slug ]) }}"><div class="bg-cover bg-no-repeat bg-center p-32 mb-6" style="background-image:url({{ $route->main }})"></div></a>
+                            <a href="{{ route('route', ['slug' => $route->slug ]) }}"><div class="bg-cover bg-no-repeat bg-center py-32 mb-6" style="background-image:url({{ $route->main }})"></div></a>
                             <a href="{{ route('route', ['slug' => $route->slug ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none">{{ ${'route'}->{'name_' . $locale} }}</h2></a>
                         </div>
                     </div>
