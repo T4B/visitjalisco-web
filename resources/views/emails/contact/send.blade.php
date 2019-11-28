@@ -7,6 +7,6 @@ Has recibido un mensaje a través del sitio VisitJalisco
 **Teléfono:** {{ $data['phone'] }}  
 **Mensaje:** {{ $data['message'] }}  
 
-Thanks,<br>
+Gracias,<br>
 {{ config('app.name') }}
 @endcomponent

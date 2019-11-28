@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Mail Driver
@@ -61,8 +60,8 @@ return [
     ],
 
     'to' => [
-        'address' => 'example@example.com',
-        'name' => 'Example'
+        'address' => env('MAIL_TO_ADDRESS', 'example@example.com'),
+        'name' => env('MAIL_TO_NAME', 'Example')
     ],
 
     /*
@@ -137,5 +136,4 @@ return [
     */
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
-
 ];
