@@ -30,6 +30,7 @@
 .categories{
     .category{
         height: 50vw;
+        text-shadow: 2px 2px 10px #1A1A19;
         @apply .flex .items-center .justify-center .bg-cover .bg-no-repeat .bg-center .p-4 .multiply;
         @screen lg{
             height: 20vw;

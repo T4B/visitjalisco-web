@@ -5,5 +5,13 @@
                 @apply .hidden;
             }
         }
+        figure{
+            figcaption{
+                @apply .text-center;
+            }
+            a{
+                @apply .text-gray-500 .no-underline;
+            }
+        }
     }
 }
