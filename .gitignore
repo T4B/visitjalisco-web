@@ -12,3 +12,4 @@ yarn-error.log
 .npmrc
 auth.json
 .DS_Store
+_ide_helper.php

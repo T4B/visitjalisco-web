@@ -75,7 +75,7 @@ if (App::environment('production')) {
     Route::get('/blog/{slug}', 'BlogController@getPost')->name('blog.post');
 }
 
-Route::group(['prefix' => '{lang?}', 'where' => ['lang' => 'es|en'], 'as' => 'localized.'], function (){
+Route::group(['prefix' => '{lang?}', 'where' => ['lang' => 'es|en'], 'as' => 'localized.'], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/jalisco', 'JaliscoController@jalisco')->name('jalisco');
     Route::get('/agenda', 'ScheduleController@index')->name('schedule');
