@@ -17,10 +17,10 @@ class ExperiencesController extends Controller
     public function getExperienceCategory(Request $request, $category)
     {
         $experience = \App\Experience::where('slug', $category)->first();
-        if ($experience){
+        if ($experience) {
             $posts = $experience->posts()->where('status', 1)->paginate(3);
             return view('experience', compact('experience', 'posts'));
-        }else{
+        } else {
             return redirect()->route('experiences');
         }
     }
@@ -28,16 +28,16 @@ class ExperiencesController extends Controller
     public function getDestination(Request $request, $category, $slug)
     {
         $experience = \App\Experience::where('slug', $category)->first();
-        
-        if ($experience){
+
+        if ($experience) {
             $destination = \App\Destination::where('slug', $slug)->where('experience_id', $experience->id)->first();
             $posts = \App\Post::inrandomorder()->take(6)->get();
 
-            if ($destination){
+            if ($destination) {
                 return view('destination', compact('experience', 'destination', 'posts'));
             }
-            return redirect()->route('experiences.category', ['category' => $experience->slug ]);
-        }else{
+            return redirect()->route('experiences.category', ['category' => $experience->slug]);
+        } else {
             return redirect()->route('experiences');
         }
     }

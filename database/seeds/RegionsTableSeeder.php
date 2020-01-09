@@ -12,7 +12,7 @@ class RegionsTableSeeder extends Seeder
      */
     public function run()
     {
-        Region::truncate();
+//        Region::truncate();
         Region::create([
             'name_es' => 'Región Norte',
             'color' => 'orange-100',

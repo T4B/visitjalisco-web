@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Support\Facades\Event;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -14,8 +15,10 @@ class ExperiencesTest extends TestCase
      */
     public function experiences_view_has_experiences_and_posts()
     {
+        Event::fake();
+
         factory('App\Post', 10)->create();
-        
+
         $response = $this->get('/experiencias')
                     ->assertStatus(200)
                     ->assertViewHas('experiences')
@@ -24,8 +27,8 @@ class ExperiencesTest extends TestCase
         $experiences = $response->original['experiences'];
         $posts = $response->original['posts'];
 
-        $this->assertEquals(9, count($experiences));  
-        $this->assertEquals(4, count($posts));  
+        $this->assertEquals(9, count($experiences));
+        $this->assertEquals(4, count($posts));
     }
 
     /**
@@ -42,8 +45,8 @@ class ExperiencesTest extends TestCase
         $page_experience = $response->original['experience'];
         $this->assertEquals($experience->name_es, $page_experience->name_es);
 
-    }   
-    
+    }
+
     /**
      *
      * @test

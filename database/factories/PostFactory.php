@@ -11,7 +11,8 @@ $factory->define(App\Post::class, function (Faker $faker) {
         'excerpt_es' => $faker->text,
         'text_es' => $faker->text,
         'slug_es' => $faker->slug,
-        'status' => 0
+        'status' => 1,
+        'highlight' => 1,
         // 'language' => 'es'
     ];
 });
