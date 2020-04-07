@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\Queue;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -15,8 +15,7 @@ class ExperiencesTest extends TestCase
      */
     public function experiences_view_has_experiences_and_posts()
     {
-        Event::fake();
-
+        Queue::fake();
         factory('App\Post', 10)->create();
 
         $response = $this->get('/experiencias')
@@ -53,7 +52,6 @@ class ExperiencesTest extends TestCase
      */
     public function it_redirects_to_experiences_if_slug_doesnt_exists()
     {
-        ;
         $response = $this->get('/experiencias/beeb-mx')
             ->assertRedirect('/experiencias');
     }

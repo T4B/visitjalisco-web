@@ -45,7 +45,6 @@ class RoutesTests extends TestCase
      */
     public function it_redirects_to_routes_if_slug_doesnt_exists()
     {
-        ;
         $response = $this->get('/ruta/beeb-mx')
             ->assertRedirect('/rutas');
     }

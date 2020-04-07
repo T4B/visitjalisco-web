@@ -16,8 +16,9 @@ class RegionsController extends Controller
     {
         $region = \App\Region::where('slug', $slug)->first();
         //$posts = \App\Post::inrandomorder()->take(6)->get();
-        $posts = $region->posts()->where('status', 1)->inrandomorder()->take(6)->get();
+        
         if ($region){
+            $posts = $region->posts()->where('status', 1)->inrandomorder()->take(6)->get();
             return view('region', compact('region', 'posts'));
         }else{
             return redirect()->route('regions');

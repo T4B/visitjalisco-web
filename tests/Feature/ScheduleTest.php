@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Queue;
 
 class ScheduleTest extends TestCase
 {
@@ -14,6 +15,7 @@ class ScheduleTest extends TestCase
      */
     public function schedule_view_has_events_posts_and_sliders()
     {
+        Queue::fake();
         factory('App\Event', 3)->create();
         factory('App\Post', 5)->create();
         factory('App\Slider', 2)->create(['position' => 'schedule']);

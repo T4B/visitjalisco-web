@@ -66,6 +66,7 @@ class HomeTest extends TestCase
      */
     public function home_view_has_routes()
     {
+        factory('App\Route', 4)->create(['highlight' => 1]);
         $response = $this->get('/')
                     ->assertStatus(200)
                     ->assertViewHas('routes')

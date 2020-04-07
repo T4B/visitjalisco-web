@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Queue;
 
 class RegionsTest extends TestCase
 {
@@ -44,7 +45,6 @@ class RegionsTest extends TestCase
      */
     public function it_redirects_to_regions_if_slug_doesnt_exists()
     {
-        ;
         $response = $this->get('/region/beeb-mx')
             ->assertRedirect('/regiones');
     }
@@ -55,9 +55,15 @@ class RegionsTest extends TestCase
      */
     public function region_view_has_posts()
     {
+        Queue::fake();
         factory('App\Post', 10)->create();
 
         $region = \App\Region::inrandomorder()->first();
+
+        $posts = \App\Post::inrandomorder()->take(6)->get();
+        $posts->each(function ($post) use ($region) {
+            $post->regions()->attach($region->id);
+        });
         
         $response = $this->get('/region/'.$region->slug)
                     ->assertStatus(200)

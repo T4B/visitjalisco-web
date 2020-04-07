@@ -14,5 +14,6 @@ $factory->define(App\Post::class, function (Faker $faker) {
         'status' => 1,
         'highlight' => 1,
         // 'language' => 'es'
+        'image' => 'post/test.jpeg'
     ];
 });

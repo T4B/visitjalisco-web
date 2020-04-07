@@ -21,6 +21,7 @@ class PostTest extends TestCase
      */
     public function user_can_see_a_post_by_slug()
     {
+        Queue::fake();
         factory('App\Post', 4)->create();
         
         $post = \App\Post::inrandomorder()->first();
@@ -38,6 +39,7 @@ class PostTest extends TestCase
      */
     public function blog_post_view_has_posts_except_current()
     {
+        Queue::fake();
         factory('App\Post', 10)->create();
 
         $post = \App\Post::inrandomorder()->first();
