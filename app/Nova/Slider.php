@@ -18,6 +18,7 @@ class Slider extends Resource
      * @var string
      */
     public static $model = 'App\Slider';
+    public static $group = 'Sitio';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

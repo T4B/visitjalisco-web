@@ -17,6 +17,7 @@ class Page extends Resource
      * @var string
      */
     public static $model = 'App\Page';
+    public static $group = 'Sitio';
 
     /**
      * Get the displayble label of the resource.

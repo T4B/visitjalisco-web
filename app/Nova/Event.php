@@ -21,6 +21,7 @@ class Event extends Resource
      * @var string
      */
     public static $model = 'App\Event';
+    public static $group = 'Sitio';
 
     /**
      * The single value that should be used to represent the resource when being displayed.

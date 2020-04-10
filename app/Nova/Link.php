@@ -4,21 +4,18 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Markdown;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Image;
-use Benjaminhirsch\NovaSlugField\TextWithSlug;
-use Benjaminhirsch\NovaSlugField\Slug;
+use Laravel\Nova\Fields\Text;
 
-class Video extends Resource
+class Link extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Video';
+    public static $model = 'App\Link';
     public static $group = 'Sitio';
 
     /**
@@ -34,8 +31,28 @@ class Video extends Resource
      * @var array
      */
     public static $search = [
-        'title_es', 'subtitle_es'
+        'title_es',
     ];
+
+    /**
+     * Get the displayable label of the resource.
+     *
+     * @return string
+     */
+    public static function label()
+    {
+        return 'Enlaces';
+    }
+
+    /**
+     * Get the displayble singular label of the resource.
+     *
+     * @return string
+     */
+    public static function singularLabel()
+    {
+        return 'Enlace';
+    }
 
     /**
      * Get the fields displayed by the resource.
@@ -49,39 +66,33 @@ class Video extends Resource
             ID::make()
                 ->sortable()
                 ->onlyOnForms(),
-            
-            TextWithSlug::make('Título', 'title_es')
-                ->slug('slug')
-                ->rules('regex:/^[a-zA-Záéíóú\s]+$/', 'max:254'),
-
-            Slug::make('Slug')
-                ->rules('alpha_dash', 'max:254', 'sometimes:unique:videos,slug'),
-
-            Text::make('Subtítulo', 'subtitle_es')
-                ->sortable()
-                ->hideFromIndex(),
-
-            Markdown::make('Texto', 'text_es')
-                ->rules('nullable')
-                ->hideFromIndex(),
-
-            Text::make('Video URL', 'video_url')
+            Text::make('Título', 'title_es')
+                ->rules('regex:/^[a-zA-Záéíóú\s]+$/', 'max:254')
+                ->rules('required'),
+            Text::make('Enlace', 'url')
                 ->hideFromIndex()
-                ->sortable(),
-
-            Image::make('Imagen', 'image')
-                ->disk('public')
-                ->path('videos')
-                ->rules('max:1024')
-                ->creationRules('required')
-                ->updateRules('nullable')
-                ->prunable(),
-
-            Select::make('Ubicación', 'position')->options([
-                'mi-jalisco' => 'Mi Jalisco',
-                'jalisco' => 'El estado',
-            ])->displayUsingLabels(),
-            
+                ->sortable()
+                ->rules('required'),
+            Select::make('Target')->options([
+                '_blank' => 'Página nueva',
+                '_self' => 'Misma página',
+            ])->hideFromIndex()
+                ->rules('required')
+                ->displayUsingLabels(),
+            Select::make('Margen superior', 'top_space')->options([
+                '0' => '0 rem',
+                '1' => '0.25 rem',
+                '2' => '0.50 rem',
+                '3' => '0.75 rem',
+                '4' => '1 rem',
+                '5' => '1.25 rem',
+                '6' => '1.50 rem',
+                '8' => '2 rem',
+                '10' => '2.5 rem',
+                '12' => '3 rem',
+            ])->hideFromIndex()
+                ->rules('required')
+                ->displayUsingLabels(),
         ];
     }
 

@@ -38,8 +38,15 @@
                     </li>
                 </ul>
                 <button class="no-underline mt-6 mx-auto focus:outline-none block" @click="showContactForm">Contacto</button>
-                <a class="inline-block mt-2 no-underline" href="https://drive.google.com/drive/folders/1G7e0CqV0eOSj8UMtVI4kJM4SOGMDeiIm" target="_blank">Media kit</a>
-                <a class="lg:absolute lg:inset-x-0 lg:bottom-0 no-underline" href="{{ route('page', ['slug' => 'aviso-de-privacidad' ])}}">aviso de privacidad</a>
+                {{--<a class="inline-block mt-2 no-underline" href="https://drive.google.com/drive/folders/1G7e0CqV0eOSj8UMtVI4kJM4SOGMDeiIm" target="_blank">Media kit</a>
+                <a class="lg:absolute lg:inset-x-0 lg:bottom-0 no-underline" href="{{ route('page', ['slug' => 'aviso-de-privacidad' ])}}">aviso de privacidad</a>--}}
+                <ul>
+                    @foreach ($footer_links as $footer_link)
+                    <li class="mt-{{ $footer_link->top_space }}">
+                        <a href="{{ $footer_link->url }}" target="{{ $footer_link->target }}">{{ ${'footer_link'}->{'title_' . $locale} }}</a>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
             <div class="w-full lg:w-1/3 text-center ml-auto mt-4 lg:mt-0 px-10">
                 @lang('general.footer.text')

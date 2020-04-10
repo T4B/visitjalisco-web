@@ -26,7 +26,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $footer_links = \App\Link::where('position', 'footer')->get();
         View::share('locale', app()->getLocale());
+        View::share('footer_links', $footer_links);
+
         VisitJalisco::bootSearchable();
 
         Blade::if('env', function ($environment) {

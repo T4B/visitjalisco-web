@@ -17,6 +17,7 @@ class Jalisco extends Resource
      * @var string
      */
     public static $model = 'App\Jalisco';
+    public static $group = 'Sitio';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
