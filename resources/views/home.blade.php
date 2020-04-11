@@ -68,8 +68,8 @@
         </a>
         @foreach ($experiences as $experience)
             <a class="w-1/2 lg:w-1/5" href="{{ route('experiences.category', ['category' => $experience->slug ]) }}">
-                <div class="category" style="background-image:url({{ $experience->url }})">
-                    <h2 class="text-2xl">{{ ${'experience'}->{'name_' . $locale} }}</h2>
+                <div class="category {{ $experience->text_shadow ? 'text-shadow' : '' }}" style="background-image:url({{ $experience->url }})">
+                    <h2 class="{{ (empty($experience->grid_styles)) ? 'text-2xl' : $experience->grid_styles }}">{{ ${'experience'}->{'name_' . $locale} }}</h2>
                 </div>
             </a>
         @endforeach
