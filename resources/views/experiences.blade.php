@@ -76,7 +76,7 @@
             @else
                 <a class="category w-full lg:w-1/3" href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $experience->slug ]) : route('localized.experiences.category', ['category' => $experience->slug, 'lang' => $locale ]) }}"><div class="experience" style="background-image:url({{ $experience->url }})">
             @endif
-                    <h2 class="text-2xl">{{ $experience->name_es }}</h2>
+                    <h2 class="{{ (empty($experience->grid_styles)) ? 'text-2xl' : $experience->grid_styles }} {{ $experience->text_shadow ? 'text-shadow' : '' }}">{{ $experience->name_es }}</h2>
                 </div></a>
         @endforeach
     </div>
