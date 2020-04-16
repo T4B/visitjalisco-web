@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 // use App\Destination;
 use App\Post;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
 class Experience extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes, Searchable;
+    use InteractsWithMedia, SoftDeletes, Searchable;
 
     // public function destinations()
     // {

@@ -4,15 +4,15 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Place;
 use Laravel\Scout\Searchable;
 
 class Route extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes, Searchable;
+    use InteractsWithMedia, SoftDeletes, Searchable;
 
     protected $appends = ['main', 'map', 'gallerybackground'];
 

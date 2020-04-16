@@ -101,7 +101,7 @@ class Region extends Resource
                 ->rules('nullable')
                 ->hideFromIndex(),
 
-            Markdown::make('Descripción corta', 'full_description_es')
+            Markdown::make('Descripción', 'full_description_es')
                 ->rules('nullable')
                 ->hideFromIndex(),
 

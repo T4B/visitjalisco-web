@@ -5,15 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App;
 use Laravel\Scout\Searchable;
 
 class Region extends Model implements HasMedia
 {
-    use HasMediaTrait, SoftDeletes, Searchable;
+    use InteractsWithMedia, SoftDeletes, Searchable;
 
     protected $hidden = ['deleted_at', 'created_at', 'updated_at'];
     protected $appends = ['interior', 'main', 'href'];
