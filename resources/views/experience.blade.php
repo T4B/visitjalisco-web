@@ -31,7 +31,7 @@
 </slider>
 @endif
 
-<section class="destinations py-16">
+<section class="articles py-16">
     <div class="container">
         <div class="w-full text-grey-100 px-6 lg:px-0">
             <h2 class="font-bold text-11xl text-gray-400">{{ ${'experience'}->{'name_' . $locale} }}</h2>
@@ -57,7 +57,7 @@
         </div>
         @endforeach
         <div class="flex flex-wrap items-center my-8">
-            <div class="w-full lg:w-3/4 destinations-navigation">
+            <div class="w-full lg:w-3/4 articles-navigation">
                 {{ $posts->links() }}
             </div>
             <div class="w-full lg:w-1/4 text-right my-6 lg:my-0">

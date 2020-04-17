@@ -21,13 +21,17 @@ class ExperiencesTest extends TestCase
         $response = $this->get('/experiencias')
                     ->assertStatus(200)
                     ->assertViewHas('experiences')
+                    ->assertViewHas('highlighted_posts')
                     ->assertViewHas('posts')
                     ->assertViewIs('experiences');
         $experiences = $response->original['experiences'];
+        $highlighted_posts = $response->original['highlighted_posts'];
         $posts = $response->original['posts'];
 
         $this->assertEquals(9, count($experiences));
-        $this->assertEquals(4, count($posts));
+        $this->assertEquals(4, count($highlighted_posts));
+        $this->assertEquals(3, count($posts));
+        $this->assertStringContainsString('/articulos', $posts->links()->paginator->path());
     }
 
     /**
@@ -54,5 +58,23 @@ class ExperiencesTest extends TestCase
     {
         $response = $this->get('/experiencias/beeb-mx')
             ->assertRedirect('/experiencias');
+    }
+
+    /**
+     *
+     * @test
+     */
+    public function articles_view_has_posts()
+    {
+        Queue::fake();
+        factory('App\Post', 10)->create();
+
+        $response = $this->get('/articulos')
+                    ->assertStatus(200)
+                    ->assertViewHas('posts')
+                    ->assertViewIs('articles');
+        $posts = $response->original['posts'];
+
+        $this->assertEquals(3, count($posts));
     }
 }

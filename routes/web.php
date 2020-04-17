@@ -36,10 +36,12 @@ if (App::environment('production')) {
 
     if (!env('PAGE_EXPERIENCES', false)) {
         Route::get('/experiencias', 'ComingSoonController@index')->name('experiences');
+        Route::get('/articulos', 'ComingSoonController@index')->name('articles');
         Route::get('/experiencias/{category}', 'ComingSoonController@index')->name('experiences.category');
         Route::get('/experiencias/{category}/{destination}', 'ComingSoonController@index')->name('experiences.destination');
     } else {
         Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
+        Route::get('/articulos', 'ExperiencesController@getArticles')->name('articles');
         Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
         Route::get('/experiencias/{category}/{destination}', 'ExperiencesController@getDestination')->name('experiences.destination');
     }
@@ -67,6 +69,7 @@ if (App::environment('production')) {
     Route::get('/regiones', 'RegionsController@index')->name('regions');
     Route::get('/region/{slug}', 'RegionsController@getRegion')->name('region');
     Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
+    Route::get('/articulos', 'ExperiencesController@getArticles')->name('articles');
     Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
     Route::get('/experiencias/{category}/{slug}', 'ExperiencesController@getDestination')->name('experiences.destination');
     Route::get('/rutas', 'RoutesController@index')->name('routes');
@@ -98,10 +101,12 @@ Route::group(['prefix' => '{lang?}', 'where' => ['lang' => 'es|en'], 'as' => 'lo
 
         if (!env('PAGE_EXPERIENCES', false)) {
             Route::get('/experiencias', 'ComingSoonController@index')->name('experiences');
+            Route::get('/articulos', 'ComingSoonController@index')->name('articles');
             Route::get('/experiencias/{category}', 'ComingSoonController@index')->name('experiences.category');
             Route::get('/experiencias/{category}/{destination}', 'ComingSoonController@index')->name('experiences.destination');
         } else {
             Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
+            Route::get('/articulos', 'ExperiencesController@getArticles')->name('articles');
             Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
             Route::get('/experiencias/{category}/{destination}', 'ExperiencesController@getDestination')->name('experiences.destination');
         }
@@ -129,6 +134,7 @@ Route::group(['prefix' => '{lang?}', 'where' => ['lang' => 'es|en'], 'as' => 'lo
         Route::get('/regiones', 'RegionsController@index')->name('regions');
         Route::get('/region/{slug}', 'RegionsController@getRegion')->name('region');
         Route::get('/experiencias', 'ExperiencesController@index')->name('experiences');
+        Route::get('/articulos', 'ExperiencesController@getArticles')->name('articles');
         Route::get('/experiencias/{category}', 'ExperiencesController@getExperienceCategory')->name('experiences.category');
         Route::get('/experiencias/{category}/{slug}', 'ExperiencesController@getDestination')->name('experiences.destination');
         Route::get('/rutas', 'RoutesController@index')->name('routes');

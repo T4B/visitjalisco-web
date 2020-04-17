@@ -9,9 +9,13 @@ class ExperiencesController extends Controller
     public function index()
     {
         $experiences = \App\Experience::all();
-        $posts = \App\Post::with('experiences', 'regions')->where('status', 1)->where('highlight', 1)->orderBy('id', 'desc')->take(4)->get();
-        $first_post = $posts->first();
-        return view('experiences', compact('experiences', 'posts', 'first_post'));
+        $highlighted_posts = \App\Post::with('experiences', 'regions')->where('status', 1)->where('highlight', 1)->orderBy('id', 'desc')->take(4)->get();
+        $first_post = $highlighted_posts->first();
+        
+        $posts = $this->getPosts();
+        $posts->withPath('/articulos');
+        
+        return view('experiences', compact('experiences', 'highlighted_posts', 'first_post', 'posts'));
     }
 
     public function getExperienceCategory(Request $request, $category)
@@ -40,5 +44,18 @@ class ExperiencesController extends Controller
         } else {
             return redirect()->route('experiences');
         }
+    }
+
+    public function getArticles()
+    {
+        $posts = $this->getPosts();
+        return view('articles', compact('posts'));
+    }
+
+    private function getPosts(){
+        return \App\Post::with('experiences', 'regions')
+                                ->where('status', 1)
+                                ->orderBy('id', 'desc')
+                                ->paginate(3);
     }
 }

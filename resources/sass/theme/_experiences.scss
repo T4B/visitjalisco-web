@@ -19,22 +19,20 @@
     }
 }
 
-.visitjalisco-experience{
-    .destinations{
-        .destinations-navigation{
-            .pagination{
-                @apply .relative .flex .flex-row .justify-end .items-end .text-lg;
+
+.articles{
+    .articles-navigation{
+        .pagination{
+            @apply .relative .flex .flex-row .justify-end .items-end .text-lg;
+        }
+        .page-item{
+            @apply .px-4 .py-1 .bg-gray-400 .text-white .mx-2 .text-xl;
+            &.active{
+                @apply .bg-red-400;
             }
-            .page-item{
-                @apply .px-4 .py-1 .bg-gray-400 .text-white .mx-2 .text-xl;
-                &.active{
-                    @apply .bg-red-400;
-                }
-                &.disabled{
-                    @apply .hidden;
-                }
+            &.disabled{
+                @apply .hidden;
             }
         }
     }
-    
 }

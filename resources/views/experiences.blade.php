@@ -19,7 +19,7 @@
     </div>
 </section>
 
-@if ( $posts->count() )
+@if ( $highlighted_posts->count() )
 <section class="blog">
     <div class="container px-6 lg:px-0">
         <div class="w-full bg-gray-300 p-10">
@@ -42,7 +42,7 @@
             
         <div class="py-16">
             <div class="flex flex-wrap -mx-2">
-                @foreach ($posts as $post)
+                @foreach ($highlighted_posts as $post)
                     @if ($loop->first) @continue @endif
                 <div class="w-full md:w-1/2 md:mt-4 xl:mt-0 xl:w-1/3 px-2 py-8 lg:py-0">
                     <div class="post bg-gray-300 p-4 text-left text-white text-lg relative">
@@ -79,6 +79,20 @@
                     <h2 class="{{ (empty($experience->grid_styles)) ? 'text-2xl' : $experience->grid_styles }} {{ $experience->text_shadow ? 'text-shadow' : '' }}">{{ $experience->name_es }}</h2>
                 </div></a>
         @endforeach
+    </div>
+</section>
+
+<section class="articles">
+    <div class="container">
+        @foreach ($posts as $post )
+        <x-post-card :post="$post"/>
+        @endforeach
+        <div class="flex flex-wrap items-center my-8">
+            <div class="w-full articles-navigation">
+                {{ $posts->links() }}
+            </div>
+        </div>
+        
     </div>
 </section>
 
