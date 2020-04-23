@@ -35,4 +35,24 @@ class ScheduleTest extends TestCase
         $this->assertEquals(3, count($posts));  
         $this->assertEquals(2, count($sliders));  
     }
+
+
+    /**
+     *
+     * @test
+     */
+    public function schedule_view_only_show_visible_events()
+    {
+        Queue::fake();
+        factory('App\Event', 2)->create();
+        factory('App\Event', 2)->create(['visible' => 0]);
+
+        $response = $this->get('/agenda')
+                    ->assertStatus(200)
+                    ->assertViewHas('events')
+                    ->assertViewIs('schedule');
+        $events = $response->original['events'];
+
+        $this->assertEquals(2, count($events));  
+    }
 }

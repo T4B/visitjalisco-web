@@ -110,6 +110,7 @@ class Event extends Resource
                 ->prunable()
                 ->hideFromIndex(),
             Boolean::make('Destacado', 'highlight'),
+            Boolean::make('Visible', 'visible'),
         ];
     }
 

@@ -31,9 +31,10 @@ class HomeTest extends TestCase
      *
      * @test
      */
-    public function home_view_has_highlighted_events()
+    public function home_view_has_highlighted_and_visible_events()
     {
-        factory('App\Event', 5)->create(['highlight' => 1]);
+        factory('App\Event', 2)->create(['highlight' => 1]);
+        factory('App\Event', 1)->create(['highlight' => 1, 'visible' => 0]);
         factory('App\Event')->create(['highlight' => 0]);
 
         $response = $this->get('/')
@@ -42,7 +43,7 @@ class HomeTest extends TestCase
                     ->assertViewIs('home');
         $events = $response->original['events'];
 
-        $this->assertEquals(3, count($events));  
+        $this->assertEquals(2, count($events));  
     }
 
     /**
