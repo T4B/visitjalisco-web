@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -23,7 +24,7 @@ class Post extends Resource
      * @var string
      */
     public static $model = 'App\Post';
-    //public static $displayInNavigation = false;
+    
     public static $group = 'Experiencias';
 
     /**
@@ -75,10 +76,6 @@ class Post extends Resource
                 ->sortable()
                 ->hideFromIndex(),
 
-            // Text::make('Título', 'title_es')
-            //     ->sortable()
-            //     ->exceptOnForms(),
-
             TextWithSlug::make('Título', 'title_es')
                 ->slug('slug_es')
                 ->rules('required', 'string', 'max:254'),
@@ -100,7 +97,6 @@ class Post extends Resource
             Image::make('Imagen', 'image')
                 ->disk('public')
                 ->path('post')
-                //->store(new StoreImage($this, 'public', 'post', 'image', 'resize', '1920'))
                 ->rules('max:1024')
                 ->creationRules('required')
                 ->updateRules('nullable')
@@ -110,8 +106,6 @@ class Post extends Resource
                 return '<a class="cursor-pointer text-70 hover:text-primary" href="' . route('blog.post', ['slug' => $this->slug_es]) . '" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" class="fill-current"><path class="heroicon-ui" d="M19 6.41L8.7 16.71a1 1 0 1 1-1.4-1.42L17.58 5H14a1 1 0 0 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V6.41zM17 14a1 1 0 0 1 2 0v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7c0-1.1.9-2 2-2h5a1 1 0 0 1 0 2H5v12h12v-5z"/></svg></a>';
             })->asHtml()->exceptOnForms(),
 
-            //MorphToMany::make('Etiquetas', 'tags', Tag::class)->searchable(),
-
             Select::make('Estatus', 'status')->options([
                 0 => 'Borrador',
                 1 => 'Publicado',
@@ -119,6 +113,12 @@ class Post extends Resource
             ->displayUsingLabels(),
 
             Boolean::make('Destacado', 'highlight'),
+
+            Date::make('Creación', 'created_at')
+                ->onlyOnDetail()
+            ,
+            Date::make('Modificación', 'updated_at')
+                ->exceptOnForms(),
 
             BelongsToMany::make('Categorías', 'experiences', Experience::class)->searchable(),
             BelongsToMany::make('Regiones', 'regions', Region::class)->searchable(),
