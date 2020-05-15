@@ -15,6 +15,8 @@ class Experience extends Model implements HasMedia
 {
     use InteractsWithMedia, SoftDeletes, Searchable;
 
+    protected $table = 'experiences';
+
     // public function destinations()
     // {
     //     return $this->hasMany(Destination::class);
