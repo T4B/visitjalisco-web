@@ -24,7 +24,7 @@ class Post extends Resource
      * @var string
      */
     public static $model = 'App\Post';
-    
+
     public static $group = 'Experiencias';
 
     /**
