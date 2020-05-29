@@ -96,6 +96,12 @@
         </div>
     </div>
 </section>
+@else
+<section class="events text-gray-500 bg-cover bg-no-repeat bg-center" style="background-image:url({{ asset('images/bg-eventos.jpg') }})">
+    <div class="container py-36">
+        <h2>Por el momento no hay eventos disponibles</h2>
+    </div>
+</section>
 @endif
 
 @if (count($routes))
