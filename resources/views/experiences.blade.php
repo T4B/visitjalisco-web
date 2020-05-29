@@ -44,17 +44,20 @@
             <div class="flex flex-wrap -mx-2">
                 @foreach ($highlighted_posts as $post)
                     @if ($loop->first) @continue @endif
-                <div class="w-full md:w-1/2 md:mt-4 xl:mt-0 xl:w-1/3 px-2 py-8 lg:py-0">
-                    <div class="post bg-gray-300 p-4 text-left text-white text-lg relative">
-                        <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->sizes['thumb'] }})"></div></a>
-                        <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
-                        @markdown( \Str::words(${'post'}->{'excerpt_' . $locale}, 17) )
-                        <div class="tags absolute bottom-4">
+                <div class="flex w-full md:w-1/2 md:mt-4 xl:mt-0 xl:w-1/3 px-2 py-8 lg:py-0">
+                    <div class="post bg-gray-300 p-4 text-left text-white text-lg flex flex-wrap flex-col">
+                        <div>
+                            <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><div class="bg-cover bg-no-repeat bg-center p-36 mb-6" style="background-image:url({{ $post->sizes['thumb'] }})"></div></a>
+                            <a href="{{ $locale == config('app.fallback_locale') ? route('blog.post', [ 'slug' => $post->slug_es ]) : route('localized.blog.post', [ 'slug' => $post->slug_es, 'lang' => $locale ]) }}"><h2 class="font-secondary font-bold text-2xl my-2 leading-none text-gray-500">{{ ${'post'}->{'title_' . $locale} }}</h2></a>
+                        
+                            @markdown( \Str::words(${'post'}->{'excerpt_' . $locale}, 17) )
+                        </div>
+                        <div class="tags mt-auto">
                             @foreach ($post->experiences as $category)
-                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'category'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('experiences.category', ['category' => $category->slug ] ) : route('localized.experiences.category', ['category' => $category->slug, 'lang' => $locale ]) }}" class="tag truncate">{{ ${'category'}->{'name_' . $locale} }}</a>
                             @endforeach
                             @foreach ($post->regions as $region)
-                                <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="tag">{{ ${'region'}->{'name_' . $locale} }}</a>
+                                <a href="{{ $locale == config('app.fallback_locale') ? route('region', ['slug' => $region->slug ]) : route('localized.region', ['slug' => $region->slug, 'lang' => $locale ]) }}" class="tag truncate">{{ ${'region'}->{'name_' . $locale} }}</a>
                             @endforeach
                         </div>
                     </div>
