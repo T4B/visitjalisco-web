@@ -11,5 +11,6 @@ return [
     'this-is' => 'Este es',
     'mi-jalisco-alt' => 'Mi Jalisco',
     'events-alt' => 'Turismo de',
-    'conventions' => 'Reuniones'
+    'conventions' => 'Reuniones',
+    'offers' => 'Ofertas de viaje'
 ];
