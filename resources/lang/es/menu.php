@@ -5,7 +5,7 @@ return [
     'mi-jalisco' => 'Este es Mi Jalisco',
     'schedule' => 'Agenda',
     'regions' => 'Regiones',
-    'experiences' => 'Experiencias',
+    'experiences' => 'Blog',
     'routes' => 'Rutas',
     'events' => 'Turismo de Reuniones',
     'this-is' => 'Este es',
